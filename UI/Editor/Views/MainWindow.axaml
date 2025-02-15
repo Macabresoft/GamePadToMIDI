@@ -1,0 +1,22 @@
+<avaloniaEx:BaseDialog x:Class="Macabresoft.GamepadToMidi.UI.Editor.MainWindow"
+                       x:DataType="local:MainWindowViewModel"
+                       xmlns="https://github.com/avaloniaui"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                       xmlns:avaloniaEx="clr-namespace:Macabresoft.AvaloniaEx;assembly=Macabresoft.AvaloniaEx"
+                       xmlns:local="using:Macabresoft.GamepadToMidi.UI.Editor"
+                       Icon="/Assets/avalonia-logo.ico"
+                       Title="Gamepad to Midi - Macabresoft"
+                       CanResize="True"
+                       ShowMinimize="True"
+                       ShowInTaskbar="True"
+                       KeyDown="InputElement_OnKeyDown"
+                       KeyUp="InputElement_OnKeyUp">
+
+    <Design.DataContext>
+        <local:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    <ListBox ItemsSource="{Binding MidiService.MidiDevices}"
+             SelectedItem="{Binding MidiService.Selected}"
+             DisplayMemberBinding="{Binding Name}"/>
+</avaloniaEx:BaseDialog>
