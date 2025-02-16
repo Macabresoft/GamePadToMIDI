@@ -1,0 +1,105 @@
+{
+  "$id": "14",
+  "AdditionalConfiguration": {},
+  "DefaultUserSettings": {
+    "Audio": {
+      "_categoryToVolume": {
+        "$id": "15",
+        "$values": []
+      }
+    },
+    "Custom": {
+      "UserName": ""
+    },
+    "Display": {
+      "_disabledScreenShaders": {
+        "$id": "16",
+        "$values": []
+      },
+      "AspectRatio": 0,
+      "Culture": 0,
+      "DisplayMode": 2,
+      "WindowScale": 4
+    },
+    "Input": {
+      "_keyBindings": {
+        "$id": "17",
+        "$values": []
+      },
+      "_mouseBindings": {
+        "$id": "18",
+        "$values": []
+      },
+      "_primaryGamePadBindings": {
+        "$id": "19",
+        "$values": []
+      },
+      "_secondaryGamePadBindings": {
+        "$id": "20",
+        "$values": []
+      },
+      "DesiredGamePad": 0,
+      "DesiredInputDevice": 0,
+      "IsMouseEnabled": true
+    },
+    "TypeName": "UserSettings",
+    "Version": "0.0.0.0"
+  },
+  "Fallbacks": {
+    "Font": {
+      "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+      "ContentId": "00000000-0000-0000-0000-000000000000"
+    },
+    "GamePadNReference": {
+      "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+      "ContentId": "00000000-0000-0000-0000-000000000000"
+    },
+    "GamePadSReference": {
+      "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+      "ContentId": "00000000-0000-0000-0000-000000000000"
+    },
+    "GamePadXReference": {
+      "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+      "ContentId": "00000000-0000-0000-0000-000000000000"
+    },
+    "KeyboardReference": {
+      "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+      "ContentId": "00000000-0000-0000-0000-000000000000"
+    },
+    "MouseCursorReference": {
+      "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+      "ContentId": "00000000-0000-0000-0000-000000000000"
+    },
+    "MouseReference": {
+      "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+      "ContentId": "00000000-0000-0000-0000-000000000000"
+    },
+    "BackgroundColor": {
+      "R": 0,
+      "G": 0,
+      "B": 0,
+      "A": 255
+    },
+    "ErrorSpritesColor": {
+      "R": 255,
+      "G": 105,
+      "B": 180,
+      "A": 255
+    }
+  },
+  "Fonts": {
+    "_categoryAndCultureToFontDefinition": {
+      "$id": "21",
+      "$values": []
+    }
+  },
+  "ScreenShaders": [],
+  "CommonViewHeight": 10.0,
+  "CompanyName": "Macabresoft",
+  "Name": "Game Pad to MIDI",
+  "Persistent Overlay": "00000000-0000-0000-0000-000000000000",
+  "PixelsPerUnit": 32,
+  "Snap to Pixels During Render": false,
+  "Debug Scene": "00000000-0000-0000-0000-000000000000",
+  "Startup Scene": "5516ad13-9432-4c05-8467-02d7e021d86a"
+}

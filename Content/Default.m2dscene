@@ -1,0 +1,99 @@
+{
+  "$id": "4",
+  "_systems": {
+    "$id": "5",
+    "$values": [
+      {
+        "$id": "6",
+        "$type": "Macabresoft.Macabre2D.Framework.UpdateSystem, Macabre2D.Framework",
+        "Layers to Update": {
+          "IsEnabled": false,
+          "Value": 0
+        },
+        "Id": "e69e2fa6-4e04-482d-b77a-dbcfd2493789",
+        "Name": "UpdateSystem",
+        "ShouldUpdate": true
+      },
+      {
+        "$id": "7",
+        "$type": "Macabresoft.Macabre2D.Framework.RenderSystem, Macabre2D.Framework",
+        "Id": "74e15895-956d-4948-8cad-7052857f543d",
+        "Name": "RenderSystem",
+        "ShouldUpdate": true
+      },
+      {
+        "$id": "8",
+        "$type": "Macabresoft.Macabre2D.Project.Gameplay.MIDI.MidiSystem, Macabre2D.Project.Gameplay",
+        "Id": "7fa0e9e5-1bdb-494b-9ba8-57c977499e36",
+        "Name": "MidiSystem",
+        "ShouldUpdate": true
+      }
+    ]
+  },
+  "_children": {
+    "$id": "9",
+    "$values": [
+      {
+        "$id": "10",
+        "$type": "Macabresoft.Macabre2D.Framework.Camera, Macabre2D.Framework",
+        "_children": {
+          "$id": "11",
+          "$values": []
+        },
+        "ColorOverride": {
+          "IsEnabled": false,
+          "Value": {
+            "R": 255,
+            "G": 255,
+            "B": 255,
+            "A": 255
+          }
+        },
+        "Offset Options": {
+          "Offset Type": 3,
+          "Offset": "0, 0"
+        },
+        "Shader": {
+          "Configuration": {
+            "$id": "12",
+            "$type": "Macabresoft.Macabre2D.Framework.ShaderConfiguration, Macabre2D.Framework"
+          },
+          "ContentId": "00000000-0000-0000-0000-000000000000"
+        },
+        "Layers to Exclude": 0,
+        "Layers to Render": 65535,
+        "PixelSnap": 0,
+        "RenderOrder": 0,
+        "Sampler State": 5,
+        "Id": "0c3876ae-6670-4922-bc4e-bb547730ffc4",
+        "IsEnabled": true,
+        "Layers": 1,
+        "Name": "Camera",
+        "Local Position": "0, 0",
+        "Inheritance": 3,
+        "Override Common View Height": true,
+        "View Height": 10.0
+      }
+    ]
+  },
+  "State": {},
+  "BackgroundColor": {
+    "R": 0,
+    "G": 0,
+    "B": 0,
+    "A": 255
+  },
+  "BoundingArea": {
+    "$id": "13",
+    "Maximum": "0, 0",
+    "Minimum": "0, 0"
+  },
+  "Version": "0.0.0.0",
+  "Tile Size": "1, 1",
+  "Id": "2f2df198-6c50-4c17-a40f-682aca0cb27a",
+  "IsEnabled": true,
+  "Layers": 1,
+  "Name": "Default",
+  "Local Position": "0, 0",
+  "Inheritance": 3
+}

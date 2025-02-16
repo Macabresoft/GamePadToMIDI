@@ -1,0 +1,19 @@
+{
+  "$id": "1",
+  "AnimationPreviewFrameRate": 8,
+  "BackgroundColor": {
+    "R": 0,
+    "G": 0,
+    "B": 0,
+    "A": 0
+  },
+  "CameraPosition": "0, 0",
+  "CameraViewHeight": 10.0,
+  "InputDeviceDisplay": 1,
+  "LastGizmoSelected": 0,
+  "LastSceneOpened": "5516ad13-9432-4c05-8467-02d7e021d86a",
+  "LastTabSelected": 1,
+  "LayersToRender": 65535,
+  "ShouldRebuildContent": false,
+  "WindowState": 0
+}

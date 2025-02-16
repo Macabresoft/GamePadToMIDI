@@ -1,0 +1,17 @@
+{
+  "$id": "1",
+  "_splitContentPath": {
+    "$id": "2",
+    "$values": [
+      "Default"
+    ]
+  },
+  "Asset": {
+    "$id": "3",
+    "$type": "Macabresoft.Macabre2D.Framework.SceneAsset, Macabre2D.Framework",
+    "ContentId": "5516ad13-9432-4c05-8467-02d7e021d86a",
+    "IgnoreInBuild": false,
+    "Notes": ""
+  },
+  "ContentFileExtension": ".m2dscene"
+}

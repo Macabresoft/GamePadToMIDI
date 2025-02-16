@@ -1,0 +1,26 @@
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:..\..\bin\Debug\DesktopGL\Content
+/intermediateDir:obj
+/platform:DesktopGL
+/config:
+/profile:Reach
+/compress:True
+
+#-------------------------------- References --------------------------------#
+
+
+#---------------------------------- Content ---------------------------------#
+
+#begin Project.m2dproj
+/copy:Project.m2dproj
+#end Project.m2dproj
+
+#begin .metadata\5516ad13-9432-4c05-8467-02d7e021d86a.m2dmeta
+/copy:.metadata\5516ad13-9432-4c05-8467-02d7e021d86a.m2dmeta
+#end .metadata\5516ad13-9432-4c05-8467-02d7e021d86a.m2dmeta
+#begin Default.m2dscene
+/copy:Default.m2dscene
+#end Default.m2dscene
+
+
