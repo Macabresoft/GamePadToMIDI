@@ -38,7 +38,47 @@
         "$type": "Macabresoft.Macabre2D.Framework.Camera, Macabre2D.Framework",
         "_children": {
           "$id": "11",
-          "$values": []
+          "$values": [
+            {
+              "$id": "12",
+              "$type": "Macabresoft.Macabre2D.Project.Gameplay.MIDI.MidiDeviceRenderer, Macabre2D.Project.Gameplay",
+              "_children": {
+                "$id": "13",
+                "$values": []
+              },
+              "FontReference": {
+                "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                "ContentId": "00000000-0000-0000-0000-000000000000"
+              },
+              "FontCategory": 0,
+              "Format": "",
+              "Kerning": 0,
+              "ResourceName": "",
+              "Text": "",
+              "PixelSnap": 0,
+              "RenderOrder": 0,
+              "RenderOutOfBounds": false,
+              "ShouldRender": true,
+              "Id": "d4bfc3b9-ec73-4e3e-a00e-156f006af3a9",
+              "IsEnabled": true,
+              "Layers": 1,
+              "Name": "MidiDeviceRenderer",
+              "Local Position": "0, 0",
+              "Inheritance": 3,
+              "Color": {
+                "R": 255,
+                "G": 255,
+                "B": 255,
+                "A": 255
+              },
+              "RenderOptions": {
+                "Flip Horizontal": false,
+                "Flip Vertical": false,
+                "Offset Type": 4,
+                "Offset": "0, 0"
+              }
+            }
+          ]
         },
         "ColorOverride": {
           "IsEnabled": false,
@@ -51,11 +91,11 @@
         },
         "Offset Options": {
           "Offset Type": 3,
-          "Offset": "0, 0"
+          "Offset": "-1280, -681.5"
         },
         "Shader": {
           "Configuration": {
-            "$id": "12",
+            "$id": "14",
             "$type": "Macabresoft.Macabre2D.Framework.ShaderConfiguration, Macabre2D.Framework"
           },
           "ContentId": "00000000-0000-0000-0000-000000000000"
@@ -84,7 +124,7 @@
     "A": 255
   },
   "BoundingArea": {
-    "$id": "13",
+    "$id": "15",
     "Maximum": "0, 0",
     "Minimum": "0, 0"
   },

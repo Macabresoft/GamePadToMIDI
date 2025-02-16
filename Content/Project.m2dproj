@@ -1,10 +1,10 @@
 {
-  "$id": "14",
+  "$id": "16",
   "AdditionalConfiguration": {},
   "DefaultUserSettings": {
     "Audio": {
       "_categoryToVolume": {
-        "$id": "15",
+        "$id": "17",
         "$values": []
       }
     },
@@ -13,7 +13,7 @@
     },
     "Display": {
       "_disabledScreenShaders": {
-        "$id": "16",
+        "$id": "18",
         "$values": []
       },
       "AspectRatio": 0,
@@ -23,19 +23,19 @@
     },
     "Input": {
       "_keyBindings": {
-        "$id": "17",
-        "$values": []
-      },
-      "_mouseBindings": {
-        "$id": "18",
-        "$values": []
-      },
-      "_primaryGamePadBindings": {
         "$id": "19",
         "$values": []
       },
-      "_secondaryGamePadBindings": {
+      "_mouseBindings": {
         "$id": "20",
+        "$values": []
+      },
+      "_primaryGamePadBindings": {
+        "$id": "21",
+        "$values": []
+      },
+      "_secondaryGamePadBindings": {
+        "$id": "22",
         "$values": []
       },
       "DesiredGamePad": 0,
@@ -89,7 +89,7 @@
   },
   "Fonts": {
     "_categoryAndCultureToFontDefinition": {
-      "$id": "21",
+      "$id": "23",
       "$values": []
     }
   },

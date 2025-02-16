@@ -1,5 +1,6 @@
 ﻿namespace Macabresoft.Macabre2D.Project.Gameplay.MIDI;
 
+using Macabresoft.Core;
 using Macabresoft.Macabre2D.Framework;
 using Microsoft.Xna.Framework.Input;
 using NAudio.Midi;
@@ -11,9 +12,19 @@ public class MidiSystem : GameSystem {
 
     public override GameSystemKind Kind => GameSystemKind.Update;
 
+    public event EventHandler? DeviceChanged;
+
     public override void Deinitialize() {
         base.Deinitialize();
         this._midiOut = null;
+    }
+
+    public MidiDeviceDefinition Selected {
+        get => this._selected;
+        set {
+            this._selected = value;
+            this.DeviceChanged?.SafeInvoke(this);
+        }
     }
 
     public override void Initialize(IScene scene) {
