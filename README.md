@@ -1,7 +1,13 @@
-# Macabre2D Project / Template
+# Gamepad to MIDI
 
-This is a template for a Macabre2D project.
+Allows you to bind game pad buttons to send specific MIDI events to a MIDI device.
 
-Generally, you will want to start a project with a project template. The default template can be found [here](https://github.com/Macabresoft/Macabre2D-Project-Template).
+## Virtual MIDI Device
 
-It is recommended you maintain everything in the Project folder as a separate repository from Macabre2D. Macabre2D is setup to ignore this folder by default. If you don't wish to share changes with Macabre2D, it is perfectly acceptable to remove the /Project/ line from Macabre2D's .gitnore and keep a single repository.
+You will need a virtual MIDI port for which to send events. A DAW (such as *Reaper* or *FL Studio*) can take input from this virtual MIDI port, while *Gamepad to MIDI* will send the events through this port.
+
+In writing this application, I have used [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) to create virtual MIDI ports.
+
+## Macabre2D
+
+This is a Macabre2D project and therefore requires the Macabre2D game engine code to run. Follow instructions for setting up and building a Macabre2D project [here](https://github.com/Macabresoft/Macabre2D).
