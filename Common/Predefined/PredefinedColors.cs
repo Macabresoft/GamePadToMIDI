@@ -15,6 +15,7 @@ public static class PredefinedColors {
     public static IReadOnlyCollection<Color> Colors { get; } = new[] {
         Color.Transparent,
         Color.White,
-        Color.Black
+        Color.Black,
+        Color.DarkTurquoise
     };
 }

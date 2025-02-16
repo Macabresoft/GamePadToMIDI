@@ -33,7 +33,7 @@ public class MidiDeviceRenderer : TextLineRenderer {
     }
 
     /// <inheritdoc />
-    protected override string GetFullText() {
+    public override string GetFullText() {
         var text = "N/A";
         if (this._midiSystem is { Selected.IsEmpty: false }) {
             text = this._midiSystem.Selected.Name;

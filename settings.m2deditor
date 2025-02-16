@@ -3,9 +3,9 @@
   "AnimationPreviewFrameRate": 8,
   "BackgroundColor": {
     "R": 0,
-    "G": 0,
-    "B": 0,
-    "A": 0
+    "G": 206,
+    "B": 209,
+    "A": 255
   },
   "CameraPosition": "0, 0",
   "CameraViewHeight": 10.0,
