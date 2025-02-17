@@ -18,4 +18,22 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="Menu_Prompts_Confirm" xml:space="preserve">
+        <value>Confirm</value>
+    </data>
+    <data name="Menu_Return" xml:space="preserve">
+        <value>Return</value>
+    </data>
+    <data name="Menu_On" xml:space="preserve">
+        <value>On</value>
+    </data>
+    <data name="Menu_Off" xml:space="preserve">
+        <value>Off</value>
+    </data>
+    <data name="Menu_Prompts_TurnOff" xml:space="preserve">
+        <value>Turn Off</value>
+    </data>
+    <data name="Menu_Prompts_TurnOn" xml:space="preserve">
+        <value>Turn On</value>
+    </data>
 </root>

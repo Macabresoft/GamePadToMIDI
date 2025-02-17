@@ -58,5 +58,59 @@ namespace Macabresoft.Macabre2D.Project.Common {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Off.
+        /// </summary>
+        public static string Menu_Off {
+            get {
+                return ResourceManager.GetString("Menu_Off", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to On.
+        /// </summary>
+        public static string Menu_On {
+            get {
+                return ResourceManager.GetString("Menu_On", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm.
+        /// </summary>
+        public static string Menu_Prompts_Confirm {
+            get {
+                return ResourceManager.GetString("Menu_Prompts_Confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn Off.
+        /// </summary>
+        public static string Menu_Prompts_TurnOff {
+            get {
+                return ResourceManager.GetString("Menu_Prompts_TurnOff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn On.
+        /// </summary>
+        public static string Menu_Prompts_TurnOn {
+            get {
+                return ResourceManager.GetString("Menu_Prompts_TurnOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Return.
+        /// </summary>
+        public static string Menu_Return {
+            get {
+                return ResourceManager.GetString("Menu_Return", resourceCulture);
+            }
+        }
     }
 }

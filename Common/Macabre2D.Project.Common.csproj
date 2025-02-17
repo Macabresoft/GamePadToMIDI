@@ -39,4 +39,8 @@
         <DependentUpon>Resources.resx</DependentUpon>
       </Compile>
     </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Macabresoft.Core" Version="2.0.1" />
+    </ItemGroup>
 </Project>

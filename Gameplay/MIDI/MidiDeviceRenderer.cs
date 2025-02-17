@@ -1,4 +1,4 @@
-﻿namespace Macabresoft.Macabre2D.Project.Gameplay.MIDI;
+﻿namespace Macabresoft.Macabre2D.Project.Gameplay;
 
 using Macabresoft.Macabre2D.Framework;
 using Macabresoft.Macabre2D.Project.Common;
