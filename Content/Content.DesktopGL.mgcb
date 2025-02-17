@@ -24,3 +24,20 @@
 #end Default.m2dscene
 
 
+#begin .metadata\dad78dc2-736d-4c8d-83b6-2a559b4b0a35.m2dmeta
+/copy:.metadata\dad78dc2-736d-4c8d-83b6-2a559b4b0a35.m2dmeta
+#end .metadata\dad78dc2-736d-4c8d-83b6-2a559b4b0a35.m2dmeta
+#begin Sprites\Fonts\dust_7_clean
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites\Fonts\dust_7_clean.png
+#end Sprites\Fonts\dust_7_clean
+
+

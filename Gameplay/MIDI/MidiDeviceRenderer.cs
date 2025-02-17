@@ -1,6 +1,7 @@
 ﻿namespace Macabresoft.Macabre2D.Project.Gameplay.MIDI;
 
 using Macabresoft.Macabre2D.Framework;
+using Macabresoft.Macabre2D.Project.Common;
 
 /// <summary>
 /// Renders the name of the selected MIDI device.
@@ -21,7 +22,8 @@ public class MidiDeviceRenderer : TextLineRenderer {
     /// <inheritdoc />
     public override void Initialize(IScene scene, IEntity parent) {
         base.Initialize(scene, parent);
-        
+
+        this.FontCategory = FontCategory.Normal;
         this._midiSystem = this.Scene.GetSystem<MidiSystem>();
         if (this._midiSystem != null) {
             this._midiSystem.DeviceChanged += this.MidiSystem_DeviceChanged;
@@ -36,7 +38,7 @@ public class MidiDeviceRenderer : TextLineRenderer {
     public override string GetFullText() {
         var text = "N/A";
         if (this._midiSystem is { Selected.IsEmpty: false }) {
-            text = this._midiSystem.Selected.Name;
+            text = $"Device: {this._midiSystem.Selected.Name}";
         }
         
         return text;

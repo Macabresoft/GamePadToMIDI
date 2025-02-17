@@ -1,10 +1,10 @@
 {
-  "$id": "16",
+  "$id": "21",
   "AdditionalConfiguration": {},
   "DefaultUserSettings": {
     "Audio": {
       "_categoryToVolume": {
-        "$id": "17",
+        "$id": "22",
         "$values": []
       }
     },
@@ -13,30 +13,105 @@
     },
     "Display": {
       "_disabledScreenShaders": {
-        "$id": "18",
+        "$id": "23",
         "$values": []
       },
       "AspectRatio": 0,
       "Culture": 0,
       "DisplayMode": 2,
-      "WindowScale": 4
+      "WindowScale": 3
     },
     "Input": {
       "_keyBindings": {
-        "$id": "19",
-        "$values": []
+        "$id": "24",
+        "$values": [
+          {
+            "Key": 1,
+            "Value": 13
+          },
+          {
+            "Key": 2,
+            "Value": 27
+          },
+          {
+            "Key": 3,
+            "Value": 27
+          },
+          {
+            "Key": 4,
+            "Value": 38
+          },
+          {
+            "Key": 5,
+            "Value": 40
+          },
+          {
+            "Key": 6,
+            "Value": 37
+          },
+          {
+            "Key": 7,
+            "Value": 39
+          }
+        ]
       },
       "_mouseBindings": {
-        "$id": "20",
+        "$id": "25",
         "$values": []
       },
       "_primaryGamePadBindings": {
-        "$id": "21",
-        "$values": []
+        "$id": "26",
+        "$values": [
+          {
+            "Key": 1,
+            "Value": 4096
+          },
+          {
+            "Key": 2,
+            "Value": 8192
+          },
+          {
+            "Key": 3,
+            "Value": 16
+          },
+          {
+            "Key": 4,
+            "Value": 1
+          },
+          {
+            "Key": 5,
+            "Value": 2
+          },
+          {
+            "Key": 6,
+            "Value": 4
+          },
+          {
+            "Key": 7,
+            "Value": 8
+          }
+        ]
       },
       "_secondaryGamePadBindings": {
-        "$id": "22",
-        "$values": []
+        "$id": "27",
+        "$values": [
+          {
+            "Key": 4,
+            "Value": 268435456
+          },
+          {
+            "Key": 5,
+            "Value": 536870912
+          },
+          {
+            "Key": 6,
+            "Value": 2097152
+          },
+          {
+            "Key": 7,
+            "Value": 1073741824
+          }
+        ]
       },
       "DesiredGamePad": 0,
       "DesiredInputDevice": 0,
@@ -47,8 +122,8 @@
   },
   "Fallbacks": {
     "Font": {
-      "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
-      "ContentId": "00000000-0000-0000-0000-000000000000"
+      "PackagedAssetId": "0d1786bc-8fa7-4655-b181-f7a5832e7dec",
+      "ContentId": "dad78dc2-736d-4c8d-83b6-2a559b4b0a35"
     },
     "GamePadNReference": {
       "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
@@ -89,8 +164,21 @@
   },
   "Fonts": {
     "_categoryAndCultureToFontDefinition": {
-      "$id": "23",
-      "$values": []
+      "$id": "28",
+      "$values": [
+        {
+          "Key": {
+            "$id": "29",
+            "Culture": 0,
+            "Category": 1
+          },
+          "Value": {
+            "$id": "30",
+            "SpriteSheetId": "dad78dc2-736d-4c8d-83b6-2a559b4b0a35",
+            "FontId": "0d1786bc-8fa7-4655-b181-f7a5832e7dec"
+          }
+        }
+      ]
     }
   },
   "ScreenShaders": [],

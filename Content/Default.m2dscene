@@ -41,42 +41,84 @@
           "$values": [
             {
               "$id": "12",
-              "$type": "Macabresoft.Macabre2D.Project.Gameplay.MIDI.MidiDeviceRenderer, Macabre2D.Project.Gameplay",
+              "$type": "Macabresoft.Macabre2D.Framework.DockingContainer, Macabre2D.Framework",
               "_children": {
                 "$id": "13",
-                "$values": []
+                "$values": [
+                  {
+                    "$id": "14",
+                    "$type": "Macabresoft.Macabre2D.Framework.DockableWrapper, Macabre2D.Framework",
+                    "_children": {
+                      "$id": "15",
+                      "$values": [
+                        {
+                          "$id": "16",
+                          "$type": "Macabresoft.Macabre2D.Project.Gameplay.MIDI.MidiDeviceRenderer, Macabre2D.Project.Gameplay",
+                          "_children": {
+                            "$id": "17",
+                            "$values": []
+                          },
+                          "FontReference": {
+                            "PackagedAssetId": "0d1786bc-8fa7-4655-b181-f7a5832e7dec",
+                            "ContentId": "dad78dc2-736d-4c8d-83b6-2a559b4b0a35"
+                          },
+                          "FontCategory": 1,
+                          "Format": "",
+                          "Kerning": 0,
+                          "ResourceName": "",
+                          "Text": "",
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "d4bfc3b9-ec73-4e3e-a00e-156f006af3a9",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "MidiDeviceRenderer",
+                          "Local Position": "0, -5",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "RenderOptions": {
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 7,
+                            "Offset": "-85.5, -16"
+                          }
+                        }
+                      ]
+                    },
+                    "IsCollapsed": false,
+                    "Margin": "0, 0",
+                    "Location": 4,
+                    "Id": "d2287ffd-e103-4ef6-954f-f08ff7ed33e7",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "DockableWrapper",
+                    "Local Position": "0, 10",
+                    "Inheritance": 3
+                  }
+                ]
               },
-              "FontReference": {
-                "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
-                "ContentId": "00000000-0000-0000-0000-000000000000"
-              },
-              "FontCategory": 0,
-              "Format": "",
-              "Kerning": 0,
-              "ResourceName": "",
-              "Text": "",
-              "PixelSnap": 0,
-              "RenderOrder": 0,
-              "RenderOutOfBounds": false,
-              "ShouldRender": true,
-              "Id": "d4bfc3b9-ec73-4e3e-a00e-156f006af3a9",
-              "IsEnabled": true,
-              "Layers": 1,
-              "Name": "MidiDeviceRenderer",
-              "Local Position": "0, 0",
-              "Inheritance": 3,
-              "Color": {
-                "R": 255,
-                "G": 255,
-                "B": 255,
-                "A": 255
-              },
-              "RenderOptions": {
-                "Flip Horizontal": false,
-                "Flip Vertical": false,
+              "InheritParentBoundingArea": true,
+              "Height": 0.0,
+              "OffsetOptions": {
+                "$id": "18",
                 "Offset Type": 4,
                 "Offset": "0, 0"
-              }
+              },
+              "Width": 0.0,
+              "Location": 1,
+              "Id": "b12e7366-6885-4416-b7a6-32e2dfb3d452",
+              "IsEnabled": true,
+              "Layers": 1,
+              "Name": "DockingContainer",
+              "Local Position": "0, 0",
+              "Inheritance": 3
             }
           ]
         },
@@ -95,7 +137,7 @@
         },
         "Shader": {
           "Configuration": {
-            "$id": "14",
+            "$id": "19",
             "$type": "Macabresoft.Macabre2D.Framework.ShaderConfiguration, Macabre2D.Framework"
           },
           "ContentId": "00000000-0000-0000-0000-000000000000"
@@ -124,7 +166,7 @@
     "A": 255
   },
   "BoundingArea": {
-    "$id": "15",
+    "$id": "20",
     "Maximum": "0, 0",
     "Minimum": "0, 0"
   },

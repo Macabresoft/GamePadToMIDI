@@ -12,10 +12,10 @@ public static class PredefinedColors {
     /// <summary>
     /// Gets the colors available to the Macabre2D editor.
     /// </summary>
-    public static IReadOnlyCollection<Color> Colors { get; } = new[] {
+    public static IReadOnlyCollection<Color> Colors { get; } = [
         Color.Transparent,
         Color.White,
         Color.Black,
         Color.DarkTurquoise
-    };
+    ];
 }

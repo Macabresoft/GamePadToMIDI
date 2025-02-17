@@ -1,0 +1,1580 @@
+{
+  "$id": "31",
+  "_splitContentPath": {
+    "$id": "32",
+    "$values": [
+      "Sprites",
+      "Fonts",
+      "dust_7_clean"
+    ]
+  },
+  "Asset": {
+    "$id": "33",
+    "$type": "Macabresoft.Macabre2D.Framework.SpriteSheet, Macabre2D.Framework",
+    "_autoTileSets": {
+      "$id": "34",
+      "$values": []
+    },
+    "_fonts": {
+      "$id": "35",
+      "$values": [
+        {
+          "$id": "36",
+          "_characterIndexToCharacter": {
+            "$id": "37",
+            "$values": [
+              {
+                "Key": 0,
+                "Value": {
+                  "$id": "38",
+                  "SpriteIndex": 0,
+                  "Character": "A",
+                  "Kerning": 0
+                }
+              },
+              {
+                "Key": 1,
+                "Value": {
+                  "$id": "39",
+                  "SpriteIndex": 1,
+                  "Character": "B",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 2,
+                "Value": {
+                  "$id": "40",
+                  "SpriteIndex": 2,
+                  "Character": "C",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 3,
+                "Value": {
+                  "$id": "41",
+                  "SpriteIndex": 3,
+                  "Character": "D",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 4,
+                "Value": {
+                  "$id": "42",
+                  "SpriteIndex": 4,
+                  "Character": "E",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 5,
+                "Value": {
+                  "$id": "43",
+                  "SpriteIndex": 5,
+                  "Character": "F",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 6,
+                "Value": {
+                  "$id": "44",
+                  "SpriteIndex": 6,
+                  "Character": "G",
+                  "Kerning": 0
+                }
+              },
+              {
+                "Key": 7,
+                "Value": {
+                  "$id": "45",
+                  "SpriteIndex": 7,
+                  "Character": "H",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 8,
+                "Value": {
+                  "$id": "46",
+                  "SpriteIndex": 8,
+                  "Character": "I",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 9,
+                "Value": {
+                  "$id": "47",
+                  "SpriteIndex": 9,
+                  "Character": "J",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 10,
+                "Value": {
+                  "$id": "48",
+                  "SpriteIndex": 10,
+                  "Character": "K",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 11,
+                "Value": {
+                  "$id": "49",
+                  "SpriteIndex": 11,
+                  "Character": "L",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 12,
+                "Value": {
+                  "$id": "50",
+                  "SpriteIndex": 12,
+                  "Character": "M",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 13,
+                "Value": {
+                  "$id": "51",
+                  "SpriteIndex": 13,
+                  "Character": "N",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 14,
+                "Value": {
+                  "$id": "52",
+                  "SpriteIndex": 14,
+                  "Character": "O",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 15,
+                "Value": {
+                  "$id": "53",
+                  "SpriteIndex": 15,
+                  "Character": "P",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 16,
+                "Value": {
+                  "$id": "54",
+                  "SpriteIndex": 16,
+                  "Character": "Q",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 17,
+                "Value": {
+                  "$id": "55",
+                  "SpriteIndex": 17,
+                  "Character": "R",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 18,
+                "Value": {
+                  "$id": "56",
+                  "SpriteIndex": 18,
+                  "Character": "S",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 19,
+                "Value": {
+                  "$id": "57",
+                  "SpriteIndex": 19,
+                  "Character": "T",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 20,
+                "Value": {
+                  "$id": "58",
+                  "SpriteIndex": 20,
+                  "Character": "U",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 21,
+                "Value": {
+                  "$id": "59",
+                  "SpriteIndex": 21,
+                  "Character": "V",
+                  "Kerning": 0
+                }
+              },
+              {
+                "Key": 22,
+                "Value": {
+                  "$id": "60",
+                  "SpriteIndex": 22,
+                  "Character": "W",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 23,
+                "Value": {
+                  "$id": "61",
+                  "SpriteIndex": 23,
+                  "Character": "X",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 24,
+                "Value": {
+                  "$id": "62",
+                  "SpriteIndex": 24,
+                  "Character": "Y",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 25,
+                "Value": {
+                  "$id": "63",
+                  "SpriteIndex": 25,
+                  "Character": "Z",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 26,
+                "Value": {
+                  "$id": "64",
+                  "SpriteIndex": 26,
+                  "Character": "a",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 27,
+                "Value": {
+                  "$id": "65",
+                  "SpriteIndex": 27,
+                  "Character": "b",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 28,
+                "Value": {
+                  "$id": "66",
+                  "SpriteIndex": 28,
+                  "Character": "c",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 29,
+                "Value": {
+                  "$id": "67",
+                  "SpriteIndex": 29,
+                  "Character": "d",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 30,
+                "Value": {
+                  "$id": "68",
+                  "SpriteIndex": 30,
+                  "Character": "e",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 31,
+                "Value": {
+                  "$id": "69",
+                  "SpriteIndex": 31,
+                  "Character": "f",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 32,
+                "Value": {
+                  "$id": "70",
+                  "SpriteIndex": 32,
+                  "Character": "g",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 33,
+                "Value": {
+                  "$id": "71",
+                  "SpriteIndex": 33,
+                  "Character": "h",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 34,
+                "Value": {
+                  "$id": "72",
+                  "SpriteIndex": 34,
+                  "Character": "i",
+                  "Kerning": -5
+                }
+              },
+              {
+                "Key": 35,
+                "Value": {
+                  "$id": "73",
+                  "SpriteIndex": 35,
+                  "Character": "j",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 36,
+                "Value": {
+                  "$id": "74",
+                  "SpriteIndex": 36,
+                  "Character": "k",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 37,
+                "Value": {
+                  "$id": "75",
+                  "SpriteIndex": 37,
+                  "Character": "l",
+                  "Kerning": -5
+                }
+              },
+              {
+                "Key": 38,
+                "Value": {
+                  "$id": "76",
+                  "SpriteIndex": 38,
+                  "Character": "m",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 39,
+                "Value": {
+                  "$id": "77",
+                  "SpriteIndex": 39,
+                  "Character": "n",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 40,
+                "Value": {
+                  "$id": "78",
+                  "SpriteIndex": 40,
+                  "Character": "o",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 41,
+                "Value": {
+                  "$id": "79",
+                  "SpriteIndex": 41,
+                  "Character": "p",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 42,
+                "Value": {
+                  "$id": "80",
+                  "SpriteIndex": 42,
+                  "Character": "q",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 43,
+                "Value": {
+                  "$id": "81",
+                  "SpriteIndex": 43,
+                  "Character": "r",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 44,
+                "Value": {
+                  "$id": "82",
+                  "SpriteIndex": 44,
+                  "Character": "s",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 45,
+                "Value": {
+                  "$id": "83",
+                  "SpriteIndex": 45,
+                  "Character": "t",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 46,
+                "Value": {
+                  "$id": "84",
+                  "SpriteIndex": 46,
+                  "Character": "u",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 47,
+                "Value": {
+                  "$id": "85",
+                  "SpriteIndex": 47,
+                  "Character": "v",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 48,
+                "Value": {
+                  "$id": "86",
+                  "SpriteIndex": 48,
+                  "Character": "w",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 49,
+                "Value": {
+                  "$id": "87",
+                  "SpriteIndex": 49,
+                  "Character": "x",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 50,
+                "Value": {
+                  "$id": "88",
+                  "SpriteIndex": 50,
+                  "Character": "y",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 51,
+                "Value": {
+                  "$id": "89",
+                  "SpriteIndex": 51,
+                  "Character": "z",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 52,
+                "Value": {
+                  "$id": "90",
+                  "SpriteIndex": 52,
+                  "Character": "0",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 53,
+                "Value": {
+                  "$id": "91",
+                  "SpriteIndex": 53,
+                  "Character": "1",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 54,
+                "Value": {
+                  "$id": "92",
+                  "SpriteIndex": 54,
+                  "Character": "2",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 55,
+                "Value": {
+                  "$id": "93",
+                  "SpriteIndex": 55,
+                  "Character": "3",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 56,
+                "Value": {
+                  "$id": "94",
+                  "SpriteIndex": 56,
+                  "Character": "4",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 57,
+                "Value": {
+                  "$id": "95",
+                  "SpriteIndex": 57,
+                  "Character": "5",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 58,
+                "Value": {
+                  "$id": "96",
+                  "SpriteIndex": 58,
+                  "Character": "6",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 59,
+                "Value": {
+                  "$id": "97",
+                  "SpriteIndex": 59,
+                  "Character": "7",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 60,
+                "Value": {
+                  "$id": "98",
+                  "SpriteIndex": 60,
+                  "Character": "8",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 61,
+                "Value": {
+                  "$id": "99",
+                  "SpriteIndex": 61,
+                  "Character": "9",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 62,
+                "Value": {
+                  "$id": "100",
+                  "SpriteIndex": 62,
+                  "Character": ".",
+                  "Kerning": -5
+                }
+              },
+              {
+                "Key": 63,
+                "Value": {
+                  "$id": "101",
+                  "SpriteIndex": 63,
+                  "Character": ",",
+                  "Kerning": -5
+                }
+              },
+              {
+                "Key": 64,
+                "Value": {
+                  "$id": "102",
+                  "SpriteIndex": 64,
+                  "Character": ";",
+                  "Kerning": -5
+                }
+              },
+              {
+                "Key": 65,
+                "Value": {
+                  "$id": "103",
+                  "SpriteIndex": 65,
+                  "Character": ":",
+                  "Kerning": -5
+                }
+              },
+              {
+                "Key": 66,
+                "Value": {
+                  "$id": "104",
+                  "SpriteIndex": 66,
+                  "Character": "?",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 67,
+                "Value": {
+                  "$id": "105",
+                  "SpriteIndex": 67,
+                  "Character": "!",
+                  "Kerning": -5
+                }
+              },
+              {
+                "Key": 68,
+                "Value": {
+                  "$id": "106",
+                  "SpriteIndex": 68,
+                  "Character": "\"",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 69,
+                "Value": {
+                  "$id": "107",
+                  "SpriteIndex": 69,
+                  "Character": "'",
+                  "Kerning": -5
+                }
+              },
+              {
+                "Key": 70,
+                "Value": {
+                  "$id": "108",
+                  "SpriteIndex": 70,
+                  "Character": "+",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 71,
+                "Value": {
+                  "$id": "109",
+                  "SpriteIndex": 71,
+                  "Character": "-",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 72,
+                "Value": {
+                  "$id": "110",
+                  "SpriteIndex": 72,
+                  "Character": "=",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 73,
+                "Value": {
+                  "$id": "111",
+                  "SpriteIndex": 73,
+                  "Character": "*",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 74,
+                "Value": {
+                  "$id": "112",
+                  "SpriteIndex": 74,
+                  "Character": "%",
+                  "Kerning": 0
+                }
+              },
+              {
+                "Key": 75,
+                "Value": {
+                  "$id": "113",
+                  "SpriteIndex": 75,
+                  "Character": "_",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 76,
+                "Value": {
+                  "$id": "114",
+                  "SpriteIndex": 76,
+                  "Character": "(",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 77,
+                "Value": {
+                  "$id": "115",
+                  "SpriteIndex": 77,
+                  "Character": ")",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 78,
+                "Value": {
+                  "$id": "116",
+                  "SpriteIndex": 78,
+                  "Character": "[",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 79,
+                "Value": {
+                  "$id": "117",
+                  "SpriteIndex": 79,
+                  "Character": "]",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 80,
+                "Value": {
+                  "$id": "118",
+                  "SpriteIndex": 80,
+                  "Character": "{",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 81,
+                "Value": {
+                  "$id": "119",
+                  "SpriteIndex": 81,
+                  "Character": "}",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 82,
+                "Value": {
+                  "$id": "120",
+                  "SpriteIndex": 82,
+                  "Character": "~",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 83,
+                "Value": {
+                  "$id": "121",
+                  "SpriteIndex": 83,
+                  "Character": "#",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 84,
+                "Value": {
+                  "$id": "122",
+                  "SpriteIndex": 84,
+                  "Character": "&",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 85,
+                "Value": {
+                  "$id": "123",
+                  "SpriteIndex": 85,
+                  "Character": "@",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 86,
+                "Value": {
+                  "$id": "124",
+                  "SpriteIndex": 86,
+                  "Character": "©",
+                  "Kerning": 0
+                }
+              },
+              {
+                "Key": 87,
+                "Value": {
+                  "$id": "125",
+                  "SpriteIndex": 87,
+                  "Character": "®",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 88,
+                "Value": {
+                  "$id": "126",
+                  "SpriteIndex": 88,
+                  "Character": "™",
+                  "Kerning": 0
+                }
+              },
+              {
+                "Key": 89,
+                "Value": {
+                  "$id": "127",
+                  "SpriteIndex": 89,
+                  "Character": "°",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 90,
+                "Value": {
+                  "$id": "128",
+                  "SpriteIndex": 90,
+                  "Character": "^",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 91,
+                "Value": {
+                  "$id": "129",
+                  "SpriteIndex": 91,
+                  "Character": "`",
+                  "Kerning": -4
+                }
+              },
+              {
+                "Key": 92,
+                "Value": {
+                  "$id": "130",
+                  "SpriteIndex": 92,
+                  "Character": "|",
+                  "Kerning": -5
+                }
+              },
+              {
+                "Key": 93,
+                "Value": {
+                  "$id": "131",
+                  "SpriteIndex": 93,
+                  "Character": "/",
+                  "Kerning": 0
+                }
+              },
+              {
+                "Key": 94,
+                "Value": {
+                  "$id": "132",
+                  "SpriteIndex": 94,
+                  "Character": "\\",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 95,
+                "Value": {
+                  "$id": "133",
+                  "SpriteIndex": 95,
+                  "Character": "<",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 96,
+                "Value": {
+                  "$id": "134",
+                  "SpriteIndex": 96,
+                  "Character": ">",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 97,
+                "Value": {
+                  "$id": "135",
+                  "SpriteIndex": 97,
+                  "Character": "…",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 98,
+                "Value": {
+                  "$id": "136",
+                  "SpriteIndex": 98,
+                  "Character": "€",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 99,
+                "Value": {
+                  "$id": "137",
+                  "SpriteIndex": 99,
+                  "Character": "$",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 100,
+                "Value": {
+                  "$id": "138",
+                  "SpriteIndex": 100,
+                  "Character": "£",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 101,
+                "Value": {
+                  "$id": "139",
+                  "SpriteIndex": 101,
+                  "Character": "¢",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 102,
+                "Value": {
+                  "$id": "140",
+                  "SpriteIndex": 102,
+                  "Character": "¿",
+                  "Kerning": -3
+                }
+              },
+              {
+                "Key": 103,
+                "Value": {
+                  "$id": "141",
+                  "SpriteIndex": 103,
+                  "Character": "¡",
+                  "Kerning": -5
+                }
+              },
+              {
+                "Key": 104,
+                "Value": {
+                  "$id": "142",
+                  "SpriteIndex": 104,
+                  "Character": "“",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 105,
+                "Value": {
+                  "$id": "143",
+                  "SpriteIndex": 105,
+                  "Character": "”",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 106,
+                "Value": {
+                  "$id": "144",
+                  "SpriteIndex": 106,
+                  "Character": "‘",
+                  "Kerning": -4
+                }
+              },
+              {
+                "Key": 107,
+                "Value": {
+                  "$id": "145",
+                  "SpriteIndex": 107,
+                  "Character": "’",
+                  "Kerning": -4
+                }
+              },
+              {
+                "Key": 108,
+                "Value": {
+                  "$id": "146",
+                  "SpriteIndex": 108,
+                  "Character": "«",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 109,
+                "Value": {
+                  "$id": "147",
+                  "SpriteIndex": 109,
+                  "Character": "»",
+                  "Kerning": -1
+                }
+              },
+              {
+                "Key": 110,
+                "Value": {
+                  "$id": "148",
+                  "SpriteIndex": 110,
+                  "Character": "‹",
+                  "Kerning": -4
+                }
+              },
+              {
+                "Key": 111,
+                "Value": {
+                  "$id": "149",
+                  "SpriteIndex": 111,
+                  "Character": "›",
+                  "Kerning": -4
+                }
+              },
+              {
+                "Key": 112,
+                "Value": {
+                  "$id": "150",
+                  "SpriteIndex": 112,
+                  "Character": "„",
+                  "Kerning": -2
+                }
+              },
+              {
+                "Key": 113,
+                "Value": {
+                  "$id": "151",
+                  "SpriteIndex": 113,
+                  "Character": "‚",
+                  "Kerning": -4
+                }
+              },
+              {
+                "Key": 114,
+                "Value": {
+                  "$id": "152",
+                  "SpriteIndex": 114,
+                  "Character": "·",
+                  "Kerning": -4
+                }
+              },
+              {
+                "Key": 115,
+                "Value": {
+                  "$id": "153",
+                  "SpriteIndex": 115,
+                  "Character": "•",
+                  "Kerning": -4
+                }
+              },
+              {
+                "Key": 116,
+                "Value": {
+                  "$id": "154",
+                  "SpriteIndex": 116,
+                  "Character": " ",
+                  "Kerning": -3
+                }
+              }
+            ]
+          },
+          "_characterToIndex": {
+            "$id": "155",
+            "$values": [
+              {
+                "Key": "A",
+                "Value": 0
+              },
+              {
+                "Key": "B",
+                "Value": 1
+              },
+              {
+                "Key": "C",
+                "Value": 2
+              },
+              {
+                "Key": "D",
+                "Value": 3
+              },
+              {
+                "Key": "E",
+                "Value": 4
+              },
+              {
+                "Key": "F",
+                "Value": 5
+              },
+              {
+                "Key": "G",
+                "Value": 6
+              },
+              {
+                "Key": "H",
+                "Value": 7
+              },
+              {
+                "Key": "I",
+                "Value": 8
+              },
+              {
+                "Key": "J",
+                "Value": 9
+              },
+              {
+                "Key": "K",
+                "Value": 10
+              },
+              {
+                "Key": "L",
+                "Value": 11
+              },
+              {
+                "Key": "M",
+                "Value": 12
+              },
+              {
+                "Key": "N",
+                "Value": 13
+              },
+              {
+                "Key": "O",
+                "Value": 14
+              },
+              {
+                "Key": "P",
+                "Value": 15
+              },
+              {
+                "Key": "Q",
+                "Value": 16
+              },
+              {
+                "Key": "R",
+                "Value": 17
+              },
+              {
+                "Key": "S",
+                "Value": 18
+              },
+              {
+                "Key": "T",
+                "Value": 19
+              },
+              {
+                "Key": "U",
+                "Value": 20
+              },
+              {
+                "Key": "V",
+                "Value": 21
+              },
+              {
+                "Key": "W",
+                "Value": 22
+              },
+              {
+                "Key": "X",
+                "Value": 23
+              },
+              {
+                "Key": "Y",
+                "Value": 24
+              },
+              {
+                "Key": "Z",
+                "Value": 25
+              },
+              {
+                "Key": "a",
+                "Value": 26
+              },
+              {
+                "Key": "b",
+                "Value": 27
+              },
+              {
+                "Key": "c",
+                "Value": 28
+              },
+              {
+                "Key": "d",
+                "Value": 29
+              },
+              {
+                "Key": "e",
+                "Value": 30
+              },
+              {
+                "Key": "f",
+                "Value": 31
+              },
+              {
+                "Key": "g",
+                "Value": 32
+              },
+              {
+                "Key": "h",
+                "Value": 33
+              },
+              {
+                "Key": "i",
+                "Value": 34
+              },
+              {
+                "Key": "j",
+                "Value": 35
+              },
+              {
+                "Key": "k",
+                "Value": 36
+              },
+              {
+                "Key": "l",
+                "Value": 37
+              },
+              {
+                "Key": "m",
+                "Value": 38
+              },
+              {
+                "Key": "n",
+                "Value": 39
+              },
+              {
+                "Key": "o",
+                "Value": 40
+              },
+              {
+                "Key": "p",
+                "Value": 41
+              },
+              {
+                "Key": "q",
+                "Value": 42
+              },
+              {
+                "Key": "r",
+                "Value": 43
+              },
+              {
+                "Key": "s",
+                "Value": 44
+              },
+              {
+                "Key": "t",
+                "Value": 45
+              },
+              {
+                "Key": "u",
+                "Value": 46
+              },
+              {
+                "Key": "v",
+                "Value": 47
+              },
+              {
+                "Key": "w",
+                "Value": 48
+              },
+              {
+                "Key": "x",
+                "Value": 49
+              },
+              {
+                "Key": "y",
+                "Value": 50
+              },
+              {
+                "Key": "z",
+                "Value": 51
+              },
+              {
+                "Key": "0",
+                "Value": 52
+              },
+              {
+                "Key": "1",
+                "Value": 53
+              },
+              {
+                "Key": "2",
+                "Value": 54
+              },
+              {
+                "Key": "3",
+                "Value": 55
+              },
+              {
+                "Key": "4",
+                "Value": 56
+              },
+              {
+                "Key": "5",
+                "Value": 57
+              },
+              {
+                "Key": "6",
+                "Value": 58
+              },
+              {
+                "Key": "7",
+                "Value": 59
+              },
+              {
+                "Key": "8",
+                "Value": 60
+              },
+              {
+                "Key": "9",
+                "Value": 61
+              },
+              {
+                "Key": ".",
+                "Value": 62
+              },
+              {
+                "Key": ",",
+                "Value": 63
+              },
+              {
+                "Key": ";",
+                "Value": 64
+              },
+              {
+                "Key": ":",
+                "Value": 65
+              },
+              {
+                "Key": "?",
+                "Value": 66
+              },
+              {
+                "Key": "!",
+                "Value": 67
+              },
+              {
+                "Key": "\"",
+                "Value": 68
+              },
+              {
+                "Key": "'",
+                "Value": 69
+              },
+              {
+                "Key": "+",
+                "Value": 70
+              },
+              {
+                "Key": "-",
+                "Value": 71
+              },
+              {
+                "Key": "=",
+                "Value": 72
+              },
+              {
+                "Key": "*",
+                "Value": 73
+              },
+              {
+                "Key": "%",
+                "Value": 74
+              },
+              {
+                "Key": "_",
+                "Value": 75
+              },
+              {
+                "Key": "(",
+                "Value": 76
+              },
+              {
+                "Key": ")",
+                "Value": 77
+              },
+              {
+                "Key": "[",
+                "Value": 78
+              },
+              {
+                "Key": "]",
+                "Value": 79
+              },
+              {
+                "Key": "{",
+                "Value": 80
+              },
+              {
+                "Key": "}",
+                "Value": 81
+              },
+              {
+                "Key": "~",
+                "Value": 82
+              },
+              {
+                "Key": "#",
+                "Value": 83
+              },
+              {
+                "Key": "&",
+                "Value": 84
+              },
+              {
+                "Key": "@",
+                "Value": 85
+              },
+              {
+                "Key": "©",
+                "Value": 86
+              },
+              {
+                "Key": "®",
+                "Value": 87
+              },
+              {
+                "Key": "™",
+                "Value": 88
+              },
+              {
+                "Key": "°",
+                "Value": 89
+              },
+              {
+                "Key": "^",
+                "Value": 90
+              },
+              {
+                "Key": "`",
+                "Value": 91
+              },
+              {
+                "Key": "|",
+                "Value": 92
+              },
+              {
+                "Key": "/",
+                "Value": 93
+              },
+              {
+                "Key": "\\",
+                "Value": 94
+              },
+              {
+                "Key": "<",
+                "Value": 95
+              },
+              {
+                "Key": ">",
+                "Value": 96
+              },
+              {
+                "Key": "…",
+                "Value": 97
+              },
+              {
+                "Key": "€",
+                "Value": 98
+              },
+              {
+                "Key": "$",
+                "Value": 99
+              },
+              {
+                "Key": "£",
+                "Value": 100
+              },
+              {
+                "Key": "¢",
+                "Value": 101
+              },
+              {
+                "Key": "¿",
+                "Value": 102
+              },
+              {
+                "Key": "¡",
+                "Value": 103
+              },
+              {
+                "Key": "“",
+                "Value": 104
+              },
+              {
+                "Key": "”",
+                "Value": 105
+              },
+              {
+                "Key": "‘",
+                "Value": 106
+              },
+              {
+                "Key": "’",
+                "Value": 107
+              },
+              {
+                "Key": "«",
+                "Value": 108
+              },
+              {
+                "Key": "»",
+                "Value": 109
+              },
+              {
+                "Key": "‹",
+                "Value": 110
+              },
+              {
+                "Key": "›",
+                "Value": 111
+              },
+              {
+                "Key": "„",
+                "Value": 112
+              },
+              {
+                "Key": "‚",
+                "Value": 113
+              },
+              {
+                "Key": "·",
+                "Value": 114
+              },
+              {
+                "Key": "•",
+                "Value": 115
+              },
+              {
+                "Key": " ",
+                "Value": 116
+              }
+            ]
+          },
+          "_characterLayout": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!\"'+-=*%_()[]{}~#&@©®™°^`|/\\<>…€$£¢¿¡“”‘’«»‹›„‚·• ",
+          "Kerning": 0,
+          "Id": "0d1786bc-8fa7-4655-b181-f7a5832e7dec",
+          "Name": "dust_7_clean"
+        }
+      ]
+    },
+    "_iconSets": {
+      "$id": "156",
+      "$values": []
+    },
+    "_spriteAnimations": {
+      "$id": "157",
+      "$values": []
+    },
+    "_packagedObjects": {
+      "$id": "158",
+      "$values": []
+    },
+    "Columns": 16,
+    "Rows": 8,
+    "ContentId": "dad78dc2-736d-4c8d-83b6-2a559b4b0a35",
+    "IgnoreInBuild": false,
+    "Notes": ""
+  },
+  "ContentFileExtension": ".png"
+}
