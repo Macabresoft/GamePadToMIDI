@@ -41,3 +41,37 @@
 #end Sprites\Fonts\dust_7_clean
 
 
+#begin .metadata\ccca162f-31e9-4499-b1f1-9075b7350243.m2dmeta
+/copy:.metadata\ccca162f-31e9-4499-b1f1-9075b7350243.m2dmeta
+#end .metadata\ccca162f-31e9-4499-b1f1-9075b7350243.m2dmeta
+#begin Sprites\Input\mid_gamepad
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites\Input\mid_gamepad.png
+#end Sprites\Input\mid_gamepad
+
+
+#begin .metadata\dc44eb1d-18c6-4f74-bc7c-87a79edd6be4.m2dmeta
+/copy:.metadata\dc44eb1d-18c6-4f74-bc7c-87a79edd6be4.m2dmeta
+#end .metadata\dc44eb1d-18c6-4f74-bc7c-87a79edd6be4.m2dmeta
+#begin Sprites\Input\MouseCursor
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites\Input\MouseCursor.png
+#end Sprites\Input\MouseCursor
+
+

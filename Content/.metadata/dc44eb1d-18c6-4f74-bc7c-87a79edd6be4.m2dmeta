@@ -1,0 +1,41 @@
+{
+  "$id": "194",
+  "_splitContentPath": {
+    "$id": "195",
+    "$values": [
+      "Sprites",
+      "Input",
+      "MouseCursor"
+    ]
+  },
+  "Asset": {
+    "$id": "196",
+    "$type": "Macabresoft.Macabre2D.Framework.SpriteSheet, Macabre2D.Framework",
+    "_autoTileSets": {
+      "$id": "197",
+      "$values": []
+    },
+    "_fonts": {
+      "$id": "198",
+      "$values": []
+    },
+    "_iconSets": {
+      "$id": "199",
+      "$values": []
+    },
+    "_spriteAnimations": {
+      "$id": "200",
+      "$values": []
+    },
+    "_packagedObjects": {
+      "$id": "201",
+      "$values": []
+    },
+    "Columns": 4,
+    "Rows": 4,
+    "ContentId": "dc44eb1d-18c6-4f74-bc7c-87a79edd6be4",
+    "IgnoreInBuild": false,
+    "Notes": ""
+  },
+  "ContentFileExtension": ".png"
+}

@@ -1,0 +1,753 @@
+{
+  "$id": "841",
+  "_splitContentPath": {
+    "$id": "842",
+    "$values": [
+      "Sprites",
+      "Input",
+      "mid_gamepad"
+    ]
+  },
+  "Asset": {
+    "$id": "843",
+    "$type": "Macabresoft.Macabre2D.Framework.SpriteSheet, Macabre2D.Framework",
+    "_autoTileSets": {
+      "$id": "844",
+      "$values": []
+    },
+    "_fonts": {
+      "$id": "845",
+      "$values": []
+    },
+    "_iconSets": {
+      "$id": "846",
+      "$values": [
+        {
+          "$id": "847",
+          "$type": "Macabresoft.Macabre2D.Framework.GamePadIconSet, Macabre2D.Framework",
+          "_keyToIcons": {
+            "$id": "848",
+            "$values": [
+              {
+                "Key": 1,
+                "Value": {
+                  "$id": "849",
+                  "Key": 1,
+                  "Kerning": 0,
+                  "SpriteIndex": 35
+                }
+              },
+              {
+                "Key": 2,
+                "Value": {
+                  "$id": "850",
+                  "Key": 2,
+                  "Kerning": 0,
+                  "SpriteIndex": 32
+                }
+              },
+              {
+                "Key": 4,
+                "Value": {
+                  "$id": "851",
+                  "Key": 4,
+                  "Kerning": 0,
+                  "SpriteIndex": 34
+                }
+              },
+              {
+                "Key": 8,
+                "Value": {
+                  "$id": "852",
+                  "Key": 8,
+                  "Kerning": 0,
+                  "SpriteIndex": 33
+                }
+              },
+              {
+                "Key": 16,
+                "Value": {
+                  "$id": "853",
+                  "Key": 16,
+                  "Kerning": 0,
+                  "SpriteIndex": 48
+                }
+              },
+              {
+                "Key": 32,
+                "Value": {
+                  "$id": "854",
+                  "Key": 32,
+                  "Kerning": 0,
+                  "SpriteIndex": 49
+                }
+              },
+              {
+                "Key": 64,
+                "Value": {
+                  "$id": "855",
+                  "Key": 64,
+                  "Kerning": 0,
+                  "SpriteIndex": 44
+                }
+              },
+              {
+                "Key": 128,
+                "Value": {
+                  "$id": "856",
+                  "Key": 128,
+                  "Kerning": 0,
+                  "SpriteIndex": 45
+                }
+              },
+              {
+                "Key": 256,
+                "Value": {
+                  "$id": "857",
+                  "Key": 256,
+                  "Kerning": 0,
+                  "SpriteIndex": 16
+                }
+              },
+              {
+                "Key": 512,
+                "Value": {
+                  "$id": "858",
+                  "Key": 512,
+                  "Kerning": 0,
+                  "SpriteIndex": 17
+                }
+              },
+              {
+                "Key": 2048,
+                "Value": {
+                  "$id": "859",
+                  "Key": 2048,
+                  "Kerning": 0,
+                  "SpriteIndex": null
+                }
+              },
+              {
+                "Key": 4096,
+                "Value": {
+                  "$id": "860",
+                  "Key": 4096,
+                  "Kerning": 0,
+                  "SpriteIndex": 0
+                }
+              },
+              {
+                "Key": 8192,
+                "Value": {
+                  "$id": "861",
+                  "Key": 8192,
+                  "Kerning": 0,
+                  "SpriteIndex": 1
+                }
+              },
+              {
+                "Key": 16384,
+                "Value": {
+                  "$id": "862",
+                  "Key": 16384,
+                  "Kerning": 0,
+                  "SpriteIndex": 2
+                }
+              },
+              {
+                "Key": 32768,
+                "Value": {
+                  "$id": "863",
+                  "Key": 32768,
+                  "Kerning": 0,
+                  "SpriteIndex": 3
+                }
+              },
+              {
+                "Key": 2097152,
+                "Value": {
+                  "$id": "864",
+                  "Key": 2097152,
+                  "Kerning": 0,
+                  "SpriteIndex": 38
+                }
+              },
+              {
+                "Key": 4194304,
+                "Value": {
+                  "$id": "865",
+                  "Key": 4194304,
+                  "Kerning": 0,
+                  "SpriteIndex": 19
+                }
+              },
+              {
+                "Key": 8388608,
+                "Value": {
+                  "$id": "866",
+                  "Key": 8388608,
+                  "Kerning": 0,
+                  "SpriteIndex": 18
+                }
+              },
+              {
+                "Key": 16777216,
+                "Value": {
+                  "$id": "867",
+                  "Key": 16777216,
+                  "Kerning": 0,
+                  "SpriteIndex": 43
+                }
+              },
+              {
+                "Key": 33554432,
+                "Value": {
+                  "$id": "868",
+                  "Key": 33554432,
+                  "Kerning": 0,
+                  "SpriteIndex": 40
+                }
+              },
+              {
+                "Key": 67108864,
+                "Value": {
+                  "$id": "869",
+                  "Key": 67108864,
+                  "Kerning": 0,
+                  "SpriteIndex": 41
+                }
+              },
+              {
+                "Key": 134217728,
+                "Value": {
+                  "$id": "870",
+                  "Key": 134217728,
+                  "Kerning": 0,
+                  "SpriteIndex": 42
+                }
+              },
+              {
+                "Key": 268435456,
+                "Value": {
+                  "$id": "871",
+                  "Key": 268435456,
+                  "Kerning": 0,
+                  "SpriteIndex": 39
+                }
+              },
+              {
+                "Key": 536870912,
+                "Value": {
+                  "$id": "872",
+                  "Key": 536870912,
+                  "Kerning": 0,
+                  "SpriteIndex": 36
+                }
+              },
+              {
+                "Key": 1073741824,
+                "Value": {
+                  "$id": "873",
+                  "Key": 1073741824,
+                  "Kerning": 0,
+                  "SpriteIndex": 37
+                }
+              }
+            ]
+          },
+          "Kerning": 0,
+          "Id": "051af11e-0adf-4e91-932e-5c77276878c9",
+          "Name": "X Buttons"
+        },
+        {
+          "$id": "874",
+          "$type": "Macabresoft.Macabre2D.Framework.GamePadIconSet, Macabre2D.Framework",
+          "_keyToIcons": {
+            "$id": "875",
+            "$values": [
+              {
+                "Key": 1,
+                "Value": {
+                  "$id": "876",
+                  "Key": 1,
+                  "Kerning": 0,
+                  "SpriteIndex": 35
+                }
+              },
+              {
+                "Key": 2,
+                "Value": {
+                  "$id": "877",
+                  "Key": 2,
+                  "Kerning": 0,
+                  "SpriteIndex": 32
+                }
+              },
+              {
+                "Key": 4,
+                "Value": {
+                  "$id": "878",
+                  "Key": 4,
+                  "Kerning": 0,
+                  "SpriteIndex": 34
+                }
+              },
+              {
+                "Key": 8,
+                "Value": {
+                  "$id": "879",
+                  "Key": 8,
+                  "Kerning": 0,
+                  "SpriteIndex": 33
+                }
+              },
+              {
+                "Key": 16,
+                "Value": {
+                  "$id": "880",
+                  "Key": 16,
+                  "Kerning": 0,
+                  "SpriteIndex": 50
+                }
+              },
+              {
+                "Key": 32,
+                "Value": {
+                  "$id": "881",
+                  "Key": 32,
+                  "Kerning": 0,
+                  "SpriteIndex": 51
+                }
+              },
+              {
+                "Key": 64,
+                "Value": {
+                  "$id": "882",
+                  "Key": 64,
+                  "Kerning": 0,
+                  "SpriteIndex": 44
+                }
+              },
+              {
+                "Key": 128,
+                "Value": {
+                  "$id": "883",
+                  "Key": 128,
+                  "Kerning": 0,
+                  "SpriteIndex": 45
+                }
+              },
+              {
+                "Key": 256,
+                "Value": {
+                  "$id": "884",
+                  "Key": 256,
+                  "Kerning": 0,
+                  "SpriteIndex": 20
+                }
+              },
+              {
+                "Key": 512,
+                "Value": {
+                  "$id": "885",
+                  "Key": 512,
+                  "Kerning": 0,
+                  "SpriteIndex": 21
+                }
+              },
+              {
+                "Key": 2048,
+                "Value": {
+                  "$id": "886",
+                  "Key": 2048,
+                  "Kerning": 0,
+                  "SpriteIndex": null
+                }
+              },
+              {
+                "Key": 4096,
+                "Value": {
+                  "$id": "887",
+                  "Key": 4096,
+                  "Kerning": 0,
+                  "SpriteIndex": 4
+                }
+              },
+              {
+                "Key": 8192,
+                "Value": {
+                  "$id": "888",
+                  "Key": 8192,
+                  "Kerning": 0,
+                  "SpriteIndex": 5
+                }
+              },
+              {
+                "Key": 16384,
+                "Value": {
+                  "$id": "889",
+                  "Key": 16384,
+                  "Kerning": 0,
+                  "SpriteIndex": 6
+                }
+              },
+              {
+                "Key": 32768,
+                "Value": {
+                  "$id": "890",
+                  "Key": 32768,
+                  "Kerning": 0,
+                  "SpriteIndex": 7
+                }
+              },
+              {
+                "Key": 2097152,
+                "Value": {
+                  "$id": "891",
+                  "Key": 2097152,
+                  "Kerning": 0,
+                  "SpriteIndex": 38
+                }
+              },
+              {
+                "Key": 4194304,
+                "Value": {
+                  "$id": "892",
+                  "Key": 4194304,
+                  "Kerning": 0,
+                  "SpriteIndex": 23
+                }
+              },
+              {
+                "Key": 8388608,
+                "Value": {
+                  "$id": "893",
+                  "Key": 8388608,
+                  "Kerning": 0,
+                  "SpriteIndex": 22
+                }
+              },
+              {
+                "Key": 16777216,
+                "Value": {
+                  "$id": "894",
+                  "Key": 16777216,
+                  "Kerning": 0,
+                  "SpriteIndex": 43
+                }
+              },
+              {
+                "Key": 33554432,
+                "Value": {
+                  "$id": "895",
+                  "Key": 33554432,
+                  "Kerning": 0,
+                  "SpriteIndex": 40
+                }
+              },
+              {
+                "Key": 67108864,
+                "Value": {
+                  "$id": "896",
+                  "Key": 67108864,
+                  "Kerning": 0,
+                  "SpriteIndex": 41
+                }
+              },
+              {
+                "Key": 134217728,
+                "Value": {
+                  "$id": "897",
+                  "Key": 134217728,
+                  "Kerning": 0,
+                  "SpriteIndex": 42
+                }
+              },
+              {
+                "Key": 268435456,
+                "Value": {
+                  "$id": "898",
+                  "Key": 268435456,
+                  "Kerning": 0,
+                  "SpriteIndex": 39
+                }
+              },
+              {
+                "Key": 536870912,
+                "Value": {
+                  "$id": "899",
+                  "Key": 536870912,
+                  "Kerning": 0,
+                  "SpriteIndex": 36
+                }
+              },
+              {
+                "Key": 1073741824,
+                "Value": {
+                  "$id": "900",
+                  "Key": 1073741824,
+                  "Kerning": 0,
+                  "SpriteIndex": 37
+                }
+              }
+            ]
+          },
+          "Kerning": 0,
+          "Id": "f67ecd51-0bc3-4f1b-aca7-f05d323d2cf6",
+          "Name": "S Buttons"
+        },
+        {
+          "$id": "901",
+          "$type": "Macabresoft.Macabre2D.Framework.GamePadIconSet, Macabre2D.Framework",
+          "_keyToIcons": {
+            "$id": "902",
+            "$values": [
+              {
+                "Key": 1,
+                "Value": {
+                  "$id": "903",
+                  "Key": 1,
+                  "Kerning": 0,
+                  "SpriteIndex": 35
+                }
+              },
+              {
+                "Key": 2,
+                "Value": {
+                  "$id": "904",
+                  "Key": 2,
+                  "Kerning": 0,
+                  "SpriteIndex": 32
+                }
+              },
+              {
+                "Key": 4,
+                "Value": {
+                  "$id": "905",
+                  "Key": 4,
+                  "Kerning": 0,
+                  "SpriteIndex": 34
+                }
+              },
+              {
+                "Key": 8,
+                "Value": {
+                  "$id": "906",
+                  "Key": 8,
+                  "Kerning": 0,
+                  "SpriteIndex": 33
+                }
+              },
+              {
+                "Key": 16,
+                "Value": {
+                  "$id": "907",
+                  "Key": 16,
+                  "Kerning": 0,
+                  "SpriteIndex": 52
+                }
+              },
+              {
+                "Key": 32,
+                "Value": {
+                  "$id": "908",
+                  "Key": 32,
+                  "Kerning": 0,
+                  "SpriteIndex": 53
+                }
+              },
+              {
+                "Key": 64,
+                "Value": {
+                  "$id": "909",
+                  "Key": 64,
+                  "Kerning": 0,
+                  "SpriteIndex": 44
+                }
+              },
+              {
+                "Key": 128,
+                "Value": {
+                  "$id": "910",
+                  "Key": 128,
+                  "Kerning": 0,
+                  "SpriteIndex": 45
+                }
+              },
+              {
+                "Key": 256,
+                "Value": {
+                  "$id": "911",
+                  "Key": 256,
+                  "Kerning": 0,
+                  "SpriteIndex": 24
+                }
+              },
+              {
+                "Key": 512,
+                "Value": {
+                  "$id": "912",
+                  "Key": 512,
+                  "Kerning": 0,
+                  "SpriteIndex": 25
+                }
+              },
+              {
+                "Key": 2048,
+                "Value": {
+                  "$id": "913",
+                  "Key": 2048,
+                  "Kerning": 0,
+                  "SpriteIndex": null
+                }
+              },
+              {
+                "Key": 4096,
+                "Value": {
+                  "$id": "914",
+                  "Key": 4096,
+                  "Kerning": 0,
+                  "SpriteIndex": 9
+                }
+              },
+              {
+                "Key": 8192,
+                "Value": {
+                  "$id": "915",
+                  "Key": 8192,
+                  "Kerning": 0,
+                  "SpriteIndex": 8
+                }
+              },
+              {
+                "Key": 16384,
+                "Value": {
+                  "$id": "916",
+                  "Key": 16384,
+                  "Kerning": 0,
+                  "SpriteIndex": 11
+                }
+              },
+              {
+                "Key": 32768,
+                "Value": {
+                  "$id": "917",
+                  "Key": 32768,
+                  "Kerning": 0,
+                  "SpriteIndex": 10
+                }
+              },
+              {
+                "Key": 2097152,
+                "Value": {
+                  "$id": "918",
+                  "Key": 2097152,
+                  "Kerning": 0,
+                  "SpriteIndex": 38
+                }
+              },
+              {
+                "Key": 4194304,
+                "Value": {
+                  "$id": "919",
+                  "Key": 4194304,
+                  "Kerning": 0,
+                  "SpriteIndex": 27
+                }
+              },
+              {
+                "Key": 8388608,
+                "Value": {
+                  "$id": "920",
+                  "Key": 8388608,
+                  "Kerning": 0,
+                  "SpriteIndex": 26
+                }
+              },
+              {
+                "Key": 16777216,
+                "Value": {
+                  "$id": "921",
+                  "Key": 16777216,
+                  "Kerning": 0,
+                  "SpriteIndex": 43
+                }
+              },
+              {
+                "Key": 33554432,
+                "Value": {
+                  "$id": "922",
+                  "Key": 33554432,
+                  "Kerning": 0,
+                  "SpriteIndex": 40
+                }
+              },
+              {
+                "Key": 67108864,
+                "Value": {
+                  "$id": "923",
+                  "Key": 67108864,
+                  "Kerning": 0,
+                  "SpriteIndex": 41
+                }
+              },
+              {
+                "Key": 134217728,
+                "Value": {
+                  "$id": "924",
+                  "Key": 134217728,
+                  "Kerning": 0,
+                  "SpriteIndex": 42
+                }
+              },
+              {
+                "Key": 268435456,
+                "Value": {
+                  "$id": "925",
+                  "Key": 268435456,
+                  "Kerning": 0,
+                  "SpriteIndex": 39
+                }
+              },
+              {
+                "Key": 536870912,
+                "Value": {
+                  "$id": "926",
+                  "Key": 536870912,
+                  "Kerning": 0,
+                  "SpriteIndex": 36
+                }
+              },
+              {
+                "Key": 1073741824,
+                "Value": {
+                  "$id": "927",
+                  "Key": 1073741824,
+                  "Kerning": 0,
+                  "SpriteIndex": 37
+                }
+              }
+            ]
+          },
+          "Kerning": 0,
+          "Id": "85a16737-dee1-4a16-a391-5a70829dad98",
+          "Name": "N Buttons"
+        }
+      ]
+    },
+    "_spriteAnimations": {
+      "$id": "928",
+      "$values": []
+    },
+    "_packagedObjects": {
+      "$id": "929",
+      "$values": []
+    },
+    "Columns": 8,
+    "Rows": 8,
+    "ContentId": "ccca162f-31e9-4499-b1f1-9075b7350243",
+    "IgnoreInBuild": false,
+    "Notes": ""
+  },
+  "ContentFileExtension": ".png"
+}
