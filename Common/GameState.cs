@@ -33,7 +33,8 @@ public class GameState {
     /// Initializes this instance.
     /// </summary>
     /// <param name="dataManager">The data manager.</param>
-    public void Initialize(IDataManager dataManager) {
+    /// <param name="customSettings">The custom settings.</param>
+    public void Initialize(IDataManager dataManager, CustomSettings customSettings) {
         this._dataManager = dataManager;
 
         try {
@@ -52,9 +53,21 @@ public class GameState {
             this._isBusy = false;
         }
 
-        this._existingSaves.Sort((x, y) => DateTime.Compare(x.LastSaved, y.LastSaved));
-        if (this._existingSaves.FirstOrDefault() is { } existingSave) {
-            this.CurrentSave = existingSave;
+        SaveData? currentSave = null;
+        if (this._existingSaves.Any()) {
+            currentSave = this._existingSaves.FirstOrDefault(x => x.Id == customSettings.CurrentSave);
+
+            if (currentSave != null) {
+                this.CurrentSave = currentSave;
+            }
+            else {
+                this._existingSaves.Sort((x, y) => DateTime.Compare(x.LastSaved, y.LastSaved));
+                currentSave = this._existingSaves.FirstOrDefault();
+            }
+        }
+
+        if (currentSave != null) {
+            this.CurrentSave = currentSave;
         }
         else {
             this.CreateNew();
