@@ -4,12 +4,26 @@ using Macabresoft.Core;
 using Macabresoft.Macabre2D.Common;
 
 /// <summary>
+/// Events that can be raised to the game.
+/// </summary>
+public enum GameAction {
+    Shutdown,
+    SaveSettings,
+    SaveAndApplySettings
+}
+
+/// <summary>
 /// A class accessible via the containing game that can include any information about the currently running game that might be relevant in the current scene or across scenes.
 /// </summary>
 public class GameState {
     private readonly List<SaveData> _existingSaves = new();
     private IDataManager _dataManager = EmptyDataManager.Instance;
     private bool _isBusy;
+
+    /// <summary>
+    /// An event that is called when it is requested that the game should perform a specific action.
+    /// </summary>
+    public event EventHandler<GameAction>? ActionRequested;
 
     /// <summary>
     /// Gets the current save data.
@@ -86,6 +100,14 @@ public class GameState {
                 this._existingSaves.Add(saveData);
             }
         }
+    }
+
+    /// <summary>
+    /// Raises an event which requests an action be taken by the game.
+    /// </summary>
+    /// <param name="action">The action.</param>
+    public void RaiseActionRequested(GameAction action) {
+        this.ActionRequested.SafeInvoke(this, action);
     }
 
     /// <summary>
