@@ -7,12 +7,16 @@ public class SavableVerticalMenu : VerticalMenuController {
         base.Deactivate();
 
         if (this.HasChanges) {
-            this.Game.SaveUserSettings();
+            this.OnSave();
         }
     }
 
     public override void OnPush() {
         base.OnPush();
         this.HasChanges = false;
+    }
+
+    protected virtual void OnSave() {
+        this.Game.SaveUserSettings();
     }
 }

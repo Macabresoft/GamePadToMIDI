@@ -1,0 +1,222 @@
+{
+  "$id": "4",
+  "_systems": {
+    "$id": "5",
+    "$values": [
+      {
+        "$id": "6",
+        "$type": "Macabresoft.Macabre2D.Project.Gameplay.MenuSystem, Macabre2D.Project.Gameplay",
+        "CanBackOut": false,
+        "FirstMenu": {
+          "EntityId": "15f380e8-fc1f-401b-b583-7f75010bee46"
+        },
+        "Id": "9d9307fe-79be-4d65-aab9-a1847fc4a8c8",
+        "Name": "MenuSystem",
+        "ShouldUpdate": true
+      },
+      {
+        "$id": "7",
+        "$type": "Macabresoft.Macabre2D.Framework.RenderSystem, Macabre2D.Framework",
+        "Id": "e471b9f9-64c8-466e-aa4b-4f983162feaa",
+        "Name": "RenderSystem",
+        "ShouldUpdate": true
+      },
+      {
+        "$id": "8",
+        "$type": "Macabresoft.Macabre2D.Framework.InputSystem, Macabre2D.Framework",
+        "Id": "ded84141-7b23-4d93-88fd-edaad0463098",
+        "Name": "InputSystem",
+        "ShouldUpdate": true
+      }
+    ]
+  },
+  "_children": {
+    "$id": "9",
+    "$values": [
+      {
+        "$id": "10",
+        "$type": "Macabresoft.Macabre2D.Framework.Camera, Macabre2D.Framework",
+        "_children": {
+          "$id": "11",
+          "$values": [
+            {
+              "$id": "12",
+              "$type": "Macabresoft.Macabre2D.Project.Gameplay.MenuMouseCursor, Macabre2D.Project.Gameplay",
+              "_children": {
+                "$id": "13",
+                "$values": []
+              },
+              "ShouldUpdate": true,
+              "UpdateOrder": 0,
+              "PixelSnap": 0,
+              "RenderOrder": 1000,
+              "RenderOutOfBounds": true,
+              "ShouldRender": false,
+              "Id": "d3e194c7-1348-4ae9-9986-8ac33cf1cb3f",
+              "IsEnabled": true,
+              "Layers": 1,
+              "Name": "MenuMouseCursor",
+              "Local Position": "0, 0",
+              "Inheritance": 3,
+              "Color": {
+                "R": 255,
+                "G": 255,
+                "B": 255,
+                "A": 255
+              },
+              "Render Options": {
+                "$id": "14",
+                "Flip Horizontal": false,
+                "Flip Vertical": false,
+                "Offset Type": 8,
+                "Offset": "0, -16"
+              },
+              "CameraReference": {
+                "EntityId": "a7166283-80ae-4a45-962f-05694349135c"
+              },
+              "MouseCursorIconSet": {
+                "PackagedAssetId": "fb8a9971-b90d-415d-8ecd-54a8eaca1a66",
+                "ContentId": "dc44eb1d-18c6-4f74-bc7c-87a79edd6be4"
+              }
+            },
+            {
+              "$id": "15",
+              "$type": "Macabresoft.Macabre2D.Framework.BoundableCover, Macabre2D.Framework",
+              "_children": {
+                "$id": "16",
+                "$values": []
+              },
+              "Color": {
+                "R": 0,
+                "G": 0,
+                "B": 0,
+                "A": 200
+              },
+              "Padding": "0, 0",
+              "PixelSnap": 1,
+              "RenderOrder": -1000,
+              "RenderOutOfBounds": true,
+              "ShouldRender": true,
+              "Id": "92b8bde3-76ab-4ed4-b049-98b5dbc25644",
+              "IsEnabled": true,
+              "Layers": 1,
+              "Name": "MenuBackground",
+              "Local Position": "0, 0",
+              "Inheritance": 3
+            },
+            {
+              "$id": "17",
+              "$type": "Macabresoft.Macabre2D.Framework.DockingContainer, Macabre2D.Framework",
+              "_children": {
+                "$id": "18",
+                "$values": [
+                  {
+                    "$id": "19",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.SettingsSubMenu, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "20",
+                      "$values": []
+                    },
+                    "HoldDownTimer": {
+                      "Timer": {
+                        "TimeLimit": 0.25
+                      }
+                    },
+                    "HoldUpTimer": {
+                      "Timer": {
+                        "TimeLimit": 0.25
+                      }
+                    },
+                    "ResetFocusedMenuItemOnEnable": true,
+                    "ShouldScroll": true,
+                    "FontCategory": 1,
+                    "PixelSnap": 0,
+                    "RenderOutOfBounds": true,
+                    "ShouldRender": true,
+                    "IsCollapsed": false,
+                    "Margin": "1, 1",
+                    "Location": 1,
+                    "Id": "15f380e8-fc1f-401b-b583-7f75010bee46",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "SettingsSubMenu",
+                    "Local Position": "0, 0",
+                    "Inheritance": 3
+                  }
+                ]
+              },
+              "InheritParentBoundingArea": true,
+              "Height": 0.0,
+              "OffsetOptions": {
+                "$id": "21",
+                "Offset Type": 4,
+                "Offset": "0, 0"
+              },
+              "Width": 0.0,
+              "Location": 1,
+              "Id": "7f45b786-2095-409b-8493-819d3b2e08ec",
+              "IsEnabled": true,
+              "Layers": 1,
+              "Name": "DockingContainer",
+              "Local Position": "0, 0",
+              "Inheritance": 3
+            }
+          ]
+        },
+        "ColorOverride": {
+          "IsEnabled": false,
+          "Value": {
+            "R": 255,
+            "G": 255,
+            "B": 255,
+            "A": 255
+          }
+        },
+        "Offset Options": {
+          "Offset Type": 3,
+          "Offset": "-1280, -681.5"
+        },
+        "Shader": {
+          "Configuration": {
+            "$id": "22",
+            "$type": "Macabresoft.Macabre2D.Framework.ShaderConfiguration, Macabre2D.Framework"
+          },
+          "ContentId": "00000000-0000-0000-0000-000000000000"
+        },
+        "Layers to Exclude": 0,
+        "Layers to Render": 65535,
+        "PixelSnap": 0,
+        "RenderOrder": 0,
+        "Sampler State": 5,
+        "Id": "a7166283-80ae-4a45-962f-05694349135c",
+        "IsEnabled": true,
+        "Layers": 1,
+        "Name": "Camera",
+        "Local Position": "0, 0",
+        "Inheritance": 3,
+        "Override Common View Height": true,
+        "View Height": 10.0
+      }
+    ]
+  },
+  "State": {},
+  "BackgroundColor": {
+    "R": 0,
+    "G": 0,
+    "B": 0,
+    "A": 255
+  },
+  "BoundingArea": {
+    "$id": "23",
+    "Maximum": "0, 0",
+    "Minimum": "0, 0"
+  },
+  "Version": "0.0.0.0",
+  "Tile Size": "1, 1",
+  "Id": "5ae72ee2-e935-48b6-8e9e-9b1babaa4fcd",
+  "IsEnabled": true,
+  "Layers": 1,
+  "Name": "New Scene",
+  "Local Position": "0, 0",
+  "Inheritance": 3
+}

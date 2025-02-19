@@ -24,6 +24,14 @@
 #end Default.m2dscene
 
 
+#begin .metadata\afca8156-3436-4a17-9062-4932495d3808.m2dmeta
+/copy:.metadata\afca8156-3436-4a17-9062-4932495d3808.m2dmeta
+#end .metadata\afca8156-3436-4a17-9062-4932495d3808.m2dmeta
+#begin SettingsScene.m2dscene
+/copy:SettingsScene.m2dscene
+#end SettingsScene.m2dscene
+
+
 #begin .metadata\dad78dc2-736d-4c8d-83b6-2a559b4b0a35.m2dmeta
 /copy:.metadata\dad78dc2-736d-4c8d-83b6-2a559b4b0a35.m2dmeta
 #end .metadata\dad78dc2-736d-4c8d-83b6-2a559b4b0a35.m2dmeta

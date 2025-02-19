@@ -114,15 +114,14 @@ public class GameState {
     /// Saves the current save data, provided it isn't busy doing a save or a load already.
     /// </summary>
     public void Save() {
-        if (this.CurrentSave is { } saveData && !this._isBusy) {
+        if (!this._isBusy) {
             try {
                 this._isBusy = true;
-                saveData.LastSaved = DateTime.Now;
-                Serializer.Instance.Serialize(saveData, this.GetCurrentSaveFilePath(saveData));
-
-                // It is the most recently saved, so put it at the top of the list.
-                this._existingSaves.Remove(saveData);
-                this._existingSaves.InsertOrAdd(0, saveData);
+                foreach (var saveData in this._existingSaves.Where(x => x.HasChanges)) {
+                    saveData.LastSaved = DateTime.Now;
+                    saveData.HasChanges = false;
+                    Serializer.Instance.Serialize(saveData, this.GetCurrentSaveFilePath(saveData));
+                }
             }
             finally {
                 this._isBusy = false;

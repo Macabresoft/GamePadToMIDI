@@ -1,10 +1,10 @@
 {
-  "$id": "686",
+  "$id": "7",
   "_systems": {
-    "$id": "687",
+    "$id": "8",
     "$values": [
       {
-        "$id": "688",
+        "$id": "9",
         "$type": "Macabresoft.Macabre2D.Framework.UpdateSystem, Macabre2D.Framework",
         "Layers to Update": {
           "IsEnabled": false,
@@ -15,15 +15,15 @@
         "ShouldUpdate": true
       },
       {
-        "$id": "689",
+        "$id": "10",
         "$type": "Macabresoft.Macabre2D.Framework.RenderSystem, Macabre2D.Framework",
         "Id": "74e15895-956d-4948-8cad-7052857f543d",
         "Name": "RenderSystem",
         "ShouldUpdate": true
       },
       {
-        "$id": "690",
-        "$type": "Macabresoft.Macabre2D.Project.Gameplay.MIDI.MidiSystem, Macabre2D.Project.Gameplay",
+        "$id": "11",
+        "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiSystem, Macabre2D.Project.Gameplay",
         "Id": "7fa0e9e5-1bdb-494b-9ba8-57c977499e36",
         "Name": "MidiSystem",
         "ShouldUpdate": true
@@ -31,31 +31,31 @@
     ]
   },
   "_children": {
-    "$id": "691",
+    "$id": "12",
     "$values": [
       {
-        "$id": "692",
+        "$id": "13",
         "$type": "Macabresoft.Macabre2D.Framework.Camera, Macabre2D.Framework",
         "_children": {
-          "$id": "693",
+          "$id": "14",
           "$values": [
             {
-              "$id": "694",
+              "$id": "15",
               "$type": "Macabresoft.Macabre2D.Framework.DockingContainer, Macabre2D.Framework",
               "_children": {
-                "$id": "695",
+                "$id": "16",
                 "$values": [
                   {
-                    "$id": "696",
+                    "$id": "17",
                     "$type": "Macabresoft.Macabre2D.Framework.DockableWrapper, Macabre2D.Framework",
                     "_children": {
-                      "$id": "697",
+                      "$id": "18",
                       "$values": [
                         {
-                          "$id": "698",
-                          "$type": "Macabresoft.Macabre2D.Project.Gameplay.MIDI.MidiDeviceRenderer, Macabre2D.Project.Gameplay",
+                          "$id": "19",
+                          "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiDeviceRenderer, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "699",
+                            "$id": "20",
                             "$values": []
                           },
                           "FontReference": {
@@ -87,7 +87,7 @@
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 7,
-                            "Offset": "-85.5, -16"
+                            "Offset": "-11.5, -16"
                           }
                         }
                       ]
@@ -107,7 +107,7 @@
               "InheritParentBoundingArea": true,
               "Height": 0.0,
               "OffsetOptions": {
-                "$id": "700",
+                "$id": "21",
                 "Offset Type": 4,
                 "Offset": "0, 0"
               },
@@ -137,7 +137,7 @@
         },
         "Shader": {
           "Configuration": {
-            "$id": "701",
+            "$id": "22",
             "$type": "Macabresoft.Macabre2D.Framework.ShaderConfiguration, Macabre2D.Framework"
           },
           "ContentId": "00000000-0000-0000-0000-000000000000"
@@ -166,7 +166,7 @@
     "A": 255
   },
   "BoundingArea": {
-    "$id": "702",
+    "$id": "23",
     "Maximum": "0, 0",
     "Minimum": "0, 0"
   },

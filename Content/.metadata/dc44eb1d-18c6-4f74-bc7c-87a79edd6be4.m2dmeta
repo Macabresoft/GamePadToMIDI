@@ -1,7 +1,7 @@
 {
-  "$id": "194",
+  "$id": "251",
   "_splitContentPath": {
-    "$id": "195",
+    "$id": "252",
     "$values": [
       "Sprites",
       "Input",
@@ -9,26 +9,66 @@
     ]
   },
   "Asset": {
-    "$id": "196",
+    "$id": "253",
     "$type": "Macabresoft.Macabre2D.Framework.SpriteSheet, Macabre2D.Framework",
     "_autoTileSets": {
-      "$id": "197",
+      "$id": "254",
       "$values": []
     },
     "_fonts": {
-      "$id": "198",
+      "$id": "255",
       "$values": []
     },
     "_iconSets": {
-      "$id": "199",
-      "$values": []
+      "$id": "256",
+      "$values": [
+        {
+          "$id": "257",
+          "$type": "Macabresoft.Macabre2D.Framework.MouseCursorIconSet, Macabre2D.Framework",
+          "_keyToIcons": {
+            "$id": "258",
+            "$values": [
+              {
+                "Key": 1,
+                "Value": {
+                  "$id": "259",
+                  "Key": 1,
+                  "Kerning": 0,
+                  "SpriteIndex": 0
+                }
+              },
+              {
+                "Key": 2,
+                "Value": {
+                  "$id": "260",
+                  "Key": 2,
+                  "Kerning": 0,
+                  "SpriteIndex": 1
+                }
+              },
+              {
+                "Key": 3,
+                "Value": {
+                  "$id": "261",
+                  "Key": 3,
+                  "Kerning": 0,
+                  "SpriteIndex": 2
+                }
+              }
+            ]
+          },
+          "Kerning": 0,
+          "Id": "fb8a9971-b90d-415d-8ecd-54a8eaca1a66",
+          "Name": "Mouse Cursor"
+        }
+      ]
     },
     "_spriteAnimations": {
-      "$id": "200",
+      "$id": "262",
       "$values": []
     },
     "_packagedObjects": {
-      "$id": "201",
+      "$id": "263",
       "$values": []
     },
     "Columns": 4,

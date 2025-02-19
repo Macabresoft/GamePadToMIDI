@@ -213,7 +213,7 @@ public class SelectionSpinner : RenderableEntity {
             var options = this.GetOptions();
             foreach (var option in options) {
                 var spriteCharacters = new List<SpriteSheetFontCharacter>();
-                if (Resources.ResourceManager.TryGetString(option.ResourceName, out var text)) {
+                if (Resources.ResourceManager.TryGetString(option.Text, out var text)) {
                     foreach (var character in text) {
                         if (this._font.TryGetSpriteCharacter(character, out var spriteCharacter)) {
                             spriteCharacters.Add(spriteCharacter);
@@ -221,7 +221,7 @@ public class SelectionSpinner : RenderableEntity {
                     }
                 }
 
-                this._characterCollections.TryAdd(option.ResourceName, spriteCharacters);
+                this._characterCollections.TryAdd(option.Text, spriteCharacters);
             }
 
             if (this._font.TryGetSpriteCharacter(DecreaseCharacter, out var decreaseCharacter)) {

@@ -13,16 +13,19 @@ public class SaveData {
     private readonly Dictionary<Buttons, MidiNote> _buttonsToMidiNote = [];
 
     [DataMember]
-    public Guid Id { get; set; } = Guid.NewGuid();
+    public Guid Id { get; private set; } = Guid.NewGuid();
 
     [DataMember]
     public DateTime LastSaved { get; set; }
+    
+    public bool HasChanges { get; set; }
 
     public string GetFileName() => $"Game Pad to MIDI Save Data - ({this.Id}){FileExtension}";
 
     public void SetNote(Buttons button, MidiNote note) {
         if (MidiNoteBindingHelper.AvailableButtons.Contains(button)) {
             this._buttonsToMidiNote[button] = note;
+            this.HasChanges = true;
         }
     }
 

@@ -224,7 +224,7 @@ public abstract class SubMenu : ActivatableMenuElement, ISubMenu, IRenderableEnt
         return 0f;
     }
 
-    private void ApplySpinnerToMenuItem(MenuItem menuItem) {
+    protected void ApplySpinnerToMenuItem(MenuItem menuItem) {
         var spinner = menuItem.AddChild<SelectionSpinner>();
         spinner.LocalPosition = new Vector2(MenuItemDistanceFromCenter, 0f);
         spinner.EndCapPadding = 4;

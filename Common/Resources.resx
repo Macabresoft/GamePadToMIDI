@@ -36,4 +36,28 @@
     <data name="Menu_Prompts_TurnOn" xml:space="preserve">
         <value>Turn On</value>
     </data>
+    <data name="Menu_Settings_GamePadSelection_X" xml:space="preserve">
+        <value>X</value>
+    </data>
+    <data name="Menu_Settings_GamePadSelection_N" xml:space="preserve">
+        <value>N</value>
+    </data>
+    <data name="Menu_Settings_GamePadSelection_S" xml:space="preserve">
+        <value>S</value>
+    </data>
+    <data name="Menu_Settings_GamePadSelection" xml:space="preserve">
+        <value>Game Pad</value>
+    </data>
+    <data name="Menu_Settings" xml:space="preserve">
+        <value>Settings</value>
+    </data>
+    <data name="Menu_Settings_MidiDevice" xml:space="preserve">
+        <value>MIDI</value>
+    </data>
+    <data name="Menu_Settings_Note" xml:space="preserve">
+        <value>Note</value>
+    </data>
+    <data name="Menu_Settings_Velocity" xml:space="preserve">
+        <value>Velocity</value>
+    </data>
 </root>

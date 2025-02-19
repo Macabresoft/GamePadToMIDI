@@ -112,5 +112,77 @@ namespace Macabresoft.Macabre2D.Project.Common {
                 return ResourceManager.GetString("Menu_Return", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        public static string Menu_Settings {
+            get {
+                return ResourceManager.GetString("Menu_Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game Pad.
+        /// </summary>
+        public static string Menu_Settings_GamePadSelection {
+            get {
+                return ResourceManager.GetString("Menu_Settings_GamePadSelection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to N.
+        /// </summary>
+        public static string Menu_Settings_GamePadSelection_N {
+            get {
+                return ResourceManager.GetString("Menu_Settings_GamePadSelection_N", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to S.
+        /// </summary>
+        public static string Menu_Settings_GamePadSelection_S {
+            get {
+                return ResourceManager.GetString("Menu_Settings_GamePadSelection_S", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to X.
+        /// </summary>
+        public static string Menu_Settings_GamePadSelection_X {
+            get {
+                return ResourceManager.GetString("Menu_Settings_GamePadSelection_X", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MIDI.
+        /// </summary>
+        public static string Menu_Settings_MidiDevice {
+            get {
+                return ResourceManager.GetString("Menu_Settings_MidiDevice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Note.
+        /// </summary>
+        public static string Menu_Settings_Note {
+            get {
+                return ResourceManager.GetString("Menu_Settings_Note", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Velocity.
+        /// </summary>
+        public static string Menu_Settings_Velocity {
+            get {
+                return ResourceManager.GetString("Menu_Settings_Velocity", resourceCulture);
+            }
+        }
     }
 }
