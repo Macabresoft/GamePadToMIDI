@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework;
 public interface IMenuSystem {
     event EventHandler? MenuItemChanged;
 
-    ISubMenu FocusedMenu { get; }
+    IBaseMenu FocusedMenu { get; }
 
     void PopMenu();
 
@@ -19,22 +19,22 @@ public interface IMenuSystem {
 }
 
 public class MenuSystem : GameSystem, IMenuSystem {
-    private ISubMenu _focusedMenu = SubMenu.EmptyInstance;
+    private IBaseMenu _focusedMenu = BaseMenu.EmptyInstance;
 
     public event EventHandler? MenuItemChanged;
 
     public static IMenuSystem Empty { get; } = new EmptyMenuSystem();
 
     [DataMember]
-    public EntityReference<ISubMenu> FirstMenu { get; } = new();
+    public EntityReference<IBaseMenu> FirstMenu { get; } = new();
 
-    public ISubMenu FocusedMenu {
+    public IBaseMenu FocusedMenu {
         get => this._focusedMenu;
         private set {
             this._focusedMenu.PropertyChanged -= this.FocusedMenu_PropertyChanged;
             this._focusedMenu = value;
 
-            if (this.FocusedMenu != SubMenu.EmptyInstance) {
+            if (this.FocusedMenu != BaseMenu.EmptyInstance) {
                 this._focusedMenu.PropertyChanged += this.FocusedMenu_PropertyChanged;
             }
 
@@ -60,12 +60,12 @@ public class MenuSystem : GameSystem, IMenuSystem {
         this.FocusedMenu.OnPop();
 
         if (this.Game.TryPopScene(out _)) {
-            this.FocusedMenu = SubMenu.EmptyInstance;
+            this.FocusedMenu = BaseMenu.EmptyInstance;
             this.Unpause();
         }
     }
 
-    public void PushMenu(ISubMenu menu) {
+    public void PushMenu(IBaseMenu menu) {
         this.FocusedMenu = menu;
     }
 
@@ -99,13 +99,13 @@ public class MenuSystem : GameSystem, IMenuSystem {
     }
 
     private void FocusedMenu_PropertyChanged(object? sender, PropertyChangedEventArgs e) {
-        if (e.PropertyName == nameof(ISubMenu.FocusedMenuItem)) {
+        if (e.PropertyName == nameof(IBaseMenu.FocusedMenuItem)) {
             this.RaiseMenuItemChanged();
         }
     }
 
     private void Reset() {
-        this.FocusedMenu = this.FirstMenu.Entity ?? SubMenu.EmptyInstance;
+        this.FocusedMenu = this.FirstMenu.Entity ?? BaseMenu.EmptyInstance;
     }
 
     private void Scene_Activated(object? sender, EventArgs e) {
@@ -113,13 +113,13 @@ public class MenuSystem : GameSystem, IMenuSystem {
     }
 
     private void Unpause() {
-        this.FocusedMenu = SubMenu.EmptyInstance;
+        this.FocusedMenu = BaseMenu.EmptyInstance;
     }
 
     private class EmptyMenuSystem : IMenuSystem {
         public event EventHandler? MenuItemChanged;
 
-        public ISubMenu FocusedMenu => SubMenu.EmptyInstance;
+        public IBaseMenu FocusedMenu => BaseMenu.EmptyInstance;
 
         public void PopMenu() {
         }

@@ -5,7 +5,7 @@ using Macabresoft.Macabre2D.Project.Common;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-public class SettingsSubMenu : SavableVerticalMenu {
+public class SettingsSubMenu : BaseMenu {
     private bool _isLoaded;
 
     public override void Initialize(IScene scene, IEntity parent) {

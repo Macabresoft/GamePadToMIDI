@@ -1,13 +1,13 @@
 {
-  "$id": "34",
+  "$id": "1",
   "_splitContentPath": {
-    "$id": "35",
+    "$id": "2",
     "$values": [
       "SettingsScene"
     ]
   },
   "Asset": {
-    "$id": "36",
+    "$id": "3",
     "$type": "Macabresoft.Macabre2D.Framework.SceneAsset, Macabre2D.Framework",
     "ContentId": "afca8156-3436-4a17-9062-4932495d3808",
     "IgnoreInBuild": false,

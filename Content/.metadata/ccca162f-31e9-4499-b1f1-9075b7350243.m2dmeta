@@ -1,7 +1,7 @@
 {
-  "$id": "165",
+  "$id": "162",
   "_splitContentPath": {
-    "$id": "166",
+    "$id": "163",
     "$values": [
       "Sprites",
       "Input",
@@ -9,29 +9,29 @@
     ]
   },
   "Asset": {
-    "$id": "167",
+    "$id": "164",
     "$type": "Macabresoft.Macabre2D.Framework.SpriteSheet, Macabre2D.Framework",
     "_autoTileSets": {
-      "$id": "168",
+      "$id": "165",
       "$values": []
     },
     "_fonts": {
-      "$id": "169",
+      "$id": "166",
       "$values": []
     },
     "_iconSets": {
-      "$id": "170",
+      "$id": "167",
       "$values": [
         {
-          "$id": "171",
+          "$id": "168",
           "$type": "Macabresoft.Macabre2D.Framework.GamePadIconSet, Macabre2D.Framework",
           "_keyToIcons": {
-            "$id": "172",
+            "$id": "169",
             "$values": [
               {
                 "Key": 1,
                 "Value": {
-                  "$id": "173",
+                  "$id": "170",
                   "Key": 1,
                   "Kerning": 0,
                   "SpriteIndex": 35
@@ -40,7 +40,7 @@
               {
                 "Key": 2,
                 "Value": {
-                  "$id": "174",
+                  "$id": "171",
                   "Key": 2,
                   "Kerning": 0,
                   "SpriteIndex": 32
@@ -49,7 +49,7 @@
               {
                 "Key": 4,
                 "Value": {
-                  "$id": "175",
+                  "$id": "172",
                   "Key": 4,
                   "Kerning": 0,
                   "SpriteIndex": 34
@@ -58,7 +58,7 @@
               {
                 "Key": 8,
                 "Value": {
-                  "$id": "176",
+                  "$id": "173",
                   "Key": 8,
                   "Kerning": 0,
                   "SpriteIndex": 33
@@ -67,7 +67,7 @@
               {
                 "Key": 16,
                 "Value": {
-                  "$id": "177",
+                  "$id": "174",
                   "Key": 16,
                   "Kerning": 0,
                   "SpriteIndex": 48
@@ -76,7 +76,7 @@
               {
                 "Key": 32,
                 "Value": {
-                  "$id": "178",
+                  "$id": "175",
                   "Key": 32,
                   "Kerning": 0,
                   "SpriteIndex": 49
@@ -85,7 +85,7 @@
               {
                 "Key": 64,
                 "Value": {
-                  "$id": "179",
+                  "$id": "176",
                   "Key": 64,
                   "Kerning": 0,
                   "SpriteIndex": 44
@@ -94,7 +94,7 @@
               {
                 "Key": 128,
                 "Value": {
-                  "$id": "180",
+                  "$id": "177",
                   "Key": 128,
                   "Kerning": 0,
                   "SpriteIndex": 45
@@ -103,7 +103,7 @@
               {
                 "Key": 256,
                 "Value": {
-                  "$id": "181",
+                  "$id": "178",
                   "Key": 256,
                   "Kerning": 0,
                   "SpriteIndex": 16
@@ -112,7 +112,7 @@
               {
                 "Key": 512,
                 "Value": {
-                  "$id": "182",
+                  "$id": "179",
                   "Key": 512,
                   "Kerning": 0,
                   "SpriteIndex": 17
@@ -121,7 +121,7 @@
               {
                 "Key": 2048,
                 "Value": {
-                  "$id": "183",
+                  "$id": "180",
                   "Key": 2048,
                   "Kerning": 0,
                   "SpriteIndex": null
@@ -130,7 +130,7 @@
               {
                 "Key": 4096,
                 "Value": {
-                  "$id": "184",
+                  "$id": "181",
                   "Key": 4096,
                   "Kerning": 0,
                   "SpriteIndex": 0
@@ -139,7 +139,7 @@
               {
                 "Key": 8192,
                 "Value": {
-                  "$id": "185",
+                  "$id": "182",
                   "Key": 8192,
                   "Kerning": 0,
                   "SpriteIndex": 1
@@ -148,7 +148,7 @@
               {
                 "Key": 16384,
                 "Value": {
-                  "$id": "186",
+                  "$id": "183",
                   "Key": 16384,
                   "Kerning": 0,
                   "SpriteIndex": 2
@@ -157,7 +157,7 @@
               {
                 "Key": 32768,
                 "Value": {
-                  "$id": "187",
+                  "$id": "184",
                   "Key": 32768,
                   "Kerning": 0,
                   "SpriteIndex": 3
@@ -166,7 +166,7 @@
               {
                 "Key": 2097152,
                 "Value": {
-                  "$id": "188",
+                  "$id": "185",
                   "Key": 2097152,
                   "Kerning": 0,
                   "SpriteIndex": 38
@@ -175,7 +175,7 @@
               {
                 "Key": 4194304,
                 "Value": {
-                  "$id": "189",
+                  "$id": "186",
                   "Key": 4194304,
                   "Kerning": 0,
                   "SpriteIndex": 19
@@ -184,7 +184,7 @@
               {
                 "Key": 8388608,
                 "Value": {
-                  "$id": "190",
+                  "$id": "187",
                   "Key": 8388608,
                   "Kerning": 0,
                   "SpriteIndex": 18
@@ -193,7 +193,7 @@
               {
                 "Key": 16777216,
                 "Value": {
-                  "$id": "191",
+                  "$id": "188",
                   "Key": 16777216,
                   "Kerning": 0,
                   "SpriteIndex": 43
@@ -202,7 +202,7 @@
               {
                 "Key": 33554432,
                 "Value": {
-                  "$id": "192",
+                  "$id": "189",
                   "Key": 33554432,
                   "Kerning": 0,
                   "SpriteIndex": 40
@@ -211,7 +211,7 @@
               {
                 "Key": 67108864,
                 "Value": {
-                  "$id": "193",
+                  "$id": "190",
                   "Key": 67108864,
                   "Kerning": 0,
                   "SpriteIndex": 41
@@ -220,7 +220,7 @@
               {
                 "Key": 134217728,
                 "Value": {
-                  "$id": "194",
+                  "$id": "191",
                   "Key": 134217728,
                   "Kerning": 0,
                   "SpriteIndex": 42
@@ -229,7 +229,7 @@
               {
                 "Key": 268435456,
                 "Value": {
-                  "$id": "195",
+                  "$id": "192",
                   "Key": 268435456,
                   "Kerning": 0,
                   "SpriteIndex": 39
@@ -238,7 +238,7 @@
               {
                 "Key": 536870912,
                 "Value": {
-                  "$id": "196",
+                  "$id": "193",
                   "Key": 536870912,
                   "Kerning": 0,
                   "SpriteIndex": 36
@@ -247,7 +247,7 @@
               {
                 "Key": 1073741824,
                 "Value": {
-                  "$id": "197",
+                  "$id": "194",
                   "Key": 1073741824,
                   "Kerning": 0,
                   "SpriteIndex": 37
@@ -260,15 +260,15 @@
           "Name": "X Buttons"
         },
         {
-          "$id": "198",
+          "$id": "195",
           "$type": "Macabresoft.Macabre2D.Framework.GamePadIconSet, Macabre2D.Framework",
           "_keyToIcons": {
-            "$id": "199",
+            "$id": "196",
             "$values": [
               {
                 "Key": 1,
                 "Value": {
-                  "$id": "200",
+                  "$id": "197",
                   "Key": 1,
                   "Kerning": 0,
                   "SpriteIndex": 35
@@ -277,7 +277,7 @@
               {
                 "Key": 2,
                 "Value": {
-                  "$id": "201",
+                  "$id": "198",
                   "Key": 2,
                   "Kerning": 0,
                   "SpriteIndex": 32
@@ -286,7 +286,7 @@
               {
                 "Key": 4,
                 "Value": {
-                  "$id": "202",
+                  "$id": "199",
                   "Key": 4,
                   "Kerning": 0,
                   "SpriteIndex": 34
@@ -295,7 +295,7 @@
               {
                 "Key": 8,
                 "Value": {
-                  "$id": "203",
+                  "$id": "200",
                   "Key": 8,
                   "Kerning": 0,
                   "SpriteIndex": 33
@@ -304,7 +304,7 @@
               {
                 "Key": 16,
                 "Value": {
-                  "$id": "204",
+                  "$id": "201",
                   "Key": 16,
                   "Kerning": 0,
                   "SpriteIndex": 50
@@ -313,7 +313,7 @@
               {
                 "Key": 32,
                 "Value": {
-                  "$id": "205",
+                  "$id": "202",
                   "Key": 32,
                   "Kerning": 0,
                   "SpriteIndex": 51
@@ -322,7 +322,7 @@
               {
                 "Key": 64,
                 "Value": {
-                  "$id": "206",
+                  "$id": "203",
                   "Key": 64,
                   "Kerning": 0,
                   "SpriteIndex": 44
@@ -331,7 +331,7 @@
               {
                 "Key": 128,
                 "Value": {
-                  "$id": "207",
+                  "$id": "204",
                   "Key": 128,
                   "Kerning": 0,
                   "SpriteIndex": 45
@@ -340,7 +340,7 @@
               {
                 "Key": 256,
                 "Value": {
-                  "$id": "208",
+                  "$id": "205",
                   "Key": 256,
                   "Kerning": 0,
                   "SpriteIndex": 20
@@ -349,7 +349,7 @@
               {
                 "Key": 512,
                 "Value": {
-                  "$id": "209",
+                  "$id": "206",
                   "Key": 512,
                   "Kerning": 0,
                   "SpriteIndex": 21
@@ -358,7 +358,7 @@
               {
                 "Key": 2048,
                 "Value": {
-                  "$id": "210",
+                  "$id": "207",
                   "Key": 2048,
                   "Kerning": 0,
                   "SpriteIndex": null
@@ -367,7 +367,7 @@
               {
                 "Key": 4096,
                 "Value": {
-                  "$id": "211",
+                  "$id": "208",
                   "Key": 4096,
                   "Kerning": 0,
                   "SpriteIndex": 4
@@ -376,7 +376,7 @@
               {
                 "Key": 8192,
                 "Value": {
-                  "$id": "212",
+                  "$id": "209",
                   "Key": 8192,
                   "Kerning": 0,
                   "SpriteIndex": 5
@@ -385,7 +385,7 @@
               {
                 "Key": 16384,
                 "Value": {
-                  "$id": "213",
+                  "$id": "210",
                   "Key": 16384,
                   "Kerning": 0,
                   "SpriteIndex": 6
@@ -394,7 +394,7 @@
               {
                 "Key": 32768,
                 "Value": {
-                  "$id": "214",
+                  "$id": "211",
                   "Key": 32768,
                   "Kerning": 0,
                   "SpriteIndex": 7
@@ -403,7 +403,7 @@
               {
                 "Key": 2097152,
                 "Value": {
-                  "$id": "215",
+                  "$id": "212",
                   "Key": 2097152,
                   "Kerning": 0,
                   "SpriteIndex": 38
@@ -412,7 +412,7 @@
               {
                 "Key": 4194304,
                 "Value": {
-                  "$id": "216",
+                  "$id": "213",
                   "Key": 4194304,
                   "Kerning": 0,
                   "SpriteIndex": 23
@@ -421,7 +421,7 @@
               {
                 "Key": 8388608,
                 "Value": {
-                  "$id": "217",
+                  "$id": "214",
                   "Key": 8388608,
                   "Kerning": 0,
                   "SpriteIndex": 22
@@ -430,7 +430,7 @@
               {
                 "Key": 16777216,
                 "Value": {
-                  "$id": "218",
+                  "$id": "215",
                   "Key": 16777216,
                   "Kerning": 0,
                   "SpriteIndex": 43
@@ -439,7 +439,7 @@
               {
                 "Key": 33554432,
                 "Value": {
-                  "$id": "219",
+                  "$id": "216",
                   "Key": 33554432,
                   "Kerning": 0,
                   "SpriteIndex": 40
@@ -448,7 +448,7 @@
               {
                 "Key": 67108864,
                 "Value": {
-                  "$id": "220",
+                  "$id": "217",
                   "Key": 67108864,
                   "Kerning": 0,
                   "SpriteIndex": 41
@@ -457,7 +457,7 @@
               {
                 "Key": 134217728,
                 "Value": {
-                  "$id": "221",
+                  "$id": "218",
                   "Key": 134217728,
                   "Kerning": 0,
                   "SpriteIndex": 42
@@ -466,7 +466,7 @@
               {
                 "Key": 268435456,
                 "Value": {
-                  "$id": "222",
+                  "$id": "219",
                   "Key": 268435456,
                   "Kerning": 0,
                   "SpriteIndex": 39
@@ -475,7 +475,7 @@
               {
                 "Key": 536870912,
                 "Value": {
-                  "$id": "223",
+                  "$id": "220",
                   "Key": 536870912,
                   "Kerning": 0,
                   "SpriteIndex": 36
@@ -484,7 +484,7 @@
               {
                 "Key": 1073741824,
                 "Value": {
-                  "$id": "224",
+                  "$id": "221",
                   "Key": 1073741824,
                   "Kerning": 0,
                   "SpriteIndex": 37
@@ -497,15 +497,15 @@
           "Name": "S Buttons"
         },
         {
-          "$id": "225",
+          "$id": "222",
           "$type": "Macabresoft.Macabre2D.Framework.GamePadIconSet, Macabre2D.Framework",
           "_keyToIcons": {
-            "$id": "226",
+            "$id": "223",
             "$values": [
               {
                 "Key": 1,
                 "Value": {
-                  "$id": "227",
+                  "$id": "224",
                   "Key": 1,
                   "Kerning": 0,
                   "SpriteIndex": 35
@@ -514,7 +514,7 @@
               {
                 "Key": 2,
                 "Value": {
-                  "$id": "228",
+                  "$id": "225",
                   "Key": 2,
                   "Kerning": 0,
                   "SpriteIndex": 32
@@ -523,7 +523,7 @@
               {
                 "Key": 4,
                 "Value": {
-                  "$id": "229",
+                  "$id": "226",
                   "Key": 4,
                   "Kerning": 0,
                   "SpriteIndex": 34
@@ -532,7 +532,7 @@
               {
                 "Key": 8,
                 "Value": {
-                  "$id": "230",
+                  "$id": "227",
                   "Key": 8,
                   "Kerning": 0,
                   "SpriteIndex": 33
@@ -541,7 +541,7 @@
               {
                 "Key": 16,
                 "Value": {
-                  "$id": "231",
+                  "$id": "228",
                   "Key": 16,
                   "Kerning": 0,
                   "SpriteIndex": 52
@@ -550,7 +550,7 @@
               {
                 "Key": 32,
                 "Value": {
-                  "$id": "232",
+                  "$id": "229",
                   "Key": 32,
                   "Kerning": 0,
                   "SpriteIndex": 53
@@ -559,7 +559,7 @@
               {
                 "Key": 64,
                 "Value": {
-                  "$id": "233",
+                  "$id": "230",
                   "Key": 64,
                   "Kerning": 0,
                   "SpriteIndex": 44
@@ -568,7 +568,7 @@
               {
                 "Key": 128,
                 "Value": {
-                  "$id": "234",
+                  "$id": "231",
                   "Key": 128,
                   "Kerning": 0,
                   "SpriteIndex": 45
@@ -577,7 +577,7 @@
               {
                 "Key": 256,
                 "Value": {
-                  "$id": "235",
+                  "$id": "232",
                   "Key": 256,
                   "Kerning": 0,
                   "SpriteIndex": 24
@@ -586,7 +586,7 @@
               {
                 "Key": 512,
                 "Value": {
-                  "$id": "236",
+                  "$id": "233",
                   "Key": 512,
                   "Kerning": 0,
                   "SpriteIndex": 25
@@ -595,7 +595,7 @@
               {
                 "Key": 2048,
                 "Value": {
-                  "$id": "237",
+                  "$id": "234",
                   "Key": 2048,
                   "Kerning": 0,
                   "SpriteIndex": null
@@ -604,7 +604,7 @@
               {
                 "Key": 4096,
                 "Value": {
-                  "$id": "238",
+                  "$id": "235",
                   "Key": 4096,
                   "Kerning": 0,
                   "SpriteIndex": 9
@@ -613,7 +613,7 @@
               {
                 "Key": 8192,
                 "Value": {
-                  "$id": "239",
+                  "$id": "236",
                   "Key": 8192,
                   "Kerning": 0,
                   "SpriteIndex": 8
@@ -622,7 +622,7 @@
               {
                 "Key": 16384,
                 "Value": {
-                  "$id": "240",
+                  "$id": "237",
                   "Key": 16384,
                   "Kerning": 0,
                   "SpriteIndex": 11
@@ -631,7 +631,7 @@
               {
                 "Key": 32768,
                 "Value": {
-                  "$id": "241",
+                  "$id": "238",
                   "Key": 32768,
                   "Kerning": 0,
                   "SpriteIndex": 10
@@ -640,7 +640,7 @@
               {
                 "Key": 2097152,
                 "Value": {
-                  "$id": "242",
+                  "$id": "239",
                   "Key": 2097152,
                   "Kerning": 0,
                   "SpriteIndex": 38
@@ -649,7 +649,7 @@
               {
                 "Key": 4194304,
                 "Value": {
-                  "$id": "243",
+                  "$id": "240",
                   "Key": 4194304,
                   "Kerning": 0,
                   "SpriteIndex": 27
@@ -658,7 +658,7 @@
               {
                 "Key": 8388608,
                 "Value": {
-                  "$id": "244",
+                  "$id": "241",
                   "Key": 8388608,
                   "Kerning": 0,
                   "SpriteIndex": 26
@@ -667,7 +667,7 @@
               {
                 "Key": 16777216,
                 "Value": {
-                  "$id": "245",
+                  "$id": "242",
                   "Key": 16777216,
                   "Kerning": 0,
                   "SpriteIndex": 43
@@ -676,7 +676,7 @@
               {
                 "Key": 33554432,
                 "Value": {
-                  "$id": "246",
+                  "$id": "243",
                   "Key": 33554432,
                   "Kerning": 0,
                   "SpriteIndex": 40
@@ -685,7 +685,7 @@
               {
                 "Key": 67108864,
                 "Value": {
-                  "$id": "247",
+                  "$id": "244",
                   "Key": 67108864,
                   "Kerning": 0,
                   "SpriteIndex": 41
@@ -694,7 +694,7 @@
               {
                 "Key": 134217728,
                 "Value": {
-                  "$id": "248",
+                  "$id": "245",
                   "Key": 134217728,
                   "Kerning": 0,
                   "SpriteIndex": 42
@@ -703,7 +703,7 @@
               {
                 "Key": 268435456,
                 "Value": {
-                  "$id": "249",
+                  "$id": "246",
                   "Key": 268435456,
                   "Kerning": 0,
                   "SpriteIndex": 39
@@ -712,7 +712,7 @@
               {
                 "Key": 536870912,
                 "Value": {
-                  "$id": "250",
+                  "$id": "247",
                   "Key": 536870912,
                   "Kerning": 0,
                   "SpriteIndex": 36
@@ -721,7 +721,7 @@
               {
                 "Key": 1073741824,
                 "Value": {
-                  "$id": "251",
+                  "$id": "248",
                   "Key": 1073741824,
                   "Kerning": 0,
                   "SpriteIndex": 37
@@ -736,11 +736,11 @@
       ]
     },
     "_spriteAnimations": {
-      "$id": "252",
+      "$id": "249",
       "$values": []
     },
     "_packagedObjects": {
-      "$id": "253",
+      "$id": "250",
       "$values": []
     },
     "Columns": 8,

@@ -86,7 +86,7 @@ public class SelectionSpinner : RenderableEntity {
     public override void Initialize(IScene scene, IEntity parent) {
         base.Initialize(scene, parent);
 
-        if (this.TryGetAncestor<SubMenu>(out var subMenu)) {
+        if (this.TryGetAncestor<BaseMenu>(out var subMenu)) {
             this._fontReference.ContentId = subMenu.MenuItemFontReference.ContentId;
             this._fontReference.PackagedAssetId = subMenu.MenuItemFontReference.PackagedAssetId;
         }

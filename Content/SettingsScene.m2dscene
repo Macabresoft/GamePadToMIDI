@@ -6,7 +6,6 @@
       {
         "$id": "6",
         "$type": "Macabresoft.Macabre2D.Project.Gameplay.MenuSystem, Macabre2D.Project.Gameplay",
-        "CanBackOut": false,
         "FirstMenu": {
           "EntityId": "15f380e8-fc1f-401b-b583-7f75010bee46"
         },
@@ -90,7 +89,7 @@
                 "R": 0,
                 "G": 0,
                 "B": 0,
-                "A": 200
+                "A": 255
               },
               "Padding": "0, 0",
               "PixelSnap": 1,
@@ -199,7 +198,6 @@
       }
     ]
   },
-  "State": {},
   "BackgroundColor": {
     "R": 0,
     "G": 0,
@@ -211,6 +209,7 @@
     "Maximum": "0, 0",
     "Minimum": "0, 0"
   },
+  "State": {},
   "Version": "0.0.0.0",
   "Tile Size": "1, 1",
   "Id": "5ae72ee2-e935-48b6-8e9e-9b1babaa4fcd",

@@ -9,8 +9,6 @@ public abstract class SelectionMenuItem : BaseSelectionMenuItem {
     private SelectionOption _selectedOption = new(string.Empty, null);
     private SelectionSpinner? _spinner;
 
-    public IReadOnlyCollection<SelectionOption> Options => this.AvailableOptions;
-
     [DataMember]
     public bool CanWrap {
         get => this._canWrap;
@@ -21,6 +19,8 @@ public abstract class SelectionMenuItem : BaseSelectionMenuItem {
             }
         }
     }
+
+    public IReadOnlyCollection<SelectionOption> Options => this.AvailableOptions;
 
     protected abstract List<SelectionOption> AvailableOptions { get; }
 
@@ -83,7 +83,7 @@ public abstract class SelectionMenuItem : BaseSelectionMenuItem {
         this._spinner.BoundingArea.Maximum.X - this._spinner.ActualEndCapWidth <= clickPosition.X;
 
     protected void SetHasChanges() {
-        if (this.TryGetAncestor<SavableVerticalMenu>(out var menu)) {
+        if (this.TryGetAncestor<BaseMenu>(out var menu)) {
             menu.HasChanges = true;
         }
     }
