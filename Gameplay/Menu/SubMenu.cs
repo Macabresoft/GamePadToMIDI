@@ -18,7 +18,7 @@ public interface ISubMenu : IEntity, IActivatableMenuElement, IBoundable {
 }
 
 public abstract class SubMenu : ActivatableMenuElement, ISubMenu, IRenderableEntity {
-    internal const float MenuItemDistanceFromCenter = 6.5f;
+    internal const float MenuItemDistanceFromCenter = 4f;
     internal const float SeparatorHeight = 0.5f;
     private const char LeftAdornment = '[';
     private const char RightAdornment = ']';
@@ -218,7 +218,7 @@ public abstract class SubMenu : ActivatableMenuElement, ISubMenu, IRenderableEnt
 
     protected float GetMenuItemHeight(IGameProject project) {
         if (this.MenuItemFontReference.Asset is { } spriteSheet) {
-            return spriteSheet.SpriteSize.Y * project.UnitsPerPixel;
+            return spriteSheet.SpriteSize.Y * project.UnitsPerPixel - 0.1f;
         }
 
         return 0f;

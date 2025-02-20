@@ -20,7 +20,7 @@ public class SettingsSubMenu : SavableVerticalMenu {
             foreach (var button in MidiNoteBindingHelper.AvailableButtons) {
                 var midiNote = this.GetMidiNote(button);
                 var noteHeader = this.AddNoteHeaderMenuItem(button, currentPosition);
-                var noteMenuItem = this.AddNoteMenuItem(button, midiNote, noteHeader.LocalPosition.Y - menuItemHeight - SeparatorHeight);
+                var noteMenuItem = this.AddNoteMenuItem(button, midiNote, noteHeader.LocalPosition.Y - menuItemHeight);
                 var velocity = this.AddVelocityMenuItem(button, midiNote, noteMenuItem.LocalPosition.Y - menuItemHeight);
                 currentPosition = velocity.LocalPosition.Y - menuItemHeight - SeparatorHeight;
             }

@@ -21,8 +21,8 @@ public class SelectionSpinner : RenderableEntity {
     private SpriteSheetFont? _font;
     private SpriteSheetFontCharacter _increaseCharacter = new();
     private SelectionMenuItem? _menuItem;
-    private string _resourceName = string.Empty;
     private SpriteSheet? _spriteSheet;
+    private string _text = string.Empty;
     private float _textStartLocation;
 
 
@@ -32,9 +32,9 @@ public class SelectionSpinner : RenderableEntity {
         this._boundingArea = new ResettableLazy<BoundingArea>(this.CreateBoundingArea);
     }
 
-    public override BoundingArea BoundingArea => this._boundingArea.Value;
-
     public float ActualEndCapWidth { get; private set; }
+
+    public override BoundingArea BoundingArea => this._boundingArea.Value;
 
 
     [DataMember(Order = 1)]
@@ -66,11 +66,11 @@ public class SelectionSpinner : RenderableEntity {
     /// Gets or sets the text.
     /// </summary>
     [DataMember]
-    public string ResourceName {
-        get => this._resourceName;
+    public string Text {
+        get => this._text;
         set {
-            if (value != this._resourceName) {
-                this._resourceName = value;
+            if (value != this._text) {
+                this._text = value;
                 this.ResetText();
             }
         }
@@ -117,7 +117,7 @@ public class SelectionSpinner : RenderableEntity {
             this.ResetText();
         }
 
-        if (this._font != null && this._spriteSheet != null && this._characterCollections.TryGetValue(this.ResourceName, out var characters)) {
+        if (this._font != null && this._spriteSheet != null && this._characterCollections.TryGetValue(this.Text, out var characters)) {
             this._spriteSheet.Draw(
                 this.SpriteBatch,
                 this.Project.PixelsPerUnit,
@@ -213,11 +213,9 @@ public class SelectionSpinner : RenderableEntity {
             var options = this.GetOptions();
             foreach (var option in options) {
                 var spriteCharacters = new List<SpriteSheetFontCharacter>();
-                if (Resources.ResourceManager.TryGetString(option.Text, out var text)) {
-                    foreach (var character in text) {
-                        if (this._font.TryGetSpriteCharacter(character, out var spriteCharacter)) {
-                            spriteCharacters.Add(spriteCharacter);
-                        }
+                foreach (var character in option.Text) {
+                    if (this._font.TryGetSpriteCharacter(character, out var spriteCharacter)) {
+                        spriteCharacters.Add(spriteCharacter);
                     }
                 }
 
@@ -239,7 +237,7 @@ public class SelectionSpinner : RenderableEntity {
     }
 
     private void ResetText() {
-        if (this._font != null && this._characterCollections.TryGetValue(this.ResourceName, out var characters)) {
+        if (this._font != null && this._characterCollections.TryGetValue(this.Text, out var characters)) {
             var totalWidth = characters.Sum(character => this._font.GetCharacterWidth(character, 0, this.Project));
             var halfWidth = totalWidth * 0.5f;
             var boundingAreaMidPoint = this.BoundingArea.Minimum.X + 0.5f * this.BoundingArea.Width;

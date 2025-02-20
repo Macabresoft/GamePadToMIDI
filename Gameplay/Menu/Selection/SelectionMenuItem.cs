@@ -65,7 +65,7 @@ public abstract class SelectionMenuItem : BaseSelectionMenuItem {
         this._selectedOption = option;
 
         if (this._spinner != null) {
-            this._spinner.ResourceName = this._selectedOption.Text;
+            this._spinner.Text = this._selectedOption.Text;
         }
 
         this.ResetCanIncreaseDecrease();
