@@ -25,13 +25,6 @@ public class VerticalMenuController : SubMenu {
     [DataMember]
     public bool ShouldScroll { get; set; }
 
-    public override void Activate() {
-        base.Activate();
-        this.LocalPosition = new Vector2(this.LocalPosition.X, this._moveTo);
-        this.HoldDownTimer.Timer.Restart();
-        this.HoldUpTimer.Timer.Restart();
-    }
-
     public override void Deinitialize() {
         base.Deinitialize();
 
@@ -110,8 +103,15 @@ public class VerticalMenuController : SubMenu {
         this._cursor = this.Scene.GetDescendants<MenuMouseCursor>().FirstOrDefault();
         this.HoldDownTimer.Timer.Complete();
         this.HoldUpTimer.Timer.Complete();
+
         this.ResetScroll();
         this.LocalPosition = new Vector2(this.LocalPosition.X, this._moveTo);
+
+        this.Scene.Invoke(() =>
+        {
+            this.ResetScroll();
+            this.LocalPosition = new Vector2(this.LocalPosition.X, this._moveTo);
+        });
 
         if (this.TryGetAncestor<IDockingContainer>(out var dockingContainer)) {
             dockingContainer.BoundingAreaChanged += this.DockingContainer_BoundingAreaChanged;
@@ -128,6 +128,8 @@ public class VerticalMenuController : SubMenu {
             this.FocusedMenuItem = this.MenuItems.FirstOrDefault() ?? MenuItem.EmptyInstance;
         }
 
+        this.HoldDownTimer.Timer.Restart();
+        this.HoldUpTimer.Timer.Restart();
         this.FocusedMenuItem.Focus();
         this.ResetScroll();
         this.LocalPosition = new Vector2(this.LocalPosition.X, this._moveTo);

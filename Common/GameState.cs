@@ -2,6 +2,7 @@
 
 using Macabresoft.Core;
 using Macabresoft.Macabre2D.Common;
+using NAudio.Midi;
 
 /// <summary>
 /// Events that can be raised to the game.
@@ -17,13 +18,21 @@ public enum GameAction {
 /// </summary>
 public class GameState {
     private readonly List<SaveData> _existingSaves = new();
+
+    private readonly List<MidiDeviceDefinition> _midiDevices = new();
     private IDataManager _dataManager = EmptyDataManager.Instance;
     private bool _isBusy;
+    private MidiDeviceDefinition _selectedMidiDevice = MidiDeviceDefinition.Empty;
 
     /// <summary>
     /// An event that is called when it is requested that the game should perform a specific action.
     /// </summary>
     public event EventHandler<GameAction>? ActionRequested;
+
+    /// <summary>
+    /// Raised when <see cref="SelectedMidiDevice" /> changes.
+    /// </summary>
+    public event EventHandler? MidiDeviceChanged;
 
     /// <summary>
     /// Gets the current save data.
@@ -34,6 +43,22 @@ public class GameState {
     /// Gets existing <see cref="SaveData" />.
     /// </summary>
     public IReadOnlyCollection<SaveData> ExistingSaves => this._existingSaves;
+
+    /// <summary>
+    /// Gets the available MIDI devices.
+    /// </summary>
+    public IReadOnlyCollection<MidiDeviceDefinition> MidiDevices => this._midiDevices;
+
+    /// <summary>
+    /// Gets or sets the selected MIDI device.
+    /// </summary>
+    public MidiDeviceDefinition SelectedMidiDevice {
+        get => this._selectedMidiDevice;
+        set {
+            this._selectedMidiDevice = value;
+            this.MidiDeviceChanged.SafeInvoke(this);
+        }
+    }
 
     /// <summary>
     /// Creates a new save file and saves it.
@@ -85,6 +110,21 @@ public class GameState {
         }
         else {
             this.CreateNew();
+        }
+
+        this._midiDevices.Clear();
+
+        if (MidiOut.NumberOfDevices > 0) {
+            for (var device = 0; device < MidiOut.NumberOfDevices; device++) {
+                this._midiDevices.Add(new MidiDeviceDefinition(device, MidiOut.DeviceInfo(device).ProductName));
+            }
+
+            if (this._midiDevices.FirstOrDefault(x => string.Equals(customSettings.DeviceName, x.Name)) is { IsEmpty: false } midiDevice) {
+                this.SelectedMidiDevice = midiDevice;
+            }
+            else {
+                this.SelectedMidiDevice = this._midiDevices.FirstOrDefault();
+            }
         }
     }
 

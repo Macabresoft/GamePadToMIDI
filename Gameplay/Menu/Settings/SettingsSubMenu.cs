@@ -6,8 +6,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
 public class SettingsSubMenu : SavableVerticalMenu {
+    private bool _isLoaded;
+
     public override void Initialize(IScene scene, IEntity parent) {
-        if (!BaseGame.IsDesignMode) {
+        if (!BaseGame.IsDesignMode && !this._isLoaded) {
             this.ClearChildren();
 
             var menuItemHeight = this.GetMenuItemHeight(scene.Project);
@@ -24,6 +26,8 @@ public class SettingsSubMenu : SavableVerticalMenu {
                 var velocity = this.AddVelocityMenuItem(button, midiNote, noteMenuItem.LocalPosition.Y - menuItemHeight);
                 currentPosition = velocity.LocalPosition.Y - menuItemHeight - SeparatorHeight;
             }
+
+            this._isLoaded = true;
         }
 
         base.Initialize(scene, parent);

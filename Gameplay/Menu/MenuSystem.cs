@@ -9,13 +9,9 @@ using Microsoft.Xna.Framework;
 public interface IMenuSystem {
     event EventHandler? MenuItemChanged;
 
-    bool CanBackOut { get; set; }
-
     ISubMenu FocusedMenu { get; }
 
     void PopMenu();
-
-    void PushMenu(ISubMenu menu);
 
     void RaiseMenuItemChanged();
 
@@ -23,13 +19,9 @@ public interface IMenuSystem {
 }
 
 public class MenuSystem : GameSystem, IMenuSystem {
-    private readonly Stack<ISubMenu> _menuStack = new();
     private ISubMenu _focusedMenu = SubMenu.EmptyInstance;
 
     public event EventHandler? MenuItemChanged;
-
-    [DataMember]
-    public bool CanBackOut { get; set; }
 
     public static IMenuSystem Empty { get; } = new EmptyMenuSystem();
 
@@ -39,27 +31,20 @@ public class MenuSystem : GameSystem, IMenuSystem {
     public ISubMenu FocusedMenu {
         get => this._focusedMenu;
         private set {
-            if (value != this._focusedMenu) {
-                this._focusedMenu.PropertyChanged -= this.FocusedMenu_PropertyChanged;
-                this._focusedMenu.Deactivate();
+            this._focusedMenu.PropertyChanged -= this.FocusedMenu_PropertyChanged;
+            this._focusedMenu = value;
 
-                this._focusedMenu = value;
-
-                if (this.FocusedMenu != SubMenu.EmptyInstance) {
-                    this._focusedMenu.Activate();
-                    this._focusedMenu.PropertyChanged += this.FocusedMenu_PropertyChanged;
-                }
-
-                this.RaisePropertyChanged();
-                this.RaiseMenuItemChanged();
+            if (this.FocusedMenu != SubMenu.EmptyInstance) {
+                this._focusedMenu.PropertyChanged += this.FocusedMenu_PropertyChanged;
             }
+
+            this.RaisePropertyChanged();
+            this.RaiseMenuItemChanged();
+            this.FocusedMenu.OnPush();
         }
     }
 
     public override GameSystemKind Kind => GameSystemKind.Update;
-
-    public bool LastChangeWasPush { get; private set; }
-
 
     public override void Initialize(IScene scene) {
         this.Scene.Activated -= this.Scene_Activated;
@@ -72,25 +57,16 @@ public class MenuSystem : GameSystem, IMenuSystem {
     }
 
     public void PopMenu() {
-        this.LastChangeWasPush = false;
         this.FocusedMenu.OnPop();
-        if (this._menuStack.TryPop(out var menu)) {
-            this.FocusedMenu = menu;
-        }
-        else if (this.CanBackOut || this.Game.TryPopScene(out _)) {
+
+        if (this.Game.TryPopScene(out _)) {
+            this.FocusedMenu = SubMenu.EmptyInstance;
             this.Unpause();
         }
     }
 
     public void PushMenu(ISubMenu menu) {
-        if (menu != SubMenu.EmptyInstance && this.FocusedMenu.Id != menu.Id) {
-            if (this.FocusedMenu != SubMenu.EmptyInstance) {
-                this._menuStack.Push(this.FocusedMenu);
-            }
-
-            this.FocusedMenu = menu;
-            this.FocusedMenu.OnPush();
-        }
+        this.FocusedMenu = menu;
     }
 
     public void RaiseMenuItemChanged() {
@@ -129,11 +105,7 @@ public class MenuSystem : GameSystem, IMenuSystem {
     }
 
     private void Reset() {
-        foreach (var menu in this.Scene.GetDescendants<ISubMenu>().Where(x => x.Id != this.FocusedMenu.Id)) {
-            menu.Deactivate();
-        }
-
-        this.PushMenu(this.FirstMenu.Entity ?? SubMenu.EmptyInstance);
+        this.FocusedMenu = this.FirstMenu.Entity ?? SubMenu.EmptyInstance;
     }
 
     private void Scene_Activated(object? sender, EventArgs e) {
@@ -142,23 +114,14 @@ public class MenuSystem : GameSystem, IMenuSystem {
 
     private void Unpause() {
         this.FocusedMenu = SubMenu.EmptyInstance;
-        this._menuStack.Clear();
     }
 
     private class EmptyMenuSystem : IMenuSystem {
         public event EventHandler? MenuItemChanged;
 
-        public bool CanBackOut {
-            get => false;
-            set { }
-        }
-
         public ISubMenu FocusedMenu => SubMenu.EmptyInstance;
 
         public void PopMenu() {
-        }
-
-        public void PushMenu(ISubMenu menu) {
         }
 
         public void RaiseMenuItemChanged() {

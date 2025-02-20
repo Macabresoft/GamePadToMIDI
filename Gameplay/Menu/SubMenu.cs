@@ -6,7 +6,7 @@ using Macabresoft.Macabre2D.Project.Common;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public interface ISubMenu : IEntity, IActivatableMenuElement, IBoundable {
+public interface ISubMenu : IEntity, IBoundable {
     float AdornmentWidth { get; }
     IMenuItem FocusedMenuItem { get; set; }
     bool ShowDirectionActions { get; }
@@ -17,9 +17,9 @@ public interface ISubMenu : IEntity, IActivatableMenuElement, IBoundable {
     void OnPush();
 }
 
-public abstract class SubMenu : ActivatableMenuElement, ISubMenu, IRenderableEntity {
+public abstract class SubMenu : DockableWrapper, ISubMenu, IRenderableEntity {
     internal const float MenuItemDistanceFromCenter = 4f;
-    internal const float SeparatorHeight = 0.5f;
+    internal const float SeparatorHeight = 0.25f;
     private const char LeftAdornment = '[';
     private const char RightAdornment = ']';
 
@@ -81,16 +81,6 @@ public abstract class SubMenu : ActivatableMenuElement, ISubMenu, IRenderableEnt
 
     protected List<IMenuItem> MenuItems { get; } = new();
 
-    public override void Activate() {
-        base.Activate();
-
-        if (!BaseGame.IsDesignMode) {
-            foreach (var menuItem in this.MenuItems) {
-                menuItem.Activate();
-            }
-        }
-    }
-
     public abstract void HandleInput(FrameTime frameTime, InputState inputState);
 
     public override void Initialize(IScene scene, IEntity parent) {
@@ -114,6 +104,11 @@ public abstract class SubMenu : ActivatableMenuElement, ISubMenu, IRenderableEnt
     }
 
     public virtual void OnPush() {
+        if (!BaseGame.IsDesignMode) {
+            foreach (var menuItem in this.MenuItems) {
+                menuItem.Activate();
+            }
+        }
     }
 
     public void Render(FrameTime frameTime, BoundingArea viewBoundingArea) {
@@ -200,6 +195,14 @@ public abstract class SubMenu : ActivatableMenuElement, ISubMenu, IRenderableEnt
         return menuItem;
     }
 
+    protected void ApplySpinnerToMenuItem(MenuItem menuItem) {
+        var spinner = menuItem.AddChild<SelectionSpinner>();
+        spinner.LocalPosition = new Vector2(MenuItemDistanceFromCenter, 0f);
+        spinner.EndCapPadding = 4;
+        spinner.EndCapWidth = 7;
+        spinner.RenderOptions.OffsetType = PixelOffsetType.Right;
+    }
+
     protected void ApplyTextToMenuItem(MenuItem menuItem, string resourceName) {
         this.ApplyTextToMenuItem(menuItem, resourceName, PixelOffsetType.Left, -MenuItemDistanceFromCenter);
     }
@@ -222,14 +225,6 @@ public abstract class SubMenu : ActivatableMenuElement, ISubMenu, IRenderableEnt
         }
 
         return 0f;
-    }
-
-    protected void ApplySpinnerToMenuItem(MenuItem menuItem) {
-        var spinner = menuItem.AddChild<SelectionSpinner>();
-        spinner.LocalPosition = new Vector2(MenuItemDistanceFromCenter, 0f);
-        spinner.EndCapPadding = 4;
-        spinner.EndCapWidth = 7;
-        spinner.RenderOptions.OffsetType = PixelOffsetType.Right;
     }
 
     private void ResetAdornments() {
@@ -280,12 +275,6 @@ public abstract class SubMenu : ActivatableMenuElement, ISubMenu, IRenderableEnt
         public bool ShowDirectionActions => false;
         public bool ShowReturnPrompt => false;
         public bool ShowUpDownOnLeft => false;
-
-        public void Activate() {
-        }
-
-        public void Deactivate() {
-        }
 
         public void HandleInput(FrameTime frameTime, InputState inputState) {
         }

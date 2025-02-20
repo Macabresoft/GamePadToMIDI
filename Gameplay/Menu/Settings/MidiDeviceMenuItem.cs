@@ -5,7 +5,6 @@ using Macabresoft.Macabre2D.Project.Common;
 
 public class MidiDeviceMenuItem : SelectionMenuItem {
     private readonly SelectionOption _noSelection;
-    private MidiSystem? _midiSystem;
 
     public MidiDeviceMenuItem() : base() {
         this._noSelection = new SelectionOption(MidiDeviceDefinition.Empty.Name, () => this.SetMidiDevice(MidiDeviceDefinition.Empty));
@@ -15,21 +14,15 @@ public class MidiDeviceMenuItem : SelectionMenuItem {
 
     protected override List<SelectionOption> AvailableOptions { get; } = [];
 
-    public override void Deinitialize() {
-        base.Deinitialize();
-        this._midiSystem = null;
-    }
 
     public override void Initialize(IScene scene, IEntity parent) {
-        this._midiSystem = scene.GetSystem<MidiSystem>();
         this.AvailableOptions.Clear();
         this.AvailableOptions.Add(this._noSelection);
 
-        if (this._midiSystem != null) {
-            foreach (var midiDevice in this._midiSystem.MidiDevices) {
-                this.AvailableOptions.Add(new SelectionOption(midiDevice.Name, () => this.SetMidiDevice(midiDevice)));
-            }
+        foreach (var midiDevice in scene.Game.State.MidiDevices) {
+            this.AvailableOptions.Add(new SelectionOption(midiDevice.Name, () => this.SetMidiDevice(midiDevice)));
         }
+        
 
         base.Initialize(scene, parent);
 
@@ -46,11 +39,8 @@ public class MidiDeviceMenuItem : SelectionMenuItem {
     }
 
     private void SetMidiDevice(MidiDeviceDefinition midiDevice) {
-        if (this._midiSystem != null) {
-            this._midiSystem.Selected = midiDevice;
-        }
-
         this.Game.UserSettings.Custom.DeviceName = midiDevice.Name;
+        this.Game.State.SelectedMidiDevice = midiDevice;
         this.SetHasChanges();
     }
 }

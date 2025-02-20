@@ -3,9 +3,9 @@
 public class SavableVerticalMenu : VerticalMenuController {
     public bool HasChanges { get; set; }
 
-    public override void Deactivate() {
-        base.Deactivate();
-
+    public override void OnPop() {
+        base.OnPop();
+        
         if (this.HasChanges) {
             this.OnSave();
         }
