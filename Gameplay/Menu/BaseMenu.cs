@@ -17,9 +17,9 @@ public interface IBaseMenu : IEntity, IBoundable {
 }
 
 public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
-    internal const float SeparatorHeight = 0.25f;
+    internal const float SeparatorHeight = 0.2f;
     private const char LeftAdornment = '[';
-    private const float MenuItemDistanceFromCenter = 4f;
+    private const float MenuItemDistanceFromCenter = 3.75f;
     private const char RightAdornment = ']';
 
     private const float ScrollVelocity = 20f;
@@ -347,7 +347,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
 
     protected float GetMenuItemHeight(IGameProject project) {
         if (this.MenuItemFontReference.Asset is { } spriteSheet) {
-            return spriteSheet.SpriteSize.Y * project.UnitsPerPixel - 0.1f;
+            return spriteSheet.SpriteSize.Y * project.UnitsPerPixel;
         }
 
         return 0f;

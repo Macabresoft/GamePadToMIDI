@@ -15,14 +15,15 @@ public class SettingsSubMenu : BaseMenu {
             var menuItemHeight = this.GetMenuItemHeight(scene.Project);
             var header = this.AddHeader(nameof(Resources.Menu_Settings));
 
-            var device = this.AddSpinnerMenuItemWithText<MidiDeviceMenuItem>(header.LocalPosition.Y - menuItemHeight - SeparatorHeight);
+            var back = this.AddBackMenuItem(header.LocalPosition.Y - menuItemHeight - SeparatorHeight);
+            var device = this.AddSpinnerMenuItemWithText<MidiDeviceMenuItem>(back.LocalPosition.Y - menuItemHeight - SeparatorHeight);
             var gamePad = this.AddSpinnerMenuItemWithText<GamePadDisplayMenuItem>(device.LocalPosition.Y - menuItemHeight);
 
             var currentPosition = gamePad.LocalPosition.Y - menuItemHeight - SeparatorHeight;
             foreach (var button in MidiNoteBindingHelper.AvailableButtons) {
                 var midiNote = this.GetMidiNote(button);
-                var noteHeader = this.AddNoteHeaderMenuItem(button, currentPosition);
-                var noteMenuItem = this.AddNoteMenuItem(button, midiNote, noteHeader.LocalPosition.Y - menuItemHeight);
+                this.AddNoteHeaderMenuItem(button, currentPosition - (menuItemHeight * 1.5f));
+                var noteMenuItem = this.AddNoteMenuItem(button, midiNote, currentPosition - menuItemHeight);
                 var velocity = this.AddVelocityMenuItem(button, midiNote, noteMenuItem.LocalPosition.Y - menuItemHeight);
                 currentPosition = velocity.LocalPosition.Y - menuItemHeight - SeparatorHeight;
             }

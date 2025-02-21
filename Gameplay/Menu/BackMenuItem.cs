@@ -7,7 +7,6 @@ public class BackMenuItem : MenuItem {
 
     protected override void Execute() {
         if (this.Scene.GetSystem<MenuSystem>() is { } menuSystem) {
-            // TODO: call save on the submenu
             menuSystem.PopMenu();
         }
     }
