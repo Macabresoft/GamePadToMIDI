@@ -1,10 +1,10 @@
 {
-  "$id": "7",
+  "$id": "4",
   "_systems": {
-    "$id": "8",
+    "$id": "5",
     "$values": [
       {
-        "$id": "9",
+        "$id": "6",
         "$type": "Macabresoft.Macabre2D.Framework.UpdateSystem, Macabre2D.Framework",
         "Layers to Update": {
           "IsEnabled": false,
@@ -15,14 +15,14 @@
         "ShouldUpdate": true
       },
       {
-        "$id": "10",
+        "$id": "7",
         "$type": "Macabresoft.Macabre2D.Framework.RenderSystem, Macabre2D.Framework",
         "Id": "74e15895-956d-4948-8cad-7052857f543d",
         "Name": "RenderSystem",
         "ShouldUpdate": true
       },
       {
-        "$id": "11",
+        "$id": "8",
         "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiSystem, Macabre2D.Project.Gameplay",
         "Id": "7fa0e9e5-1bdb-494b-9ba8-57c977499e36",
         "Name": "MidiSystem",
@@ -31,42 +31,52 @@
     ]
   },
   "_children": {
-    "$id": "12",
+    "$id": "9",
     "$values": [
       {
-        "$id": "13",
+        "$id": "10",
         "$type": "Macabresoft.Macabre2D.Framework.Camera, Macabre2D.Framework",
         "_children": {
-          "$id": "14",
+          "$id": "11",
           "$values": [
             {
-              "$id": "15",
+              "$id": "12",
               "$type": "Macabresoft.Macabre2D.Framework.DockingContainer, Macabre2D.Framework",
               "_children": {
-                "$id": "16",
+                "$id": "13",
                 "$values": [
                   {
-                    "$id": "17",
+                    "$id": "14",
                     "$type": "Macabresoft.Macabre2D.Framework.DockableWrapper, Macabre2D.Framework",
                     "_children": {
-                      "$id": "18",
+                      "$id": "15",
                       "$values": [
                         {
-                          "$id": "19",
+                          "$id": "16",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiDeviceRenderer, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "20",
+                            "$id": "17",
                             "$values": []
                           },
+                          "FontCategory": 1,
                           "FontReference": {
                             "PackagedAssetId": "0d1786bc-8fa7-4655-b181-f7a5832e7dec",
                             "ContentId": "dad78dc2-736d-4c8d-83b6-2a559b4b0a35"
                           },
-                          "FontCategory": 1,
                           "Format": "",
                           "Kerning": 0,
                           "ResourceName": "",
+                          "ScrollTime": {
+                            "TimeLimit": 1.0
+                          },
+                          "ScrollWaitTime": {
+                            "TimeLimit": 1.0
+                          },
                           "Text": "",
+                          "WidthOverride": {
+                            "IsEnabled": true,
+                            "Value": 2.0
+                          },
                           "PixelSnap": 0,
                           "RenderOrder": 0,
                           "RenderOutOfBounds": false,
@@ -83,11 +93,12 @@
                             "B": 255,
                             "A": 255
                           },
+                          "ShouldScroll": true,
                           "RenderOptions": {
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 7,
-                            "Offset": "-11.5, -16"
+                            "Offset": "-92, -16"
                           }
                         }
                       ]
@@ -107,7 +118,7 @@
               "InheritParentBoundingArea": true,
               "Height": 0.0,
               "OffsetOptions": {
-                "$id": "21",
+                "$id": "18",
                 "Offset Type": 4,
                 "Offset": "0, 0"
               },
@@ -137,7 +148,7 @@
         },
         "Shader": {
           "Configuration": {
-            "$id": "22",
+            "$id": "19",
             "$type": "Macabresoft.Macabre2D.Framework.ShaderConfiguration, Macabre2D.Framework"
           },
           "ContentId": "00000000-0000-0000-0000-000000000000"
@@ -158,7 +169,6 @@
       }
     ]
   },
-  "State": {},
   "BackgroundColor": {
     "R": 0,
     "G": 0,
@@ -166,10 +176,11 @@
     "A": 255
   },
   "BoundingArea": {
-    "$id": "23",
+    "$id": "20",
     "Maximum": "0, 0",
     "Minimum": "0, 0"
   },
+  "State": {},
   "Version": "0.0.0.0",
   "Tile Size": "1, 1",
   "Id": "2f2df198-6c50-4c17-a40f-682aca0cb27a",

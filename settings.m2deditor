@@ -1,5 +1,5 @@
 {
-  "$id": "264",
+  "$id": "1",
   "AnimationPreviewFrameRate": 8,
   "BackgroundColor": {
     "R": 30,
@@ -7,11 +7,11 @@
     "B": 162,
     "A": 255
   },
-  "CameraPosition": "0, 0",
-  "CameraViewHeight": 34.884815,
+  "CameraPosition": "0.09323182, 3.2137282",
+  "CameraViewHeight": 14.166578,
   "InputDeviceDisplay": 1,
   "LastGizmoSelected": 0,
-  "LastSceneOpened": "afca8156-3436-4a17-9062-4932495d3808",
+  "LastSceneOpened": "5516ad13-9432-4c05-8467-02d7e021d86a",
   "LastTabSelected": 0,
   "LayersToRender": 65535,
   "ShouldRebuildContent": false,
