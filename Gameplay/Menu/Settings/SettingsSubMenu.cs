@@ -21,7 +21,7 @@ public class SettingsSubMenu : BaseMenu {
 
             var currentPosition = gamePad.LocalPosition.Y - menuItemHeight - SeparatorHeight;
             foreach (var button in MidiNoteBindingHelper.AvailableButtons) {
-                var midiNote = this.GetMidiNote(button);
+                var midiNote = this.GetMidiNote(button, scene.Game);
                 this.AddNoteHeaderMenuItem(button, currentPosition - (menuItemHeight * 1.5f));
                 var noteMenuItem = this.AddNoteMenuItem(button, midiNote, currentPosition - menuItemHeight);
                 var velocity = this.AddVelocityMenuItem(button, midiNote, noteMenuItem.LocalPosition.Y - menuItemHeight);
@@ -35,8 +35,9 @@ public class SettingsSubMenu : BaseMenu {
     }
 
     protected override void OnSave() {
-        base.OnSave();
         this.Game.State.Save();
+        this.Game.UserSettings.Custom.CurrentSave = this.Game.State.CurrentSave.Id;
+        base.OnSave();
     }
 
     private GamePadButtonRenderer AddNoteHeaderMenuItem(Buttons button, float yPosition) {
@@ -65,8 +66,8 @@ public class SettingsSubMenu : BaseMenu {
         return menuItem;
     }
 
-    private MidiNote GetMidiNote(Buttons button) {
-        if (this.Game.State.CurrentSave.TryGetMidiNote(button, out var midiNote)) {
+    private MidiNote GetMidiNote(Buttons button, IGame game) {
+        if (game.State.CurrentSave.TryGetMidiNote(button, out var midiNote)) {
             return midiNote.Value;
         }
 
