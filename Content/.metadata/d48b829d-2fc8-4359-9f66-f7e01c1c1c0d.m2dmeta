@@ -1,0 +1,40 @@
+{
+  "$id": "153",
+  "_splitContentPath": {
+    "$id": "154",
+    "$values": [
+      "Sprites",
+      "MidiPad"
+    ]
+  },
+  "Asset": {
+    "$id": "155",
+    "$type": "Macabresoft.Macabre2D.Framework.SpriteSheet, Macabre2D.Framework",
+    "_autoTileSets": {
+      "$id": "156",
+      "$values": []
+    },
+    "_fonts": {
+      "$id": "157",
+      "$values": []
+    },
+    "_iconSets": {
+      "$id": "158",
+      "$values": []
+    },
+    "_spriteAnimations": {
+      "$id": "159",
+      "$values": []
+    },
+    "_packagedObjects": {
+      "$id": "160",
+      "$values": []
+    },
+    "Columns": 2,
+    "Rows": 1,
+    "ContentId": "d48b829d-2fc8-4359-9f66-f7e01c1c1c0d",
+    "IgnoreInBuild": false,
+    "Notes": ""
+  },
+  "ContentFileExtension": ".png"
+}

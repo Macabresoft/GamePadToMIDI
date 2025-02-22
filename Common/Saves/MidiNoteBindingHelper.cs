@@ -23,8 +23,6 @@ public static class MidiNoteBindingHelper {
         Buttons.LeftTrigger,
         Buttons.RightShoulder,
         Buttons.RightTrigger,
-        Buttons.LeftStick,
-        Buttons.RightStick,
         Buttons.LeftThumbstickLeft,
         Buttons.LeftThumbstickUp,
         Buttons.LeftThumbstickRight,

@@ -1,10 +1,10 @@
 {
-  "$id": "4",
+  "$id": "685",
   "_systems": {
-    "$id": "5",
+    "$id": "686",
     "$values": [
       {
-        "$id": "6",
+        "$id": "687",
         "$type": "Macabresoft.Macabre2D.Framework.UpdateSystem, Macabre2D.Framework",
         "Layers to Update": {
           "IsEnabled": false,
@@ -15,15 +15,23 @@
         "ShouldUpdate": true
       },
       {
-        "$id": "7",
+        "$id": "688",
         "$type": "Macabresoft.Macabre2D.Framework.RenderSystem, Macabre2D.Framework",
         "Id": "74e15895-956d-4948-8cad-7052857f543d",
         "Name": "RenderSystem",
         "ShouldUpdate": true
       },
       {
-        "$id": "8",
+        "$id": "689",
         "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiSystem, Macabre2D.Project.Gameplay",
+        "PadOffSprite": {
+          "SpriteIndex": 0,
+          "ContentId": "d48b829d-2fc8-4359-9f66-f7e01c1c1c0d"
+        },
+        "PadOnSprite": {
+          "SpriteIndex": 1,
+          "ContentId": "d48b829d-2fc8-4359-9f66-f7e01c1c1c0d"
+        },
         "Id": "7fa0e9e5-1bdb-494b-9ba8-57c977499e36",
         "Name": "MidiSystem",
         "ShouldUpdate": true
@@ -31,31 +39,31 @@
     ]
   },
   "_children": {
-    "$id": "9",
+    "$id": "690",
     "$values": [
       {
-        "$id": "10",
+        "$id": "691",
         "$type": "Macabresoft.Macabre2D.Framework.Camera, Macabre2D.Framework",
         "_children": {
-          "$id": "11",
+          "$id": "692",
           "$values": [
             {
-              "$id": "12",
+              "$id": "693",
               "$type": "Macabresoft.Macabre2D.Framework.DockingContainer, Macabre2D.Framework",
               "_children": {
-                "$id": "13",
+                "$id": "694",
                 "$values": [
                   {
-                    "$id": "14",
+                    "$id": "695",
                     "$type": "Macabresoft.Macabre2D.Framework.DockableWrapper, Macabre2D.Framework",
                     "_children": {
-                      "$id": "15",
+                      "$id": "696",
                       "$values": [
                         {
-                          "$id": "16",
+                          "$id": "697",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiDeviceRenderer, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "17",
+                            "$id": "698",
                             "$values": []
                           },
                           "FontCategory": 1,
@@ -74,7 +82,7 @@
                           },
                           "Text": "",
                           "WidthOverride": {
-                            "IsEnabled": true,
+                            "IsEnabled": false,
                             "Value": 2.0
                           },
                           "PixelSnap": 0,
@@ -93,7 +101,7 @@
                             "B": 255,
                             "A": 255
                           },
-                          "ShouldScroll": true,
+                          "ShouldScroll": false,
                           "RenderOptions": {
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
@@ -118,7 +126,7 @@
               "InheritParentBoundingArea": true,
               "Height": 0.0,
               "OffsetOptions": {
-                "$id": "18",
+                "$id": "699",
                 "Offset Type": 4,
                 "Offset": "0, 0"
               },
@@ -128,6 +136,1561 @@
               "IsEnabled": true,
               "Layers": 1,
               "Name": "DockingContainer",
+              "Local Position": "0, 0",
+              "Inheritance": 3
+            },
+            {
+              "$id": "700",
+              "$type": "Macabresoft.Macabre2D.Framework.Entity, Macabre2D.Framework",
+              "_children": {
+                "$id": "701",
+                "$values": [
+                  {
+                    "$id": "702",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "703",
+                      "$values": [
+                        {
+                          "$id": "704",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "705",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 4096,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "204e46bd-4658-4f50-b486-073a10ecd6da",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "706",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 4096,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "b0541b16-ee3f-4372-8f8d-4a54b6781e65",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (A)",
+                    "Local Position": "-4, 3",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "707",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "708",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "709",
+                      "$values": [
+                        {
+                          "$id": "710",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "711",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 8192,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "a1c21f45-1821-4951-a09c-cc5e596a2014",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "712",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 8192,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "747725df-c661-4432-97e5-0cd616155bd5",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (B)",
+                    "Local Position": "-4, 1",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "713",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "714",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "715",
+                      "$values": [
+                        {
+                          "$id": "716",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "717",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 16384,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "61944812-3297-431d-bf3a-f18767595df8",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "718",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 16384,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "4986dc66-d3a7-4b95-8fb7-4310ac3509eb",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (X)",
+                    "Local Position": "-4, -1",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "719",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "720",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "721",
+                      "$values": [
+                        {
+                          "$id": "722",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "723",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 32768,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "0fe8feb7-c64c-40bd-aba6-b68b65bab623",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "724",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 32768,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "3670b4e9-04a8-4e74-a0b1-5ccfccb8db3f",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (Y)",
+                    "Local Position": "-4, -3",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "725",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "726",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "727",
+                      "$values": [
+                        {
+                          "$id": "728",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "729",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 4,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "1383aafa-52b5-4a7b-85dd-9792c897e1c4",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "730",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 4,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "8a7ff464-7414-46a0-bcbc-70495492cc37",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (Dpad Left)",
+                    "Local Position": "-2, 3",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "731",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "732",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "733",
+                      "$values": [
+                        {
+                          "$id": "734",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "735",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 1,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "54416f40-a18a-442d-998a-8dceac71edab",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "736",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 1,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "0f1419ab-2917-4fd6-a391-eadf91f9e24c",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (Dpad Up)",
+                    "Local Position": "-2, 1",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "737",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "738",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "739",
+                      "$values": [
+                        {
+                          "$id": "740",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "741",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 8,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "b897c2ed-6597-40ef-af42-adbbc3cfdda7",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "742",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 8,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "122947fa-0442-4cbc-b9d9-1ebfeccbf67a",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (Dpad Right)",
+                    "Local Position": "-2, -1",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "743",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "744",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "745",
+                      "$values": [
+                        {
+                          "$id": "746",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "747",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 2,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "0db72187-2016-4239-a878-129c66e7b079",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "748",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 2,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "b02c75fd-37cf-4719-b5cc-5dc2b4bec2cb",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (Dpad Down)",
+                    "Local Position": "-2, -3",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "749",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "750",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "751",
+                      "$values": [
+                        {
+                          "$id": "752",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "753",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 256,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "7712c72c-830f-49bb-a010-592b5758e34f",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "754",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 256,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "366a1e83-2d76-4d66-9a79-b658cf33418d",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (LB)",
+                    "Local Position": "0, 3",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "755",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "756",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "757",
+                      "$values": [
+                        {
+                          "$id": "758",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "759",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 512,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "db62fbac-9942-435f-ba22-5c95cf2a3f4b",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "760",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 512,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "239f11f7-b97d-4535-8bc4-352553eb80ec",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (RB)",
+                    "Local Position": "0, 1",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "761",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "762",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "763",
+                      "$values": [
+                        {
+                          "$id": "764",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "765",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 8388608,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "b09a8421-87ef-4ff3-acfc-714d2c4ad9c5",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "766",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 8388608,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "270d1b33-4bf3-471a-a51a-f6fd5ed93cfe",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (LT)",
+                    "Local Position": "0, -1",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "767",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "768",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "769",
+                      "$values": [
+                        {
+                          "$id": "770",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "771",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 4194304,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "5b74704c-840a-4692-90bc-32afad979a7a",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "772",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 4194304,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "28767adb-f1d3-4e69-b4d7-341a310c850f",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (RT)",
+                    "Local Position": "0, -3",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "773",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "774",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "775",
+                      "$values": [
+                        {
+                          "$id": "776",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "777",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 2097152,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "4a291ef6-14a6-41ea-8b03-f65eecba543f",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "778",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 2097152,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "7c58c7ac-dd4f-442b-aa7c-2f7af181b9f8",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (L Left)",
+                    "Local Position": "2, 3",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "779",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "780",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "781",
+                      "$values": [
+                        {
+                          "$id": "782",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "783",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 268435456,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "e0b82553-729d-40ac-b006-8736332e8dcf",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "784",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 268435456,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "7a3a5a30-5835-4044-9e4b-c2e91747094f",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (L Up)",
+                    "Local Position": "2, 1",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "785",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "786",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "787",
+                      "$values": [
+                        {
+                          "$id": "788",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "789",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 1073741824,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "2ea0a420-d45b-461d-9103-440476ed591d",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "790",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 1073741824,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "e9350841-4e4d-4a7d-a9b5-409d938d8899",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (L Right)",
+                    "Local Position": "2, -1",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "791",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "792",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "793",
+                      "$values": [
+                        {
+                          "$id": "794",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "795",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 536870912,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "2f23322d-d691-4265-aa60-11600f03bbbe",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "796",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 536870912,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "e62a0bab-d0f3-44fa-ba63-a0701179e93b",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (L Down)",
+                    "Local Position": "2, -3",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "797",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "798",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "799",
+                      "$values": [
+                        {
+                          "$id": "800",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "801",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 134217728,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "9efc85e6-7d54-4160-a779-6b808dffe45b",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "802",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 134217728,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "880885b5-f078-4d43-a5d1-7d56b169c29a",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (R Left)",
+                    "Local Position": "4, 3",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "803",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "804",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "805",
+                      "$values": [
+                        {
+                          "$id": "806",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "807",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 16777216,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "e5694822-edff-4493-b32a-18726bd9e916",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "808",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 16777216,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "7883478c-677c-4f53-a3a9-bee1a4d1e742",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (R Up)",
+                    "Local Position": "4, 1",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "809",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "810",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "811",
+                      "$values": [
+                        {
+                          "$id": "812",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "813",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 67108864,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "ae44522d-209c-467a-8e35-4123665ded6f",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "814",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 67108864,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "7499ead3-3ac0-49b9-8635-f999b4de15e2",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (R Right)",
+                    "Local Position": "4, -1",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "815",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  },
+                  {
+                    "$id": "816",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "817",
+                      "$values": [
+                        {
+                          "$id": "818",
+                          "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "819",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Button": 33554432,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "92bdd24c-9e5d-4a57-bed5-ff622ec71da9",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "GamePadButtonRenderer",
+                          "Local Position": "-0.6, 0.65",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "820",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 3,
+                            "Offset": "-8, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "Button": 33554432,
+                    "PixelSnap": 0,
+                    "RenderOrder": 0,
+                    "RenderOutOfBounds": false,
+                    "ShouldRender": true,
+                    "Id": "859069e9-d1f7-4f6c-85e8-e8a55680fb8b",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MidiPad (R Down)",
+                    "Local Position": "4, -3",
+                    "Inheritance": 3,
+                    "Color": {
+                      "R": 255,
+                      "G": 255,
+                      "B": 255,
+                      "A": 255
+                    },
+                    "Render Options": {
+                      "$id": "821",
+                      "Flip Horizontal": false,
+                      "Flip Vertical": false,
+                      "Offset Type": 3,
+                      "Offset": "-32, -32"
+                    }
+                  }
+                ]
+              },
+              "Id": "4e901b83-8901-4e11-9bae-ba133c0b6a12",
+              "IsEnabled": true,
+              "Layers": 1,
+              "Name": "MidiPadBoard",
               "Local Position": "0, 0",
               "Inheritance": 3
             }
@@ -148,7 +1711,7 @@
         },
         "Shader": {
           "Configuration": {
-            "$id": "19",
+            "$id": "822",
             "$type": "Macabresoft.Macabre2D.Framework.ShaderConfiguration, Macabre2D.Framework"
           },
           "ContentId": "00000000-0000-0000-0000-000000000000"
@@ -176,7 +1739,7 @@
     "A": 255
   },
   "BoundingArea": {
-    "$id": "20",
+    "$id": "823",
     "Maximum": "0, 0",
     "Minimum": "0, 0"
   },

@@ -32,6 +32,23 @@
 #end SettingsScene.m2dscene
 
 
+#begin .metadata\d48b829d-2fc8-4359-9f66-f7e01c1c1c0d.m2dmeta
+/copy:.metadata\d48b829d-2fc8-4359-9f66-f7e01c1c1c0d.m2dmeta
+#end .metadata\d48b829d-2fc8-4359-9f66-f7e01c1c1c0d.m2dmeta
+#begin Sprites\MidiPad
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites\MidiPad.png
+#end Sprites\MidiPad
+
+
 #begin .metadata\dad78dc2-736d-4c8d-83b6-2a559b4b0a35.m2dmeta
 /copy:.metadata\dad78dc2-736d-4c8d-83b6-2a559b4b0a35.m2dmeta
 #end .metadata\dad78dc2-736d-4c8d-83b6-2a559b4b0a35.m2dmeta
