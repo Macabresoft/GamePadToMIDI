@@ -211,6 +211,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     public void OnPop() {
         if (this.HasChanges) {
             this.OnSave();
+            this.HasChanges = false;
         }
     }
 
@@ -220,9 +221,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
                 menuItem.Activate();
             }
         }
-
-        this.HasChanges = false;
-
+        
         if (!this.ResetFocusedMenuItemOnEnable && this._currentIndex >= 0 && this._currentIndex < this.MenuItems.Count) {
             this.FocusedMenuItem = this.MenuItems[this._currentIndex];
         }

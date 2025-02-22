@@ -72,7 +72,8 @@ public class SettingsSubMenu : BaseMenu {
         }
 
         var newMidiNote = new MidiNote(0, 100);
-        this.Game.State.CurrentSave.SetNote(button, newMidiNote);
+        game.State.CurrentSave.SetNote(button, newMidiNote);
+        this.HasChanges = true;
         return newMidiNote;
     }
 }
