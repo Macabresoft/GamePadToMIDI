@@ -17,7 +17,7 @@ public class MidiDeviceRenderer : TextLineRenderer {
     /// <inheritdoc />
     public override string GetFullText() {
         var text = "Please Select a Device in Settings";
-        if (this.Game.State.SelectedMidiDevice is { IsEmpty: false } midiDevice) {
+        if (this.Game.State.SelectedMidiDevice is { IsEmpty: false } midiDevice && !string.IsNullOrEmpty(midiDevice.Name)) {
             text = $"Device: {midiDevice.Name}";
         }
 

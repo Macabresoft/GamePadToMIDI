@@ -20,3 +20,5 @@ Fonts and game pad icons were created by somepx, support their work:
 * [patreon](https://www.patreon.com/c/somepx/posts)
 * [mastodon](https://mastodon.gamedev.place/@somepx)
 * [bluesky](https://bsky.app/profile/somepx.com)
+
+To use these fonts and game pad icons in another project, you will need to purchase them from somepx. They are not included in this repository in their original form.
