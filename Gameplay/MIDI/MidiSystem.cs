@@ -6,19 +6,32 @@ using Macabresoft.Macabre2D.Project.Common;
 using Microsoft.Xna.Framework.Input;
 using NAudio.Midi;
 
+/// <summary>
+/// A system which handles general MIDI
+/// </summary>
 public class MidiSystem : GameSystem {
     private MidiOut? _midiOut;
     private IScene? _pauseScene;
-    
+
+    /// <inheritdoc />
     public override GameSystemKind Kind => GameSystemKind.Update;
 
+    /// <summary>
+    /// Gets the sprite shown when a MIDI pad is not active.
+    /// </summary>
     [DataMember]
     public SpriteReference PadOffSprite { get; } = new();
 
+    /// <summary>
+    /// Gets the sprite shown when a MIDI pad is active.
+    /// </summary>
     [DataMember]
     public SpriteReference PadOnSprite { get; } = new();
 
+    /// <inheritdoc />
     public override void Deinitialize() {
+        this.Game.State.MidiDeviceChanged -= this.State_MidiDeviceChanged;
+
         base.Deinitialize();
         this._midiOut = null;
         this._pauseScene = null;
@@ -27,21 +40,34 @@ public class MidiSystem : GameSystem {
         this.PadOnSprite.Deinitialize();
     }
 
+    /// <summary>
+    /// Gets the <see cref="MidiNote" /> associated with the provided
+    /// <param name="button" />
+    /// .
+    /// </summary>
+    /// <param name="button">The button.</param>
+    /// <returns>The MIDI note definition.</returns>
     public MidiNote GetMidiNote(Buttons button) => this.Game.State.CurrentSave.TryGetMidiNote(button, out var midiNote) ? midiNote.Value : MidiNote.Empty;
 
+    /// <inheritdoc />
     public override void Initialize(IScene scene) {
         base.Initialize(scene);
 
         this.PadOffSprite.Initialize(this.Scene.Assets, this.Game);
         this.PadOnSprite.Initialize(this.Scene.Assets, this.Game);
 
-        this._midiOut = this.Game.State.SelectedMidiDevice.Index >= 0 ? new MidiOut(this.Game.State.SelectedMidiDevice.Index) : null;
+        this.ResetMidiOut();
+        this.Game.State.MidiDeviceChanged += this.State_MidiDeviceChanged;
 
         if (this.Scene.Assets.TryLoadContent<Scene>(this.Scene.Project.AdditionalConfiguration.PauseSceneId, out var pauseScene)) {
             this._pauseScene = pauseScene;
         }
     }
 
+    /// <summary>
+    /// Plays the specified <see cref="MidiNote" />.
+    /// </summary>
+    /// <param name="midiNote">The MIDI note definition.</param>
     public void PlayMidiNote(MidiNote midiNote) {
         if (this._midiOut != null) {
             var noteOnEvent = new NoteOnEvent(0, 1, midiNote.Note, midiNote.Velocity, 50);
@@ -49,9 +75,18 @@ public class MidiSystem : GameSystem {
         }
     }
 
+    /// <inheritdoc />
     public override void Update(FrameTime frameTime, InputState inputState) {
         if (this._pauseScene != null && inputState.IsGamePadButtonNewlyPressed(Buttons.Start)) {
             this.Game.PushScene(this._pauseScene);
         }
+    }
+
+    private void ResetMidiOut() {
+        this._midiOut = this.Game.State.SelectedMidiDevice.Index >= 0 ? new MidiOut(this.Game.State.SelectedMidiDevice.Index) : null;
+    }
+
+    private void State_MidiDeviceChanged(object? sender, EventArgs e) {
+        this.ResetMidiOut();
     }
 }
