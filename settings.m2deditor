@@ -1,5 +1,5 @@
 {
-  "$id": "425",
+  "$id": "272",
   "AnimationPreviewFrameRate": 8,
   "BackgroundColor": {
     "R": 30,
@@ -11,8 +11,8 @@
   "CameraViewHeight": 21.894272,
   "InputDeviceDisplay": 1,
   "LastGizmoSelected": 1,
-  "LastSceneOpened": "5516ad13-9432-4c05-8467-02d7e021d86a",
-  "LastTabSelected": 1,
+  "LastSceneOpened": "afca8156-3436-4a17-9062-4932495d3808",
+  "LastTabSelected": 0,
   "LayersToRender": 65535,
   "ShouldRebuildContent": false,
   "WindowState": 2

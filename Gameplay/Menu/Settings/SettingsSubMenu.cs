@@ -15,8 +15,7 @@ public class SettingsSubMenu : BaseMenu {
             var menuItemHeight = this.GetMenuItemHeight(scene.Project);
             var header = this.AddHeader(nameof(Resources.Menu_Settings));
 
-            var back = this.AddReturnMenuItem(header.LocalPosition.Y - menuItemHeight - SeparatorHeight);
-            var device = this.AddSpinnerMenuItemWithText<MidiDeviceMenuItem>(back.LocalPosition.Y - menuItemHeight - SeparatorHeight);
+            var device = this.AddSpinnerMenuItemWithText<MidiDeviceMenuItem>(header.LocalPosition.Y - menuItemHeight - SeparatorHeight);
             var gamePad = this.AddSpinnerMenuItemWithText<GamePadDisplayMenuItem>(device.LocalPosition.Y - menuItemHeight);
 
             var currentPosition = gamePad.LocalPosition.Y - menuItemHeight - SeparatorHeight;
@@ -27,7 +26,8 @@ public class SettingsSubMenu : BaseMenu {
                 var velocity = this.AddVelocityMenuItem(button, midiNote, noteMenuItem.LocalPosition.Y - menuItemHeight);
                 currentPosition = velocity.LocalPosition.Y - menuItemHeight - SeparatorHeight;
             }
-
+            
+            this.AddReturnMenuItem(currentPosition);
             this._isLoaded = true;
         }
 

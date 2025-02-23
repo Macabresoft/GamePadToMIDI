@@ -89,7 +89,7 @@
                 "R": 0,
                 "G": 0,
                 "B": 0,
-                "A": 255
+                "A": 200
               },
               "Padding": "0, 0",
               "PixelSnap": 1,
@@ -116,6 +116,7 @@
                       "$id": "20",
                       "$values": []
                     },
+                    "FontCategory": 1,
                     "HoldDownTimer": {
                       "Timer": {
                         "TimeLimit": 0.25
@@ -126,11 +127,9 @@
                         "TimeLimit": 0.25
                       }
                     },
-                    "ResetFocusedMenuItemOnEnable": true,
-                    "ShouldScroll": true,
-                    "FontCategory": 1,
                     "PixelSnap": 0,
                     "RenderOutOfBounds": true,
+                    "ResetFocusedMenuItemOnEnable": true,
                     "ShouldRender": true,
                     "IsCollapsed": false,
                     "Margin": "1, 1",
