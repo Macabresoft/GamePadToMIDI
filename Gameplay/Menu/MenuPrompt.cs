@@ -4,17 +4,27 @@ using System.Runtime.Serialization;
 using Macabresoft.Macabre2D.Framework;
 using Macabresoft.Macabre2D.Project.Common;
 
+/// <summary>
+/// The type of prompt.
+/// </summary>
 public enum PromptType {
     Confirm,
-    Cancel
+    Cancel,
+    Settings
 }
 
+/// <summary>
+/// A prompt which shows an input and its description.
+/// </summary>
 public class MenuPrompt : DockableWrapper {
     private ISpriteEntity _inputActionRenderer = EmptyObject.Instance;
     private IMenuSystem _menuSystem = MenuSystem.Empty;
     private PromptType _promptType = PromptType.Confirm;
     private ITextRenderer _textLineRenderer = EmptyObject.Instance;
 
+    /// <summary>
+    /// Gets or sets the prompt type.
+    /// </summary>
     [DataMember]
     public PromptType PromptType {
         get => this._promptType;
@@ -25,6 +35,7 @@ public class MenuPrompt : DockableWrapper {
         }
     }
 
+    /// <inheritdoc />
     public override void Deinitialize() {
         this._menuSystem.MenuItemChanged -= this.MenuSystem_MenuItemChanged;
         this.Game.InputDeviceChanged -= this.GameOnInputDeviceChanged;
@@ -36,6 +47,7 @@ public class MenuPrompt : DockableWrapper {
         this._menuSystem = MenuSystem.Empty;
     }
 
+    /// <inheritdoc />
     public override void Initialize(IScene scene, IEntity parent) {
         base.Initialize(scene, parent);
 
@@ -83,18 +95,14 @@ public class MenuPrompt : DockableWrapper {
     }
 
     private bool TryGetPromptResource(out string resourceName) {
-        bool result;
-        resourceName = string.Empty;
-        if (this.PromptType == PromptType.Cancel) {
-            result = this._menuSystem.FocusedMenu.ShowReturnPrompt;
-            resourceName = nameof(Resources.Menu_Return);
-        }
-        else {
-            resourceName = this._menuSystem.FocusedMenu.FocusedMenuItem.ConfirmPromptResourceName;
-            result = !string.IsNullOrEmpty(resourceName);
-        }
+        resourceName = this.PromptType switch {
+            PromptType.Cancel => nameof(Resources.Menu_Return),
+            PromptType.Confirm => this._menuSystem.FocusedMenu.FocusedMenuItem.ConfirmPromptResourceName,
+            PromptType.Settings => nameof(Resources.Menu_Settings),
+            _ => string.Empty
+        };
 
-        return result;
+        return !string.IsNullOrEmpty(resourceName);
     }
 
     private void UpdateInputAction() {
@@ -102,6 +110,7 @@ public class MenuPrompt : DockableWrapper {
             renderer.Action = this.PromptType switch {
                 PromptType.Confirm => InputAction.Confirm,
                 PromptType.Cancel => InputAction.Cancel,
+                PromptType.Settings => InputAction.Settings,
                 _ => throw new ArgumentOutOfRangeException()
             };
         }

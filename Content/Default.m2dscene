@@ -2678,13 +2678,137 @@
                     "Name": "MidiPadBoard",
                     "Local Position": "0, 0",
                     "Inheritance": 3
+                  },
+                  {
+                    "$id": "180",
+                    "$type": "Macabresoft.Macabre2D.Project.Gameplay.MenuPrompt, Macabre2D.Project.Gameplay",
+                    "_children": {
+                      "$id": "181",
+                      "$values": [
+                        {
+                          "$id": "182",
+                          "$type": "Macabresoft.Macabre2D.Framework.InputActionRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "183",
+                            "$values": []
+                          },
+                          "GamePadNReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadSReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "GamePadXReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "KeyboardReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "MouseReference": {
+                            "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                            "ContentId": "00000000-0000-0000-0000-000000000000"
+                          },
+                          "Action": 3,
+                          "DisplayMode": 0,
+                          "InputDeviceToRender": 0,
+                          "Kerning": 0,
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "2e0fabb4-7f96-4110-a9a2-373be31c691b",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "InputActionRenderer",
+                          "Local Position": "0, 0",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "Render Options": {
+                            "$id": "184",
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 6,
+                            "Offset": "-16, -8"
+                          }
+                        },
+                        {
+                          "$id": "185",
+                          "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
+                          "_children": {
+                            "$id": "186",
+                            "$values": []
+                          },
+                          "FontCategory": 0,
+                          "FontReference": {
+                            "PackagedAssetId": "0d1786bc-8fa7-4655-b181-f7a5832e7dec",
+                            "ContentId": "dad78dc2-736d-4c8d-83b6-2a559b4b0a35"
+                          },
+                          "Format": "",
+                          "Kerning": 0,
+                          "ResourceName": "Menu_Settings",
+                          "ScrollTime": {
+                            "TimeLimit": 1.0
+                          },
+                          "ScrollWaitTime": {
+                            "TimeLimit": 1.0
+                          },
+                          "Text": "",
+                          "WidthOverride": {
+                            "IsEnabled": false,
+                            "Value": 0.0
+                          },
+                          "PixelSnap": 0,
+                          "RenderOrder": 0,
+                          "RenderOutOfBounds": false,
+                          "ShouldRender": true,
+                          "Id": "23192119-6fd1-4fb0-aaeb-19e4a61285d7",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "TextLineRenderer",
+                          "Local Position": "0, 0",
+                          "Inheritance": 3,
+                          "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                          },
+                          "ShouldScroll": false,
+                          "RenderOptions": {
+                            "Flip Horizontal": false,
+                            "Flip Vertical": false,
+                            "Offset Type": 5,
+                            "Offset": "0, -8"
+                          }
+                        }
+                      ]
+                    },
+                    "PromptType": 2,
+                    "IsCollapsed": false,
+                    "Margin": "0.1, 0.05",
+                    "Location": 9,
+                    "Id": "898ddbfc-2b06-412b-b677-f4c1963d0778",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "MenuPrompt",
+                    "Local Position": "-8.791049, -4.7",
+                    "Inheritance": 3
                   }
                 ]
               },
               "InheritParentBoundingArea": true,
               "Height": 0.0,
               "OffsetOptions": {
-                "$id": "180",
+                "$id": "187",
                 "Offset Type": 4,
                 "Offset": "0, 0"
               },
@@ -2714,7 +2838,7 @@
         },
         "Shader": {
           "Configuration": {
-            "$id": "181",
+            "$id": "188",
             "$type": "Macabresoft.Macabre2D.Framework.ShaderConfiguration, Macabre2D.Framework"
           },
           "ContentId": "00000000-0000-0000-0000-000000000000"
@@ -2742,7 +2866,7 @@
     "A": 255
   },
   "BoundingArea": {
-    "$id": "182",
+    "$id": "189",
     "Maximum": "0, 0",
     "Minimum": "0, 0"
   },

@@ -9,9 +9,7 @@ public abstract class BaseSelectionMenuItem : MenuItem {
     private readonly IncrementalGameTimer _clickDecreaseTimer = new();
     private readonly IncrementalGameTimer _clickIncreaseTimer = new();
     private readonly GameTimer _clickResetTimer = new(0.75f);
-
-    public override string ConfirmPromptResourceName => string.Empty;
-
+    
     public bool IsDecreaseEnabled { get; protected set; }
 
     public bool IsIncreaseEnabled { get; protected set; }

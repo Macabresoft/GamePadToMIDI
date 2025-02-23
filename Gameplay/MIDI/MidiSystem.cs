@@ -85,6 +85,7 @@ public class MidiSystem : InputSystem {
     }
 
     private void ResetMidiOut() {
+        this._midiOut?.Dispose();
         this._midiOut = this.Game.State.SelectedMidiDevice.Index >= 0 ? new MidiOut(this.Game.State.SelectedMidiDevice.Index) : null;
     }
 
