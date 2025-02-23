@@ -50,7 +50,7 @@
               "PixelSnap": 0,
               "RenderOrder": 1000,
               "RenderOutOfBounds": true,
-              "ShouldRender": false,
+              "ShouldRender": true,
               "Id": "d3e194c7-1348-4ae9-9986-8ac33cf1cb3f",
               "IsEnabled": true,
               "Layers": 1,

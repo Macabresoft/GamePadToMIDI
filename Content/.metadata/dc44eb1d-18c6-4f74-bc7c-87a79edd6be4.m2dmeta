@@ -1,7 +1,7 @@
 {
-  "$id": "259",
+  "$id": "251",
   "_splitContentPath": {
-    "$id": "260",
+    "$id": "252",
     "$values": [
       "Sprites",
       "Input",
@@ -9,29 +9,29 @@
     ]
   },
   "Asset": {
-    "$id": "261",
+    "$id": "253",
     "$type": "Macabresoft.Macabre2D.Framework.SpriteSheet, Macabre2D.Framework",
     "_autoTileSets": {
-      "$id": "262",
+      "$id": "254",
       "$values": []
     },
     "_fonts": {
-      "$id": "263",
+      "$id": "255",
       "$values": []
     },
     "_iconSets": {
-      "$id": "264",
+      "$id": "256",
       "$values": [
         {
-          "$id": "265",
+          "$id": "257",
           "$type": "Macabresoft.Macabre2D.Framework.MouseCursorIconSet, Macabre2D.Framework",
           "_keyToIcons": {
-            "$id": "266",
+            "$id": "258",
             "$values": [
               {
                 "Key": 1,
                 "Value": {
-                  "$id": "267",
+                  "$id": "259",
                   "Key": 1,
                   "Kerning": 0,
                   "SpriteIndex": 0
@@ -40,7 +40,7 @@
               {
                 "Key": 2,
                 "Value": {
-                  "$id": "268",
+                  "$id": "260",
                   "Key": 2,
                   "Kerning": 0,
                   "SpriteIndex": 1
@@ -49,7 +49,7 @@
               {
                 "Key": 3,
                 "Value": {
-                  "$id": "269",
+                  "$id": "261",
                   "Key": 3,
                   "Kerning": 0,
                   "SpriteIndex": 2
@@ -64,11 +64,11 @@
       ]
     },
     "_spriteAnimations": {
-      "$id": "270",
+      "$id": "262",
       "$values": []
     },
     "_packagedObjects": {
-      "$id": "271",
+      "$id": "263",
       "$values": []
     },
     "Columns": 4,

@@ -188,6 +188,7 @@
   "CommonViewHeight": 10.0,
   "CompanyName": "Macabresoft",
   "Name": "Game Pad to MIDI",
+  "AllowInputRegardlessOfDevice": true,
   "Persistent Overlay": "00000000-0000-0000-0000-000000000000",
   "PixelsPerUnit": 32,
   "Snap to Pixels During Render": false,
