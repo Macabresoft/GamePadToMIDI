@@ -16,7 +16,8 @@ public class SettingsSubMenu : BaseMenu {
             var header = this.AddHeader(nameof(Resources.Menu_Settings));
 
             var device = this.AddSpinnerMenuItemWithText<MidiDeviceMenuItem>(header.LocalPosition.Y - menuItemHeight - SeparatorHeight);
-            var gamePad = this.AddSpinnerMenuItemWithText<GamePadDisplayMenuItem>(device.LocalPosition.Y - menuItemHeight);
+            var channel = this.AddSpinnerMenuItemWithText<ChannelMenuItem>(device.LocalPosition.Y - menuItemHeight);
+            var gamePad = this.AddSpinnerMenuItemWithText<GamePadDisplayMenuItem>(channel.LocalPosition.Y - menuItemHeight);
 
             var currentPosition = gamePad.LocalPosition.Y - menuItemHeight - SeparatorHeight;
             foreach (var button in MidiNoteBindingHelper.AvailableButtons) {

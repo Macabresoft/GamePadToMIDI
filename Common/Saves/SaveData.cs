@@ -7,6 +7,16 @@ using Newtonsoft.Json;
 
 [DataContract]
 public class SaveData {
+    /// <summary>
+    /// The minimum MIDI channel.
+    /// </summary>
+    public const int MinimumChannel = 1;
+    
+    /// <summary>
+    /// The maximum MIDI channel.
+    /// </summary>
+    public const int MaximumChannel = 16;
+
     public const string FileExtension = ".gptomidi";
 
     [JsonProperty(ObjectCreationHandling = ObjectCreationHandling.Replace)]
@@ -17,6 +27,19 @@ public class SaveData {
 
     [DataMember]
     public DateTime LastSaved { get; set; }
+
+    private int _channel = 1;
+
+    [DataMember]
+    public int Channel {
+        get => this._channel;
+        set {
+            if (this._channel != value) {
+                this._channel = Math.Clamp(value, MinimumChannel, MaximumChannel);
+                this.HasChanges = true;
+            }
+        }
+    }
     
     public bool HasChanges { get; set; }
 

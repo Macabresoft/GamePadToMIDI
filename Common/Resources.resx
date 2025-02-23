@@ -60,4 +60,7 @@
     <data name="Menu_Settings_Velocity" xml:space="preserve">
         <value>Velocity</value>
     </data>
+    <data name="Menu_Settings_Channel" xml:space="preserve">
+        <value>Channel (1-16)</value>
+    </data>
 </root>

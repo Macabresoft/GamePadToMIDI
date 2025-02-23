@@ -123,6 +123,15 @@ namespace Macabresoft.Macabre2D.Project.Common {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Channel (1-16).
+        /// </summary>
+        public static string Menu_Settings_Channel {
+            get {
+                return ResourceManager.GetString("Menu_Settings_Channel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Game Pad.
         /// </summary>
         public static string Menu_Settings_GamePadSelection {

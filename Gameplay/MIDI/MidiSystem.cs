@@ -70,7 +70,7 @@ public class MidiSystem : InputSystem {
     /// <param name="midiNote">The MIDI note definition.</param>
     public void PlayMidiNote(MidiNote midiNote) {
         if (this._midiOut != null) {
-            var noteOnEvent = new NoteOnEvent(0, 1, midiNote.Note, midiNote.Velocity, 50);
+            var noteOnEvent = new NoteOnEvent(0, this.Game.State.CurrentSave.Channel, midiNote.Note, midiNote.Velocity, 50);
             this._midiOut.Send(noteOnEvent.GetAsShortMessage());
         }
     }
