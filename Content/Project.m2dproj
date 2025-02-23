@@ -117,7 +117,7 @@
         ]
       },
       "DesiredGamePad": 0,
-      "DesiredInputDevice": 0,
+      "DesiredInputDevice": 1,
       "IsMouseEnabled": true
     },
     "TypeName": "UserSettings",
