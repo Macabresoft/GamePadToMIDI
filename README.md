@@ -11,3 +11,12 @@ In writing this application, I have used [loopMIDI](https://www.tobias-erichsen.
 ## Macabre2D
 
 This is a Macabre2D project and therefore requires the Macabre2D game engine code to run. Follow instructions for setting up and building a Macabre2D project [here](https://github.com/Macabresoft/Macabre2D).
+
+## Fonts and Game Pad Icons
+
+Fonts and game pad icons were created by somepx, support their work:
+
+* [itch.io](https://somepx.itch.io/)
+* [patreon](https://www.patreon.com/c/somepx/posts)
+* [mastodon](https://mastodon.gamedev.place/@somepx)
+* [bluesky](https://bsky.app/profile/somepx.com)
