@@ -1,12 +1,12 @@
 {
-  "$id": "25",
+  "$id": "465",
   "AdditionalConfiguration": {
     "PauseSceneId": "afca8156-3436-4a17-9062-4932495d3808"
   },
   "DefaultUserSettings": {
     "Audio": {
       "_categoryToVolume": {
-        "$id": "26",
+        "$id": "466",
         "$values": []
       }
     },
@@ -16,7 +16,7 @@
     },
     "Display": {
       "_disabledScreenShaders": {
-        "$id": "27",
+        "$id": "467",
         "$values": []
       },
       "AspectRatio": 0,
@@ -26,7 +26,7 @@
     },
     "Input": {
       "_keyBindings": {
-        "$id": "28",
+        "$id": "468",
         "$values": [
           {
             "Key": 1,
@@ -59,11 +59,11 @@
         ]
       },
       "_mouseBindings": {
-        "$id": "29",
+        "$id": "469",
         "$values": []
       },
       "_primaryGamePadBindings": {
-        "$id": "30",
+        "$id": "470",
         "$values": [
           {
             "Key": 1,
@@ -96,7 +96,7 @@
         ]
       },
       "_secondaryGamePadBindings": {
-        "$id": "31",
+        "$id": "471",
         "$values": [
           {
             "Key": 4,
@@ -167,16 +167,16 @@
   },
   "Fonts": {
     "_categoryAndCultureToFontDefinition": {
-      "$id": "32",
+      "$id": "472",
       "$values": [
         {
           "Key": {
-            "$id": "33",
+            "$id": "473",
             "Culture": 0,
             "Category": 1
           },
           "Value": {
-            "$id": "34",
+            "$id": "474",
             "SpriteSheetId": "dad78dc2-736d-4c8d-83b6-2a559b4b0a35",
             "FontId": "0d1786bc-8fa7-4655-b181-f7a5832e7dec"
           }

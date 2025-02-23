@@ -41,9 +41,7 @@ public class MidiSystem : InputSystem {
     }
 
     /// <summary>
-    /// Gets the <see cref="MidiNote" /> associated with the provided
-    /// <param name="button" />
-    /// .
+    /// Gets the <see cref="MidiNote" /> associated with the provided button.
     /// </summary>
     /// <param name="button">The button.</param>
     /// <returns>The MIDI note definition.</returns>
@@ -65,6 +63,15 @@ public class MidiSystem : InputSystem {
     }
 
     /// <summary>
+    /// Opens the settings menu.
+    /// </summary>
+    public void OpenSettings() {
+        if (this._pauseScene != null) {
+            this.Game.PushScene(this._pauseScene);
+        }
+    }
+
+    /// <summary>
     /// Plays the specified <see cref="MidiNote" />.
     /// </summary>
     /// <param name="midiNote">The MIDI note definition.</param>
@@ -78,9 +85,9 @@ public class MidiSystem : InputSystem {
     /// <inheritdoc />
     public override void Update(FrameTime frameTime, InputState inputState) {
         base.Update(frameTime, inputState);
-        
-        if (this._pauseScene != null && this.IsPressed(InputAction.Settings)) {
-            this.Game.PushScene(this._pauseScene);
+
+        if (this.IsPressed(InputAction.Settings)) {
+            this.OpenSettings();
         }
     }
 

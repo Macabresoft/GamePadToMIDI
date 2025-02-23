@@ -16,6 +16,7 @@ public class MidiPad : BaseSpriteEntity, IUpdateableEntity {
     private MidiNote _midiNote = MidiNote.Empty;
     private MidiSystem? _midiSystem;
     private ITextRenderer _noteIndexRenderer = EmptyObject.Instance;
+    private MidiMouseCursor? _cursor;
 
     /// <summary>
     /// Gets or sets the button for this MIDI pad.
@@ -32,6 +33,11 @@ public class MidiPad : BaseSpriteEntity, IUpdateableEntity {
         }
     }
 
+    /// <summary>
+    /// Gets the MIDI note.
+    /// </summary>
+    public MidiNote MidiNote => this._midiNote;
+
     /// <inheritdoc />
     public bool ShouldUpdate => this._midiNote.IsEnabled;
 
@@ -46,12 +52,14 @@ public class MidiPad : BaseSpriteEntity, IUpdateableEntity {
         base.Deinitialize();
         this._gamePadButtonRenderer = null;
         this._noteIndexRenderer = EmptyObject.Instance;
+        this._cursor = null;
     }
 
     /// <inheritdoc />
     public override void Initialize(IScene scene, IEntity parent) {
         base.Initialize(scene, parent);
         this._midiSystem = this.Scene.GetSystem<MidiSystem>();
+        this._cursor = this.Scene.GetDescendants<MidiMouseCursor>().FirstOrDefault();
         this.RenderOptions.OffsetType = PixelOffsetType.Center;
 
         this._gamePadButtonRenderer = this.GetOrAddChild<GamePadButtonRenderer>();
@@ -65,11 +73,23 @@ public class MidiPad : BaseSpriteEntity, IUpdateableEntity {
         this.ResetMidiNote();
     }
 
+    /// <summary>
+    /// Plays the MIDI note.
+    /// </summary>
+    public void PlayMidiNote() {
+        this._midiSystem?.PlayMidiNote(this._midiNote);
+        this._isOn = true;
+    }
+
     /// <inheritdoc />
     public void Update(FrameTime frameTime, InputState inputState) {
         if (inputState.IsGamePadButtonNewlyPressed(this.Button)) {
-            this._midiSystem?.PlayMidiNote(this._midiNote);
-            this._isOn = true;
+            this.PlayMidiNote();
+        }
+        else if (this.CheckIsBeingClicked()) {
+            if (!this._isOn) {
+                this.PlayMidiNote();
+            }
         }
         else if (!inputState.IsGamePadButtonHeld(this.Button)) {
             this._isOn = false;
@@ -77,6 +97,8 @@ public class MidiPad : BaseSpriteEntity, IUpdateableEntity {
 
         this._noteIndexRenderer.Text = this._midiNote.Note.ToString();
     }
+
+    private bool CheckIsBeingClicked() => this._cursor is { IsClicking: true } && this.BoundingArea.Contains(this._cursor.WorldPosition);
 
     private void ResetMidiNote() {
         if (this._gamePadButtonRenderer != null) {

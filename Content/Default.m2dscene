@@ -49,21 +49,64 @@
           "$values": [
             {
               "$id": "12",
-              "$type": "Macabresoft.Macabre2D.Framework.DockingContainer, Macabre2D.Framework",
+              "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiMouseCursor, Macabre2D.Project.Gameplay",
               "_children": {
                 "$id": "13",
+                "$values": []
+              },
+              "SettingsButtonReference": {
+                "EntityId": "898ddbfc-2b06-412b-b677-f4c1963d0778"
+              },
+              "ShouldUpdate": true,
+              "UpdateOrder": 1000,
+              "PixelSnap": 0,
+              "RenderOrder": 1000,
+              "RenderOutOfBounds": true,
+              "ShouldRender": false,
+              "Id": "5ff7c2db-e38c-4862-9346-2e5434864335",
+              "IsEnabled": true,
+              "Layers": 1,
+              "Name": "MidiMouseCursor",
+              "Local Position": "0, 0",
+              "Inheritance": 3,
+              "Color": {
+                "R": 255,
+                "G": 255,
+                "B": 255,
+                "A": 255
+              },
+              "Render Options": {
+                "$id": "14",
+                "Flip Horizontal": false,
+                "Flip Vertical": false,
+                "Offset Type": 8,
+                "Offset": "0, -16"
+              },
+              "CameraReference": {
+                "EntityId": "0c3876ae-6670-4922-bc4e-bb547730ffc4"
+              },
+              "MouseCursorIconSet": {
+                "PackagedAssetId": "fb8a9971-b90d-415d-8ecd-54a8eaca1a66",
+                "ContentId": "dc44eb1d-18c6-4f74-bc7c-87a79edd6be4"
+              }
+            },
+            {
+              "$id": "15",
+              "$type": "Macabresoft.Macabre2D.Framework.DockingContainer, Macabre2D.Framework",
+              "_children": {
+                "$id": "16",
                 "$values": [
                   {
-                    "$id": "14",
+                    "$id": "17",
                     "$type": "Macabresoft.Macabre2D.Framework.DockableWrapper, Macabre2D.Framework",
                     "_children": {
-                      "$id": "15",
+                      "$id": "18",
                       "$values": [
                         {
-                          "$id": "16",
+                          "$id": "19",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiDeviceRenderer, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "17",
+                            "$id": "20",
                             "$values": []
                           },
                           "FontCategory": 1,
@@ -122,22 +165,22 @@
                     "Inheritance": 3
                   },
                   {
-                    "$id": "18",
+                    "$id": "21",
                     "$type": "Macabresoft.Macabre2D.Framework.DockableWrapper, Macabre2D.Framework",
                     "_children": {
-                      "$id": "19",
+                      "$id": "22",
                       "$values": [
                         {
-                          "$id": "20",
+                          "$id": "23",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "21",
+                            "$id": "24",
                             "$values": [
                               {
-                                "$id": "22",
+                                "$id": "25",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "23",
+                                  "$id": "26",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -170,7 +213,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "24",
+                                  "$id": "27",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -178,10 +221,10 @@
                                 }
                               },
                               {
-                                "$id": "25",
+                                "$id": "28",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "26",
+                                  "$id": "29",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -247,7 +290,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "27",
+                            "$id": "30",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -255,16 +298,16 @@
                           }
                         },
                         {
-                          "$id": "28",
+                          "$id": "31",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "29",
+                            "$id": "32",
                             "$values": [
                               {
-                                "$id": "30",
+                                "$id": "33",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "31",
+                                  "$id": "34",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -297,7 +340,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "32",
+                                  "$id": "35",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -305,10 +348,10 @@
                                 }
                               },
                               {
-                                "$id": "33",
+                                "$id": "36",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "34",
+                                  "$id": "37",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -374,7 +417,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "35",
+                            "$id": "38",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -382,16 +425,16 @@
                           }
                         },
                         {
-                          "$id": "36",
+                          "$id": "39",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "37",
+                            "$id": "40",
                             "$values": [
                               {
-                                "$id": "38",
+                                "$id": "41",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "39",
+                                  "$id": "42",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -424,7 +467,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "40",
+                                  "$id": "43",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -432,10 +475,10 @@
                                 }
                               },
                               {
-                                "$id": "41",
+                                "$id": "44",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "42",
+                                  "$id": "45",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -501,7 +544,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "43",
+                            "$id": "46",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -509,16 +552,16 @@
                           }
                         },
                         {
-                          "$id": "44",
+                          "$id": "47",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "45",
+                            "$id": "48",
                             "$values": [
                               {
-                                "$id": "46",
+                                "$id": "49",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "47",
+                                  "$id": "50",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -551,7 +594,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "48",
+                                  "$id": "51",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -559,10 +602,10 @@
                                 }
                               },
                               {
-                                "$id": "49",
+                                "$id": "52",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "50",
+                                  "$id": "53",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -628,7 +671,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "51",
+                            "$id": "54",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -636,16 +679,16 @@
                           }
                         },
                         {
-                          "$id": "52",
+                          "$id": "55",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "53",
+                            "$id": "56",
                             "$values": [
                               {
-                                "$id": "54",
+                                "$id": "57",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "55",
+                                  "$id": "58",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -678,7 +721,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "56",
+                                  "$id": "59",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -686,10 +729,10 @@
                                 }
                               },
                               {
-                                "$id": "57",
+                                "$id": "60",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "58",
+                                  "$id": "61",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -755,7 +798,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "59",
+                            "$id": "62",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -763,16 +806,16 @@
                           }
                         },
                         {
-                          "$id": "60",
+                          "$id": "63",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "61",
+                            "$id": "64",
                             "$values": [
                               {
-                                "$id": "62",
+                                "$id": "65",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "63",
+                                  "$id": "66",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -805,7 +848,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "64",
+                                  "$id": "67",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -813,10 +856,10 @@
                                 }
                               },
                               {
-                                "$id": "65",
+                                "$id": "68",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "66",
+                                  "$id": "69",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -882,7 +925,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "67",
+                            "$id": "70",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -890,16 +933,16 @@
                           }
                         },
                         {
-                          "$id": "68",
+                          "$id": "71",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "69",
+                            "$id": "72",
                             "$values": [
                               {
-                                "$id": "70",
+                                "$id": "73",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "71",
+                                  "$id": "74",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -932,7 +975,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "72",
+                                  "$id": "75",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -940,10 +983,10 @@
                                 }
                               },
                               {
-                                "$id": "73",
+                                "$id": "76",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "74",
+                                  "$id": "77",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -1009,7 +1052,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "75",
+                            "$id": "78",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -1017,16 +1060,16 @@
                           }
                         },
                         {
-                          "$id": "76",
+                          "$id": "79",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "77",
+                            "$id": "80",
                             "$values": [
                               {
-                                "$id": "78",
+                                "$id": "81",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "79",
+                                  "$id": "82",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -1059,7 +1102,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "80",
+                                  "$id": "83",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -1067,10 +1110,10 @@
                                 }
                               },
                               {
-                                "$id": "81",
+                                "$id": "84",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "82",
+                                  "$id": "85",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -1136,7 +1179,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "83",
+                            "$id": "86",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -1144,16 +1187,16 @@
                           }
                         },
                         {
-                          "$id": "84",
+                          "$id": "87",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "85",
+                            "$id": "88",
                             "$values": [
                               {
-                                "$id": "86",
+                                "$id": "89",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "87",
+                                  "$id": "90",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -1186,7 +1229,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "88",
+                                  "$id": "91",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -1194,10 +1237,10 @@
                                 }
                               },
                               {
-                                "$id": "89",
+                                "$id": "92",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "90",
+                                  "$id": "93",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -1263,7 +1306,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "91",
+                            "$id": "94",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -1271,16 +1314,16 @@
                           }
                         },
                         {
-                          "$id": "92",
+                          "$id": "95",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "93",
+                            "$id": "96",
                             "$values": [
                               {
-                                "$id": "94",
+                                "$id": "97",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "95",
+                                  "$id": "98",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -1313,7 +1356,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "96",
+                                  "$id": "99",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -1321,10 +1364,10 @@
                                 }
                               },
                               {
-                                "$id": "97",
+                                "$id": "100",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "98",
+                                  "$id": "101",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -1390,7 +1433,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "99",
+                            "$id": "102",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -1398,16 +1441,16 @@
                           }
                         },
                         {
-                          "$id": "100",
+                          "$id": "103",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "101",
+                            "$id": "104",
                             "$values": [
                               {
-                                "$id": "102",
+                                "$id": "105",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "103",
+                                  "$id": "106",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -1440,7 +1483,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "104",
+                                  "$id": "107",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -1448,10 +1491,10 @@
                                 }
                               },
                               {
-                                "$id": "105",
+                                "$id": "108",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "106",
+                                  "$id": "109",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -1517,7 +1560,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "107",
+                            "$id": "110",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -1525,16 +1568,16 @@
                           }
                         },
                         {
-                          "$id": "108",
+                          "$id": "111",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "109",
+                            "$id": "112",
                             "$values": [
                               {
-                                "$id": "110",
+                                "$id": "113",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "111",
+                                  "$id": "114",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -1567,7 +1610,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "112",
+                                  "$id": "115",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -1575,10 +1618,10 @@
                                 }
                               },
                               {
-                                "$id": "113",
+                                "$id": "116",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "114",
+                                  "$id": "117",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -1644,7 +1687,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "115",
+                            "$id": "118",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -1652,16 +1695,16 @@
                           }
                         },
                         {
-                          "$id": "116",
+                          "$id": "119",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "117",
+                            "$id": "120",
                             "$values": [
                               {
-                                "$id": "118",
+                                "$id": "121",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "119",
+                                  "$id": "122",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -1694,7 +1737,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "120",
+                                  "$id": "123",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -1702,10 +1745,10 @@
                                 }
                               },
                               {
-                                "$id": "121",
+                                "$id": "124",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "122",
+                                  "$id": "125",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -1771,7 +1814,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "123",
+                            "$id": "126",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -1779,16 +1822,16 @@
                           }
                         },
                         {
-                          "$id": "124",
+                          "$id": "127",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "125",
+                            "$id": "128",
                             "$values": [
                               {
-                                "$id": "126",
+                                "$id": "129",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "127",
+                                  "$id": "130",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -1821,7 +1864,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "128",
+                                  "$id": "131",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -1829,10 +1872,10 @@
                                 }
                               },
                               {
-                                "$id": "129",
+                                "$id": "132",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "130",
+                                  "$id": "133",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -1898,7 +1941,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "131",
+                            "$id": "134",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -1906,16 +1949,16 @@
                           }
                         },
                         {
-                          "$id": "132",
+                          "$id": "135",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "133",
+                            "$id": "136",
                             "$values": [
                               {
-                                "$id": "134",
+                                "$id": "137",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "135",
+                                  "$id": "138",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -1948,7 +1991,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "136",
+                                  "$id": "139",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -1956,10 +1999,10 @@
                                 }
                               },
                               {
-                                "$id": "137",
+                                "$id": "140",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "138",
+                                  "$id": "141",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -2025,7 +2068,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "139",
+                            "$id": "142",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -2033,16 +2076,16 @@
                           }
                         },
                         {
-                          "$id": "140",
+                          "$id": "143",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "141",
+                            "$id": "144",
                             "$values": [
                               {
-                                "$id": "142",
+                                "$id": "145",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "143",
+                                  "$id": "146",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -2075,7 +2118,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "144",
+                                  "$id": "147",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -2083,10 +2126,10 @@
                                 }
                               },
                               {
-                                "$id": "145",
+                                "$id": "148",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "146",
+                                  "$id": "149",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -2152,7 +2195,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "147",
+                            "$id": "150",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -2160,16 +2203,16 @@
                           }
                         },
                         {
-                          "$id": "148",
+                          "$id": "151",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "149",
+                            "$id": "152",
                             "$values": [
                               {
-                                "$id": "150",
+                                "$id": "153",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "151",
+                                  "$id": "154",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -2202,7 +2245,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "152",
+                                  "$id": "155",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -2210,10 +2253,10 @@
                                 }
                               },
                               {
-                                "$id": "153",
+                                "$id": "156",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "154",
+                                  "$id": "157",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -2279,7 +2322,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "155",
+                            "$id": "158",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -2287,16 +2330,16 @@
                           }
                         },
                         {
-                          "$id": "156",
+                          "$id": "159",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "157",
+                            "$id": "160",
                             "$values": [
                               {
-                                "$id": "158",
+                                "$id": "161",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "159",
+                                  "$id": "162",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -2329,7 +2372,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "160",
+                                  "$id": "163",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -2337,10 +2380,10 @@
                                 }
                               },
                               {
-                                "$id": "161",
+                                "$id": "164",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "162",
+                                  "$id": "165",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -2406,7 +2449,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "163",
+                            "$id": "166",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -2414,16 +2457,16 @@
                           }
                         },
                         {
-                          "$id": "164",
+                          "$id": "167",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "165",
+                            "$id": "168",
                             "$values": [
                               {
-                                "$id": "166",
+                                "$id": "169",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "167",
+                                  "$id": "170",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -2456,7 +2499,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "168",
+                                  "$id": "171",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -2464,10 +2507,10 @@
                                 }
                               },
                               {
-                                "$id": "169",
+                                "$id": "172",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "170",
+                                  "$id": "173",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -2533,7 +2576,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "171",
+                            "$id": "174",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -2541,16 +2584,16 @@
                           }
                         },
                         {
-                          "$id": "172",
+                          "$id": "175",
                           "$type": "Macabresoft.Macabre2D.Project.Gameplay.MidiPad, Macabre2D.Project.Gameplay",
                           "_children": {
-                            "$id": "173",
+                            "$id": "176",
                             "$values": [
                               {
-                                "$id": "174",
+                                "$id": "177",
                                 "$type": "Macabresoft.Macabre2D.Framework.GamePadButtonRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "175",
+                                  "$id": "178",
                                   "$values": []
                                 },
                                 "GamePadNReference": {
@@ -2583,7 +2626,7 @@
                                   "A": 255
                                 },
                                 "Render Options": {
-                                  "$id": "176",
+                                  "$id": "179",
                                   "Flip Horizontal": false,
                                   "Flip Vertical": false,
                                   "Offset Type": 3,
@@ -2591,10 +2634,10 @@
                                 }
                               },
                               {
-                                "$id": "177",
+                                "$id": "180",
                                 "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                                 "_children": {
-                                  "$id": "178",
+                                  "$id": "181",
                                   "$values": []
                                 },
                                 "FontCategory": 0,
@@ -2660,7 +2703,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "179",
+                            "$id": "182",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 3,
@@ -2680,16 +2723,16 @@
                     "Inheritance": 3
                   },
                   {
-                    "$id": "180",
+                    "$id": "183",
                     "$type": "Macabresoft.Macabre2D.Project.Gameplay.MenuPrompt, Macabre2D.Project.Gameplay",
                     "_children": {
-                      "$id": "181",
+                      "$id": "184",
                       "$values": [
                         {
-                          "$id": "182",
+                          "$id": "185",
                           "$type": "Macabresoft.Macabre2D.Framework.InputActionRenderer, Macabre2D.Framework",
                           "_children": {
-                            "$id": "183",
+                            "$id": "186",
                             "$values": []
                           },
                           "GamePadNReference": {
@@ -2733,7 +2776,7 @@
                             "A": 255
                           },
                           "Render Options": {
-                            "$id": "184",
+                            "$id": "187",
                             "Flip Horizontal": false,
                             "Flip Vertical": false,
                             "Offset Type": 6,
@@ -2741,10 +2784,10 @@
                           }
                         },
                         {
-                          "$id": "185",
+                          "$id": "188",
                           "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
                           "_children": {
-                            "$id": "186",
+                            "$id": "189",
                             "$values": []
                           },
                           "FontCategory": 0,
@@ -2808,7 +2851,7 @@
               "InheritParentBoundingArea": true,
               "Height": 0.0,
               "OffsetOptions": {
-                "$id": "187",
+                "$id": "190",
                 "Offset Type": 4,
                 "Offset": "0, 0"
               },
@@ -2838,7 +2881,7 @@
         },
         "Shader": {
           "Configuration": {
-            "$id": "188",
+            "$id": "191",
             "$type": "Macabresoft.Macabre2D.Framework.ShaderConfiguration, Macabre2D.Framework"
           },
           "ContentId": "00000000-0000-0000-0000-000000000000"
@@ -2866,7 +2909,7 @@
     "A": 255
   },
   "BoundingArea": {
-    "$id": "189",
+    "$id": "192",
     "Maximum": "0, 0",
     "Minimum": "0, 0"
   },
