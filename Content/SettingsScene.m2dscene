@@ -26,23 +26,34 @@
         "Id": "ded84141-7b23-4d93-88fd-edaad0463098",
         "Name": "InputSystem",
         "ShouldUpdate": true
+      },
+      {
+        "$id": "9",
+        "$type": "Macabresoft.Macabre2D.Framework.UpdateSystem, Macabre2D.Framework",
+        "Layers to Update": {
+          "IsEnabled": false,
+          "Value": 0
+        },
+        "Id": "f9b8ad3a-f56f-4c74-b0ee-7d982842ea25",
+        "Name": "UpdateSystem",
+        "ShouldUpdate": true
       }
     ]
   },
   "_children": {
-    "$id": "9",
+    "$id": "10",
     "$values": [
       {
-        "$id": "10",
+        "$id": "11",
         "$type": "Macabresoft.Macabre2D.Framework.Camera, Macabre2D.Framework",
         "_children": {
-          "$id": "11",
+          "$id": "12",
           "$values": [
             {
-              "$id": "12",
+              "$id": "13",
               "$type": "Macabresoft.Macabre2D.Project.Gameplay.MenuMouseCursor, Macabre2D.Project.Gameplay",
               "_children": {
-                "$id": "13",
+                "$id": "14",
                 "$values": []
               },
               "ShouldUpdate": true,
@@ -50,7 +61,7 @@
               "PixelSnap": 0,
               "RenderOrder": 1000,
               "RenderOutOfBounds": true,
-              "ShouldRender": true,
+              "ShouldRender": false,
               "Id": "d3e194c7-1348-4ae9-9986-8ac33cf1cb3f",
               "IsEnabled": true,
               "Layers": 1,
@@ -64,7 +75,7 @@
                 "A": 255
               },
               "Render Options": {
-                "$id": "14",
+                "$id": "15",
                 "Flip Horizontal": false,
                 "Flip Vertical": false,
                 "Offset Type": 8,
@@ -79,10 +90,10 @@
               }
             },
             {
-              "$id": "15",
+              "$id": "16",
               "$type": "Macabresoft.Macabre2D.Framework.BoundableCover, Macabre2D.Framework",
               "_children": {
-                "$id": "16",
+                "$id": "17",
                 "$values": []
               },
               "Color": {
@@ -104,16 +115,16 @@
               "Inheritance": 3
             },
             {
-              "$id": "17",
+              "$id": "18",
               "$type": "Macabresoft.Macabre2D.Framework.DockingContainer, Macabre2D.Framework",
               "_children": {
-                "$id": "18",
+                "$id": "19",
                 "$values": [
                   {
-                    "$id": "19",
+                    "$id": "20",
                     "$type": "Macabresoft.Macabre2D.Project.Gameplay.SettingsSubMenu, Macabre2D.Project.Gameplay",
                     "_children": {
-                      "$id": "20",
+                      "$id": "21",
                       "$values": []
                     },
                     "FontCategory": 1,
@@ -146,7 +157,7 @@
               "InheritParentBoundingArea": true,
               "Height": 0.0,
               "OffsetOptions": {
-                "$id": "21",
+                "$id": "22",
                 "Offset Type": 4,
                 "Offset": "0, 0"
               },
@@ -176,7 +187,7 @@
         },
         "Shader": {
           "Configuration": {
-            "$id": "22",
+            "$id": "23",
             "$type": "Macabresoft.Macabre2D.Framework.ShaderConfiguration, Macabre2D.Framework"
           },
           "ContentId": "00000000-0000-0000-0000-000000000000"
@@ -204,7 +215,7 @@
     "A": 255
   },
   "BoundingArea": {
-    "$id": "23",
+    "$id": "24",
     "Maximum": "0, 0",
     "Minimum": "0, 0"
   },

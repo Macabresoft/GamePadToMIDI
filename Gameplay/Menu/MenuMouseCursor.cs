@@ -5,6 +5,9 @@ using Macabresoft.Macabre2D.Framework;
 using Macabresoft.Macabre2D.Project.Common;
 using Microsoft.Xna.Framework;
 
+/// <summary>
+/// Mouse cursor for menus.
+/// </summary>
 public class MenuMouseCursor : MouseCursorRenderer {
     private readonly GameTimer _disappearTimer = new(5f);
     private readonly GameTimer _viewportSizeChangedTimer = new(0.1f);
@@ -13,12 +16,16 @@ public class MenuMouseCursor : MouseCursorRenderer {
     private bool _viewportSizeChanged;
     private bool _wasPressed;
 
+    /// <summary>
+    /// Deactivates this instance.
+    /// </summary>
     public void Deactivate() {
         this._disappearTimer.Complete();
         this.IsHoveringOverActivatableElement = false;
         this.ShouldRender = false;
     }
 
+    /// <inheritdoc />
     public override void Deinitialize() {
         this.Game.ViewportSizeChanged -= this.Game_ViewportSizeChanged;
 
@@ -29,6 +36,7 @@ public class MenuMouseCursor : MouseCursorRenderer {
         }
     }
 
+    /// <inheritdoc />
     public override void Initialize(IScene scene, IEntity parent) {
         base.Initialize(scene, parent);
         this.Game.ViewportSizeChanged += this.Game_ViewportSizeChanged;
@@ -47,6 +55,7 @@ public class MenuMouseCursor : MouseCursorRenderer {
         this.Deactivate();
     }
 
+    /// <inheritdoc />
     public override void Update(FrameTime frameTime, InputState inputState) {
         // Behavior around the mouse when the viewport changes is complicated.
         // Essentially, the view port changing in size triggers the mouse to
@@ -67,7 +76,7 @@ public class MenuMouseCursor : MouseCursorRenderer {
         if (this._menuSystem == null) {
             return;
         }
-        
+
         if (!this.Game.InputBindings.TryGetBindings(InputAction.Confirm, out _, out _, out _, out var mouseButton) || mouseButton == MouseButton.None) {
             mouseButton = MouseButton.Left;
         }
@@ -114,6 +123,7 @@ public class MenuMouseCursor : MouseCursorRenderer {
         }
     }
 
+    /// <inheritdoc />
     protected override IEnumerable<IAssetReference> GetAssetReferences() {
         yield return this.MouseCursorIconSet;
     }
