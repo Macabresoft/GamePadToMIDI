@@ -9,7 +9,7 @@ using NAudio.Midi;
 /// <summary>
 /// A system which handles general MIDI
 /// </summary>
-public class MidiSystem : GameSystem {
+public class MidiSystem : InputSystem {
     private MidiOut? _midiOut;
     private IScene? _pauseScene;
 
@@ -77,7 +77,9 @@ public class MidiSystem : GameSystem {
 
     /// <inheritdoc />
     public override void Update(FrameTime frameTime, InputState inputState) {
-        if (this._pauseScene != null && inputState.IsGamePadButtonNewlyPressed(Buttons.Start)) {
+        base.Update(frameTime, inputState);
+        
+        if (this._pauseScene != null && this.IsPressed(InputAction.Settings)) {
             this.Game.PushScene(this._pauseScene);
         }
     }
