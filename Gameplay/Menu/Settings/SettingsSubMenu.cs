@@ -15,7 +15,7 @@ public class SettingsSubMenu : BaseMenu {
             var menuItemHeight = this.GetMenuItemHeight(scene.Project);
             var header = this.AddHeader(nameof(Resources.Menu_Settings));
 
-            var back = this.AddBackMenuItem(header.LocalPosition.Y - menuItemHeight - SeparatorHeight);
+            var back = this.AddReturnMenuItem(header.LocalPosition.Y - menuItemHeight - SeparatorHeight);
             var device = this.AddSpinnerMenuItemWithText<MidiDeviceMenuItem>(back.LocalPosition.Y - menuItemHeight - SeparatorHeight);
             var gamePad = this.AddSpinnerMenuItemWithText<GamePadDisplayMenuItem>(device.LocalPosition.Y - menuItemHeight);
 

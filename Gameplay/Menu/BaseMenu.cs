@@ -6,32 +6,57 @@ using Macabresoft.Macabre2D.Project.Common;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+/// <summary>
+/// Interface for a menu.
+/// </summary>
 public interface IBaseMenu : IEntity, IBoundable {
+
+    /// <summary>
+    /// Gets or sets the focused menu item.
+    /// </summary>
     IMenuItem FocusedMenuItem { get; set; }
-    bool ShowDirectionActions { get; }
+
+    /// <summary>
+    /// Gets a value indicating whether the return prompt should be shown.
+    /// </summary>
     bool ShowReturnPrompt { get; }
-    bool ShowUpDownOnLeft { get; }
+
+    /// <summary>
+    /// Handles input for this menu.
+    /// </summary>
+    /// <param name="frameTime">The frame time.</param>
+    /// <param name="inputState">The input state.</param>
     void HandleInput(FrameTime frameTime, InputState inputState);
+
+    /// <summary>
+    /// Called when a menu is popped from the stack.
+    /// </summary>
     void OnPop();
+
+    /// <summary>
+    /// Called when a menu is pushed to the stack.
+    /// </summary>
     void OnPush();
 }
 
+/// <summary>
+/// Base implementation of menu functionality.
+/// </summary>
 public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     internal const float SeparatorHeight = 0.2f;
     private const char LeftAdornment = '[';
     private const float MenuItemDistanceFromCenter = 3.75f;
     private const char RightAdornment = ']';
-
     private const float ScrollVelocity = 20f;
 
-    public static readonly IBaseMenu EmptyInstance = new EmptyBaseMenu();
     private static readonly Color HeaderColor = PredefinedColors.MacabreLightPurple;
+
+    private readonly List<IMenuItem> _menuItems = [];
+    private float _adornmentWidth;
     private int _currentIndex = -1;
     private MenuMouseCursor? _cursor;
-
     private IMenuItem _focusedItem = MenuItem.EmptyInstance;
     private SpriteSheetFont? _font;
-
     private FontCategory _fontCategory;
     private IInputSystem _inputSystem = InputSystem.Empty;
     private SpriteSheetFontCharacter? _leftAdornmentCharacter;
@@ -40,8 +65,12 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     private SpriteSheetFontCharacter? _rightAdornmentCharacter;
     private SpriteSheet? _spriteSheet;
 
-    public float AdornmentWidth { get; private set; }
+    /// <summary>
+    /// Gets an empty menu instance.
+    /// </summary>
+    public static IBaseMenu EmptyInstance { get; } = new EmptyBaseMenu();
 
+    /// <inheritdoc />
     public IMenuItem FocusedMenuItem {
         get => this._focusedItem;
         set {
@@ -58,6 +87,9 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         }
     }
 
+    /// <summary>
+    /// Gets or sets the font category for this menu.
+    /// </summary>
     [DataMember]
     public FontCategory FontCategory {
         get => this._fontCategory;
@@ -70,37 +102,50 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         }
     }
 
+    /// <summary>
+    /// Gets or sets a value indicating whether this has changes.
+    /// </summary>
     public bool HasChanges { get; set; }
 
+    /// <summary>
+    /// Gets a timer when holding up delays scrolling for a bit.
+    /// </summary>
     [DataMember]
     public IncrementalGameTimer HoldDownTimer { get; } = new();
 
+    /// <summary>
+    /// Gets a timer when holding down delays scrolling for a bit.
+    /// </summary>
     [DataMember]
     public IncrementalGameTimer HoldUpTimer { get; } = new();
 
+    /// <summary>
+    /// Gets the font to be used by menu items under this menu.
+    /// </summary>
     public SpriteSheetFontReference MenuItemFontReference { get; } = new();
 
+    /// <inheritdoc />
     [DataMember]
     public PixelSnap PixelSnap { get; set; } = PixelSnap.Inherit;
 
+    /// <inheritdoc />
     [DataMember]
     public bool RenderOutOfBounds { get; set; } = true;
 
+    /// <summary>
+    /// Gets or sets a value which indicates whether the focused menu item should be reset when this is enabled.
+    /// </summary>
     [DataMember]
     public bool ResetFocusedMenuItemOnEnable { get; set; }
 
+    /// <inheritdoc />
     [DataMember]
     public bool ShouldRender { get; set; } = true;
 
-    [DataMember]
-    public bool ShouldScroll { get; set; }
-
-    public virtual bool ShowDirectionActions => true;
+    /// <inheritdoc />
     public virtual bool ShowReturnPrompt => true;
-    public virtual bool ShowUpDownOnLeft => true;
 
-    protected List<IMenuItem> MenuItems { get; } = new();
-
+    /// <inheritdoc />
     public override void Deinitialize() {
         base.Deinitialize();
 
@@ -109,12 +154,13 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         this._menuSystem = MenuSystem.Empty;
     }
 
+    /// <inheritdoc />
     public void HandleInput(FrameTime frameTime, InputState inputState) {
         if (this._inputSystem.IsPressed(InputAction.Cancel) || this._inputSystem.IsPressed(InputAction.Settings)) {
             this._menuSystem.PopMenu();
         }
-        else if (this.MenuItems.Any()) {
-            var currentIndex = this.FocusedMenuItem == MenuItem.EmptyInstance ? -1 : Math.Max(this.MenuItems.IndexOf(this.FocusedMenuItem), 0);
+        else if (this._menuItems.Any()) {
+            var currentIndex = this.FocusedMenuItem == MenuItem.EmptyInstance ? -1 : Math.Max(this._menuItems.IndexOf(this.FocusedMenuItem), 0);
             var originalIndex = currentIndex;
 
             if (this.HoldDownTimer.CanExecute(frameTime, () => this._inputSystem.IsHeld(InputAction.Down))) {
@@ -126,8 +172,8 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
                 this._cursor?.Deactivate();
             }
 
-            currentIndex = Math.Clamp(currentIndex, 0, this.MenuItems.Count - 1);
-            var currentMenuItem = this.MenuItems[currentIndex];
+            currentIndex = Math.Clamp(currentIndex, 0, this._menuItems.Count - 1);
+            var currentMenuItem = this._menuItems[currentIndex];
 
             if (currentIndex != originalIndex) {
                 this.FocusedMenuItem = currentMenuItem;
@@ -146,16 +192,18 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
                 this.LocalPosition = new Vector2(this.LocalPosition.X, this._moveTo);
             }
 
-            if (this.ShouldScroll && Math.Abs(this.LocalPosition.Y - this._moveTo) > 0.01f) {
+            if (Math.Abs(this.LocalPosition.Y - this._moveTo) > 0.01f) {
+                var multiplier = MathF.Max(1f, MathF.Abs(this.LocalPosition.Y - this._moveTo));
+
                 if (this.LocalPosition.Y < this._moveTo) {
-                    this.Move(new Vector2(0f, (float)(ScrollVelocity * frameTime.SecondsPassed)));
+                    this.Move(new Vector2(0f, (float)(ScrollVelocity * frameTime.SecondsPassed * multiplier)));
 
                     if (this.LocalPosition.Y >= this._moveTo) {
                         this.LocalPosition = new Vector2(this.LocalPosition.X, this._moveTo);
                     }
                 }
                 else {
-                    this.Move(new Vector2(0f, (float)(-ScrollVelocity * frameTime.SecondsPassed)));
+                    this.Move(new Vector2(0f, (float)(-ScrollVelocity * frameTime.SecondsPassed * multiplier)));
 
                     if (this.LocalPosition.Y <= this._moveTo) {
                         this.LocalPosition = new Vector2(this.LocalPosition.X, this._moveTo);
@@ -168,16 +216,17 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         }
     }
 
+    /// <inheritdoc />
     public override void Initialize(IScene scene, IEntity parent) {
         if (this.TryGetAncestor<IDockingContainer>(out var originalDockingContainer)) {
             originalDockingContainer.BoundingAreaChanged -= this.DockingContainer_BoundingAreaChanged;
         }
 
         base.Initialize(scene, parent);
-        this.MenuItems.Clear();
-        this.MenuItems.AddRange(this.Children.OfType<IMenuItem>());
+        this._menuItems.Clear();
+        this._menuItems.AddRange(this.Children.OfType<IMenuItem>());
 
-        if (this.MenuItems.FirstOrDefault() is { } menuItem) {
+        if (this._menuItems.FirstOrDefault() is { } menuItem) {
             this.FocusedMenuItem = menuItem;
         }
 
@@ -203,11 +252,13 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         }
     }
 
+    /// <inheritdoc />
     public override void LoadAssets(IAssetManager assets, IGame game) {
         this.ResetFont(game.Project);
         base.LoadAssets(assets, game);
     }
 
+    /// <inheritdoc />
     public void OnPop() {
         if (this.HasChanges) {
             this.OnSave();
@@ -215,18 +266,19 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         }
     }
 
+    /// <inheritdoc />
     public void OnPush() {
         if (!BaseGame.IsDesignMode) {
-            foreach (var menuItem in this.MenuItems) {
+            foreach (var menuItem in this._menuItems) {
                 menuItem.Activate();
             }
         }
-        
-        if (!this.ResetFocusedMenuItemOnEnable && this._currentIndex >= 0 && this._currentIndex < this.MenuItems.Count) {
-            this.FocusedMenuItem = this.MenuItems[this._currentIndex];
+
+        if (!this.ResetFocusedMenuItemOnEnable && this._currentIndex >= 0 && this._currentIndex < this._menuItems.Count) {
+            this.FocusedMenuItem = this._menuItems[this._currentIndex];
         }
         else {
-            this.FocusedMenuItem = this.MenuItems.FirstOrDefault() ?? MenuItem.EmptyInstance;
+            this.FocusedMenuItem = this._menuItems.FirstOrDefault() ?? MenuItem.EmptyInstance;
         }
 
         this.HoldDownTimer.Timer.Restart();
@@ -236,10 +288,12 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         this.LocalPosition = new Vector2(this.LocalPosition.X, this._moveTo);
     }
 
+    /// <inheritdoc />
     public void Render(FrameTime frameTime, BoundingArea viewBoundingArea) {
         this.Render(frameTime, viewBoundingArea, PredefinedColors.TextHighlightColor);
     }
 
+    /// <inheritdoc />
     public void Render(FrameTime frameTime, BoundingArea viewBoundingArea, Color colorOverride) {
         if (this.IsEnabled && this.SpriteBatch != null && this.FocusedMenuItem != MenuItem.EmptyInstance && this._spriteSheet != null) {
             if (this._leftAdornmentCharacter != null) {
@@ -247,7 +301,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
                     this.SpriteBatch,
                     this.Project.PixelsPerUnit,
                     this._leftAdornmentCharacter.SpriteIndex,
-                    new Vector2(this.FocusedMenuItem.BoundingArea.Minimum.X - this.AdornmentWidth, this.FocusedMenuItem.BoundingArea.Minimum.Y),
+                    new Vector2(this.FocusedMenuItem.BoundingArea.Minimum.X - this._adornmentWidth, this.FocusedMenuItem.BoundingArea.Minimum.Y),
                     colorOverride,
                     SpriteEffects.FlipVertically);
             }
@@ -264,15 +318,11 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         }
     }
 
-    protected BackMenuItem AddBackMenuItem(float yPosition) {
-        var menuItem = this.AddMenuItem<BackMenuItem>(yPosition);
-        var textLine = menuItem.AddChild<MenuTextLineRenderer>();
-        textLine.RenderOptions.OffsetType = PixelOffsetType.Center;
-        textLine.ResourceName = menuItem.ResourceName;
-        textLine.FontCategory = this.FontCategory;
-        return menuItem;
-    }
-
+    /// <summary>
+    /// Adds a header.
+    /// </summary>
+    /// <param name="resourceName">The resource name.</param>
+    /// <returns>The header.</returns>
     protected TextLineRenderer AddHeader(string resourceName) {
         var header = this.AddChild<TextLineRenderer>();
         header.RenderOptions.OffsetType = PixelOffsetType.Center;
@@ -282,36 +332,75 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         return header;
     }
 
+    /// <summary>
+    /// Adds a menu item.
+    /// </summary>
+    /// <param name="yPosition">The Y position.</param>
+    /// <typeparam name="T">The type.</typeparam>
+    /// <returns>The menu item.</returns>
     protected T AddMenuItem<T>(float yPosition) where T : MenuItem, new() {
         var menuItem = this.AddChild<T>();
         menuItem.LocalPosition = new Vector2(0f, yPosition);
         return menuItem;
     }
 
+    /// <summary>
+    /// Adds a menu item with text.
+    /// </summary>
+    /// <param name="yPosition">The Y position.</param>
+    /// <typeparam name="T">The type.</typeparam>
+    /// <returns>The menu item.</returns>
     protected T AddMenuItemWithText<T>(float yPosition) where T : MenuItem, new() {
         var menuItem = this.AddMenuItem<T>(yPosition);
         this.ApplyTextToMenuItem(menuItem, menuItem.ResourceName);
         return menuItem;
     }
 
-    protected T AddMenuItemWithText<T>(PixelOffsetType offsetType, float distanceFromCenter) where T : MenuItem, new() {
-        var menuItem = this.AddMenuItem<T>(0f);
-        this.ApplyTextToMenuItem(menuItem, menuItem.ResourceName, offsetType, distanceFromCenter);
+    /// <summary>
+    /// Adds a return menu item.
+    /// </summary>
+    /// <param name="yPosition">The Y position.</param>
+    /// <returns>The return menu item.</returns>
+    protected ReturnMenuItem AddReturnMenuItem(float yPosition) {
+        var menuItem = this.AddMenuItem<ReturnMenuItem>(yPosition);
+        var textLine = menuItem.AddChild<MenuTextLineRenderer>();
+        textLine.RenderOptions.OffsetType = PixelOffsetType.Center;
+        textLine.ResourceName = menuItem.ResourceName;
+        textLine.FontCategory = this.FontCategory;
         return menuItem;
     }
 
+    /// <summary>
+    /// Adds a spinner menu item.
+    /// </summary>
+    /// <param name="yPosition">The Y position.</param>
+    /// <typeparam name="T">The type.</typeparam>
+    /// <returns>The menu item.</returns>
     protected T AddSpinnerMenuItem<T>(float yPosition) where T : MenuItem, new() {
         var menuItem = this.AddMenuItem<T>(yPosition);
         this.ApplySpinnerToMenuItem(menuItem);
         return menuItem;
     }
 
+    /// <summary>
+    /// Adds a spinner menu item with text.
+    /// </summary>
+    /// <param name="yPosition">The Y position.</param>
+    /// <typeparam name="T">The type.</typeparam>
+    /// <returns>The menu item.</returns>
     protected T AddSpinnerMenuItemWithText<T>(float yPosition) where T : MenuItem, new() {
         var menuItem = this.AddMenuItemWithText<T>(yPosition);
         this.ApplySpinnerToMenuItem(menuItem);
         return menuItem;
     }
 
+    /// <summary>
+    /// Adds a spinner menu item with text.
+    /// </summary>
+    /// <param name="menuItem">The menu item.</param>
+    /// <param name="resourceName">The resource name.</param>
+    /// <param name="yPosition">The Y position.</param>
+    /// <returns>The menu item.</returns>
     protected MenuItem AddSpinnerMenuItemWithText(MenuItem menuItem, string resourceName, float yPosition) {
         this.AddChild(menuItem);
         menuItem.LocalPosition = new Vector2(0f, yPosition);
@@ -320,6 +409,10 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         return menuItem;
     }
 
+    /// <summary>
+    /// Applies a spinner element to the menu item.
+    /// </summary>
+    /// <param name="menuItem">The menu item.</param>
     protected void ApplySpinnerToMenuItem(MenuItem menuItem) {
         var spinner = menuItem.AddChild<SelectionSpinner>();
         spinner.LocalPosition = new Vector2(MenuItemDistanceFromCenter, 0f);
@@ -328,22 +421,29 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         spinner.RenderOptions.OffsetType = PixelOffsetType.Right;
     }
 
+    /// <summary>
+    /// Applies text to a menu item.
+    /// </summary>
+    /// <param name="menuItem">The menu item.</param>
+    /// <param name="resourceName">The resource name.</param>
     protected void ApplyTextToMenuItem(MenuItem menuItem, string resourceName) {
-        this.ApplyTextToMenuItem(menuItem, resourceName, PixelOffsetType.Left, -MenuItemDistanceFromCenter);
-    }
-
-    protected void ApplyTextToMenuItem(MenuItem menuItem, string resourceName, PixelOffsetType offsetType, float distanceFromCenter) {
         var textLine = menuItem.AddChild<MenuTextLineRenderer>();
         textLine.ResourceName = resourceName;
-        textLine.LocalPosition = new Vector2(distanceFromCenter, 0f);
-        textLine.RenderOptions.OffsetType = offsetType;
+        textLine.LocalPosition = new Vector2(-MenuItemDistanceFromCenter, 0f);
+        textLine.RenderOptions.OffsetType = PixelOffsetType.Left;
         textLine.FontCategory = this.FontCategory;
     }
 
+    /// <inheritdoc />
     protected override IEnumerable<IAssetReference> GetAssetReferences() {
         yield return this.MenuItemFontReference;
     }
 
+    /// <summary>
+    /// Gets the height of menu items.
+    /// </summary>
+    /// <param name="project">The project.</param>
+    /// <returns>The height of a menu item.</returns>
     protected float GetMenuItemHeight(IGameProject project) {
         if (this.MenuItemFontReference.Asset is { } spriteSheet) {
             return spriteSheet.SpriteSize.Y * project.UnitsPerPixel;
@@ -352,6 +452,9 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         return 0f;
     }
 
+    /// <summary>
+    /// Called when this saves.
+    /// </summary>
     protected virtual void OnSave() {
         this.Game.SaveUserSettings();
     }
@@ -369,8 +472,8 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         var nextIndex = currentIndex;
         var hasResult = false;
 
-        for (var i = currentIndex + 1; i < this.MenuItems.Count; i++) {
-            var menuItem = this.MenuItems[i];
+        for (var i = currentIndex + 1; i < this._menuItems.Count; i++) {
+            var menuItem = this._menuItems[i];
             if (menuItem.CanFocus) {
                 nextIndex = i;
                 hasResult = true;
@@ -380,7 +483,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
 
         if (!hasResult && currentIndex != 0) {
             for (var i = 0; i < currentIndex; i++) {
-                var menuItem = this.MenuItems[i];
+                var menuItem = this._menuItems[i];
                 if (menuItem.CanFocus) {
                     nextIndex = i;
                     break;
@@ -396,7 +499,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         var hasResult = false;
 
         for (var i = currentIndex - 1; i >= 0; i--) {
-            var menuItem = this.MenuItems[i];
+            var menuItem = this._menuItems[i];
             if (menuItem.CanFocus) {
                 previousIndex = i;
                 hasResult = true;
@@ -404,9 +507,9 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
             }
         }
 
-        if (!hasResult && currentIndex != this.MenuItems.Count - 1) {
-            for (var i = this.MenuItems.Count - 1; i > currentIndex; i--) {
-                var menuItem = this.MenuItems[i];
+        if (!hasResult && currentIndex != this._menuItems.Count - 1) {
+            for (var i = this._menuItems.Count - 1; i > currentIndex; i--) {
+                var menuItem = this._menuItems[i];
                 if (menuItem.CanFocus) {
                     previousIndex = i;
                     break;
@@ -434,7 +537,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
 
             if (this._font.TryGetSpriteCharacter(LeftAdornment, out this._leftAdornmentCharacter)) {
                 var characterPixelWidth = this._spriteSheet.SpriteSize.X + this._font.Kerning + this._leftAdornmentCharacter.Kerning;
-                this.AdornmentWidth = characterPixelWidth * this.Project.UnitsPerPixel;
+                this._adornmentWidth = characterPixelWidth * this.Project.UnitsPerPixel;
             }
         }
         else {
@@ -455,7 +558,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     }
 
     private void ResetScroll() {
-        if (this.ShouldScroll && this.Parent is IBoundableEntity parent && this.CheckRequiresScrolling(parent, out var halfHeight)) {
+        if (this.Parent is IBoundableEntity parent && this.CheckRequiresScrolling(parent, out var halfHeight)) {
             var yCenter = parent.BoundingArea.Minimum.Y + halfHeight;
             var difference = yCenter - this.FocusedMenuItem.BoundingArea.Minimum.Y;
 
@@ -477,9 +580,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
             set { }
         }
 
-        public bool ShowDirectionActions => false;
         public bool ShowReturnPrompt => false;
-        public bool ShowUpDownOnLeft => false;
 
         public void HandleInput(FrameTime frameTime, InputState inputState) {
         }
