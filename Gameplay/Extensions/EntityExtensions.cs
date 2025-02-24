@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 
 public static class EntityExtensions {
     public static Color GetMenuItemColor(this IEntity entity) {
-        if (entity.Parent is IMenuItem menuItem) {
+        if (entity.TryGetAncestor<IMenuItem>(out var menuItem)) {
             if (!menuItem.CanFocus) {
                 return PredefinedColors.DeactivatedText;
             }

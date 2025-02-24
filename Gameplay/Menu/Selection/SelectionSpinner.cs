@@ -6,14 +6,15 @@ using Macabresoft.Macabre2D.Framework;
 using Macabresoft.Macabre2D.Project.Common;
 using Microsoft.Xna.Framework;
 
+/// <summary>
+/// A selection spinner that can be applied to a <see cref="MenuItem" />.
+/// </summary>
 public class SelectionSpinner : RenderableEntity {
     private const char DecreaseCharacter = '<';
     private const char IncreaseCharacter = '>';
 
     private readonly ResettableLazy<BoundingArea> _boundingArea;
     private readonly Dictionary<string, IReadOnlyCollection<SpriteSheetFontCharacter>> _characterCollections = new();
-    private readonly SpriteSheetFontReference _fontReference = new();
-
     private ResourceCulture _currentCulture;
     private SpriteSheetFontCharacter _decreaseCharacter = new();
     private int _endCapPadding;
@@ -23,23 +24,29 @@ public class SelectionSpinner : RenderableEntity {
     private SelectionMenuItem? _menuItem;
     private SpriteSheet? _spriteSheet;
     private string _text = string.Empty;
-    private float _textStartLocation;
+    private TextLineRenderer? _textRenderer;
 
-
+    /// <inheritdoc />
     public override event EventHandler? BoundingAreaChanged;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="SelectionSpinner" /> class.
+    /// </summary>
     public SelectionSpinner() : base() {
         this._boundingArea = new ResettableLazy<BoundingArea>(this.CreateBoundingArea);
     }
 
+    /// <summary>
+    /// Gets the actual end cap width in units. This includes padding.
+    /// </summary>
     public float ActualEndCapWidth { get; private set; }
 
+    /// <inheritdoc />
     public override BoundingArea BoundingArea => this._boundingArea.Value;
 
-
-    [DataMember(Order = 1)]
-    public Color Color { get; set; } = Color.White;
-
+    /// <summary>
+    /// Gets or sets the padding for the end caps.
+    /// </summary>
     [DataMember]
     public int EndCapPadding {
         get => this._endCapPadding;
@@ -49,6 +56,9 @@ public class SelectionSpinner : RenderableEntity {
         }
     }
 
+    /// <summary>
+    /// Gets or sets the width of the end caps.
+    /// </summary>
     [DataMember]
     public int EndCapWidth {
         get => this._endCapWidth;
@@ -59,8 +69,11 @@ public class SelectionSpinner : RenderableEntity {
         }
     }
 
+    /// <summary>
+    /// Gets the render options.
+    /// </summary>
     [DataMember(Order = 4)]
-    public RenderOptions RenderOptions { get; private set; } = new();
+    public RenderOptions RenderOptions { get; } = new();
 
     /// <summary>
     /// Gets or sets the text.
@@ -79,32 +92,34 @@ public class SelectionSpinner : RenderableEntity {
     /// <inheritdoc />
     public override void Deinitialize() {
         base.Deinitialize();
-        this._fontReference.AssetChanged -= this.Font_AssetChanged;
+        this._textRenderer = null;
     }
 
     /// <inheritdoc />
     public override void Initialize(IScene scene, IEntity parent) {
         base.Initialize(scene, parent);
 
-        if (this.TryGetAncestor<BaseMenu>(out var subMenu)) {
-            this._fontReference.ContentId = subMenu.MenuItemFontReference.ContentId;
-            this._fontReference.PackagedAssetId = subMenu.MenuItemFontReference.PackagedAssetId;
-        }
-
+        this._textRenderer = this.GetOrAddChild<MenuTextLineRenderer>();
+        this._textRenderer.RenderOptions.OffsetType = PixelOffsetType.BottomLeft;
+        this._textRenderer.FontCategory = FontCategory.Normal;
         this._menuItem = this.Parent as SelectionMenuItem;
         this._currentCulture = this.Game.DisplaySettings.Culture;
         this.ResetCharacters();
         this.ResetEndCapWidth();
-        this.RenderOptions.Initialize(this.CreateSize);
-        this.Reset();
-        this.ResetText();
-        this._fontReference.AssetChanged += this.Font_AssetChanged;
+        this.Scene.Invoke(() =>
+        {
+            this.RenderOptions.Initialize(this.CreateSize);
+            this.Reset();
+            this.ResetText();
+        });
     }
 
+    /// <inheritdoc />
     public override void Render(FrameTime frameTime, BoundingArea viewBoundingArea) {
         this.Render(frameTime, viewBoundingArea, this.GetMenuItemColor());
     }
 
+    /// <inheritdoc />
     public override void Render(FrameTime frameTime, BoundingArea viewBoundingArea, Color colorOverride) {
         if (this.BoundingArea.IsEmpty || this.SpriteBatch == null) {
             return;
@@ -117,7 +132,7 @@ public class SelectionSpinner : RenderableEntity {
             this.ResetText();
         }
 
-        if (this._font != null && this._spriteSheet != null && this._characterCollections.TryGetValue(this.Text, out var characters)) {
+        if (this._spriteSheet != null) {
             this._spriteSheet.Draw(
                 this.SpriteBatch,
                 this.Project.PixelsPerUnit,
@@ -125,20 +140,6 @@ public class SelectionSpinner : RenderableEntity {
                 new Vector2(this.BoundingArea.Minimum.X, this.BoundingArea.Minimum.Y),
                 this._menuItem?.IsDecreaseEnabled == true ? colorOverride : PredefinedColors.DeactivatedText,
                 this.RenderOptions.Orientation);
-
-            var position = this._textStartLocation;
-
-            foreach (var character in characters) {
-                this._spriteSheet.Draw(
-                    this.SpriteBatch,
-                    this.Project.PixelsPerUnit,
-                    character.SpriteIndex,
-                    new Vector2(position, this.BoundingArea.Minimum.Y),
-                    colorOverride,
-                    this.RenderOptions.Orientation);
-
-                position += this._font.GetCharacterWidth(character, 0, this.Project);
-            }
 
             this._spriteSheet.Draw(
                 this.SpriteBatch,
@@ -151,10 +152,6 @@ public class SelectionSpinner : RenderableEntity {
     }
 
     /// <inheritdoc />
-    protected override IEnumerable<IAssetReference> GetAssetReferences() {
-        yield return this._fontReference;
-    }
-
     protected override void OnTransformChanged() {
         base.OnTransformChanged();
         this.Reset();
@@ -166,14 +163,11 @@ public class SelectionSpinner : RenderableEntity {
     private Vector2 CreateSize() {
         if (this._font != null && this._spriteSheet != null) {
             var longestTextWidth = this.GetLongestOptionWidth(this._font).ToPixelSnappedValue(this.Project);
-            return new Vector2((this.EndCapWidth + this.EndCapPadding) * 2 + longestTextWidth * this.Project.PixelsPerUnit, this._spriteSheet.SpriteSize.Y);
+            var actualWidth = MathF.Min(longestTextWidth, BaseMenu.SpinnerWidth);
+            return new Vector2((this.EndCapWidth + this.EndCapPadding) * 2 + actualWidth * this.Project.PixelsPerUnit, this._spriteSheet.SpriteSize.Y);
         }
 
         return Vector2.Zero;
-    }
-
-    private void Font_AssetChanged(object? sender, bool hasAsset) {
-        this.ResetCharacters();
     }
 
     private float GetLongestOptionWidth(SpriteSheetFont font) {
@@ -199,9 +193,9 @@ public class SelectionSpinner : RenderableEntity {
     }
 
     private void ResetCharacters() {
-        if (this._fontReference is { PackagedAsset: not null, Asset: not null }) {
-            this._font = this._fontReference.PackagedAsset;
-            this._spriteSheet = this._fontReference.Asset;
+        if (this._textRenderer?.FontReference is { PackagedAsset: not null, Asset: not null }) {
+            this._font = this._textRenderer.FontReference.PackagedAsset;
+            this._spriteSheet = this._textRenderer.FontReference.Asset;
         }
         else if (this.Project.Fallbacks.Font is { PackagedAsset: not null, Asset: not null }) {
             this._font = this.Project.Fallbacks.Font.PackagedAsset;
@@ -237,11 +231,23 @@ public class SelectionSpinner : RenderableEntity {
     }
 
     private void ResetText() {
-        if (this._font != null && this._characterCollections.TryGetValue(this.Text, out var characters)) {
+        if (this._font != null && this._textRenderer != null && this._characterCollections.TryGetValue(this.Text, out var characters)) {
             var totalWidth = characters.Sum(character => this._font.GetCharacterWidth(character, 0, this.Project));
-            var halfWidth = totalWidth * 0.5f;
-            var boundingAreaMidPoint = this.BoundingArea.Minimum.X + 0.5f * this.BoundingArea.Width;
-            this._textStartLocation = (boundingAreaMidPoint - halfWidth).ToPixelSnappedValue(this.Project);
+            if (totalWidth > BaseMenu.SpinnerWidth) {
+                this._textRenderer.SetWorldPosition(new Vector2(this.BoundingArea.Minimum.X + this.ActualEndCapWidth, this.BoundingArea.Minimum.Y));
+                this._textRenderer.ShouldScroll = true;
+                this._textRenderer.WidthOverride.IsEnabled = true;
+                this._textRenderer.WidthOverride.Value = BaseMenu.SpinnerWidth;
+            }
+            else {
+                var halfWidth = totalWidth * 0.5f;
+                var boundingAreaMidPoint = this.BoundingArea.Minimum.X + 0.5f * this.BoundingArea.Width;
+                this._textRenderer.SetWorldPosition(new Vector2(boundingAreaMidPoint - halfWidth, this.BoundingArea.Minimum.Y));
+                this._textRenderer.ShouldScroll = false;
+                this._textRenderer.WidthOverride.IsEnabled = false;
+            }
+
+            this._textRenderer.Text = this.Text;
         }
     }
 }

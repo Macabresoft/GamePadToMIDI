@@ -44,6 +44,7 @@ public interface IBaseMenu : IEntity, IBoundable {
 /// </summary>
 public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     internal const float SeparatorHeight = 0.2f;
+    internal const float SpinnerWidth = 1.75f;
     private const char LeftAdornment = '[';
     private const float MenuItemDistanceFromCenter = 3.75f;
     private const char RightAdornment = ']';
@@ -238,18 +239,17 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         this.HoldDownTimer.Timer.Complete();
         this.HoldUpTimer.Timer.Complete();
 
-        this.ResetScroll();
-        this.LocalPosition = new Vector2(this.LocalPosition.X, this._moveTo);
-
         this.Scene.Invoke(() =>
         {
             this.ResetScroll();
             this.LocalPosition = new Vector2(this.LocalPosition.X, this._moveTo);
+            this.RequestRearrangeFromParent();
         });
 
         if (this.TryGetAncestor<IDockingContainer>(out var dockingContainer)) {
             dockingContainer.BoundingAreaChanged += this.DockingContainer_BoundingAreaChanged;
         }
+        
     }
 
     /// <inheritdoc />
