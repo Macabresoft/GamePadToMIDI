@@ -1,10 +1,10 @@
 {
-  "$id": "444",
+  "$id": "4",
   "_systems": {
-    "$id": "445",
+    "$id": "5",
     "$values": [
       {
-        "$id": "446",
+        "$id": "6",
         "$type": "Macabresoft.Macabre2D.Project.Gameplay.MenuSystem, Macabre2D.Project.Gameplay",
         "FirstMenu": {
           "EntityId": "15f380e8-fc1f-401b-b583-7f75010bee46"
@@ -14,21 +14,21 @@
         "ShouldUpdate": true
       },
       {
-        "$id": "447",
+        "$id": "7",
         "$type": "Macabresoft.Macabre2D.Framework.RenderSystem, Macabre2D.Framework",
         "Id": "e471b9f9-64c8-466e-aa4b-4f983162feaa",
         "Name": "RenderSystem",
         "ShouldUpdate": true
       },
       {
-        "$id": "448",
+        "$id": "8",
         "$type": "Macabresoft.Macabre2D.Framework.InputSystem, Macabre2D.Framework",
         "Id": "ded84141-7b23-4d93-88fd-edaad0463098",
         "Name": "InputSystem",
         "ShouldUpdate": true
       },
       {
-        "$id": "449",
+        "$id": "9",
         "$type": "Macabresoft.Macabre2D.Framework.UpdateSystem, Macabre2D.Framework",
         "Layers to Update": {
           "IsEnabled": false,
@@ -41,19 +41,19 @@
     ]
   },
   "_children": {
-    "$id": "450",
+    "$id": "10",
     "$values": [
       {
-        "$id": "451",
+        "$id": "11",
         "$type": "Macabresoft.Macabre2D.Framework.Camera, Macabre2D.Framework",
         "_children": {
-          "$id": "452",
+          "$id": "12",
           "$values": [
             {
-              "$id": "453",
+              "$id": "13",
               "$type": "Macabresoft.Macabre2D.Project.Gameplay.MenuMouseCursor, Macabre2D.Project.Gameplay",
               "_children": {
-                "$id": "454",
+                "$id": "14",
                 "$values": []
               },
               "ShouldUpdate": true,
@@ -75,7 +75,7 @@
                 "A": 255
               },
               "Render Options": {
-                "$id": "455",
+                "$id": "15",
                 "Flip Horizontal": false,
                 "Flip Vertical": false,
                 "Offset Type": 8,
@@ -90,10 +90,10 @@
               }
             },
             {
-              "$id": "456",
+              "$id": "16",
               "$type": "Macabresoft.Macabre2D.Framework.BoundableCover, Macabre2D.Framework",
               "_children": {
-                "$id": "457",
+                "$id": "17",
                 "$values": []
               },
               "Color": {
@@ -115,16 +115,16 @@
               "Inheritance": 3
             },
             {
-              "$id": "458",
+              "$id": "18",
               "$type": "Macabresoft.Macabre2D.Framework.DockingContainer, Macabre2D.Framework",
               "_children": {
-                "$id": "459",
+                "$id": "19",
                 "$values": [
                   {
-                    "$id": "460",
+                    "$id": "20",
                     "$type": "Macabresoft.Macabre2D.Project.Gameplay.SettingsSubMenu, Macabre2D.Project.Gameplay",
                     "_children": {
-                      "$id": "461",
+                      "$id": "21",
                       "$values": []
                     },
                     "FontCategory": 1,
@@ -151,13 +151,281 @@
                     "Name": "SettingsSubMenu",
                     "Local Position": "0, 0",
                     "Inheritance": 3
+                  },
+                  {
+                    "$id": "22",
+                    "$type": "Macabresoft.Macabre2D.Framework.DockableStackPanel, Macabre2D.Framework",
+                    "_children": {
+                      "$id": "23",
+                      "$values": [
+                        {
+                          "$id": "24",
+                          "$type": "Macabresoft.Macabre2D.Project.Gameplay.MenuPrompt, Macabre2D.Project.Gameplay",
+                          "_children": {
+                            "$id": "25",
+                            "$values": [
+                              {
+                                "$id": "26",
+                                "$type": "Macabresoft.Macabre2D.Framework.InputActionRenderer, Macabre2D.Framework",
+                                "_children": {
+                                  "$id": "27",
+                                  "$values": []
+                                },
+                                "GamePadNReference": {
+                                  "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                                  "ContentId": "00000000-0000-0000-0000-000000000000"
+                                },
+                                "GamePadSReference": {
+                                  "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                                  "ContentId": "00000000-0000-0000-0000-000000000000"
+                                },
+                                "GamePadXReference": {
+                                  "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                                  "ContentId": "00000000-0000-0000-0000-000000000000"
+                                },
+                                "KeyboardReference": {
+                                  "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                                  "ContentId": "00000000-0000-0000-0000-000000000000"
+                                },
+                                "MouseReference": {
+                                  "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                                  "ContentId": "00000000-0000-0000-0000-000000000000"
+                                },
+                                "Action": 0,
+                                "DisplayMode": 0,
+                                "InputDeviceToRender": 0,
+                                "Kerning": 0,
+                                "PixelSnap": 0,
+                                "RenderOrder": 0,
+                                "RenderOutOfBounds": false,
+                                "ShouldRender": false,
+                                "Id": "b70ecf79-9f4d-49ab-b48c-3e7a8d792691",
+                                "IsEnabled": true,
+                                "Layers": 1,
+                                "Name": "InputActionRenderer",
+                                "Local Position": "0, 0",
+                                "Inheritance": 3,
+                                "Color": {
+                                  "R": 255,
+                                  "G": 255,
+                                  "B": 255,
+                                  "A": 255
+                                },
+                                "Render Options": {
+                                  "$id": "28",
+                                  "Flip Horizontal": false,
+                                  "Flip Vertical": false,
+                                  "Offset Type": 6,
+                                  "Offset": "0, 0"
+                                }
+                              },
+                              {
+                                "$id": "29",
+                                "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
+                                "_children": {
+                                  "$id": "30",
+                                  "$values": []
+                                },
+                                "FontCategory": 0,
+                                "FontReference": {
+                                  "PackagedAssetId": "0d1786bc-8fa7-4655-b181-f7a5832e7dec",
+                                  "ContentId": "dad78dc2-736d-4c8d-83b6-2a559b4b0a35"
+                                },
+                                "Format": "",
+                                "Kerning": 0,
+                                "ResourceName": "",
+                                "ScrollTime": {
+                                  "TimeLimit": 1.0
+                                },
+                                "ScrollWaitTime": {
+                                  "TimeLimit": 1.0
+                                },
+                                "Text": "",
+                                "WidthOverride": {
+                                  "IsEnabled": false,
+                                  "Value": 0.0
+                                },
+                                "PixelSnap": 0,
+                                "RenderOrder": 0,
+                                "RenderOutOfBounds": false,
+                                "ShouldRender": false,
+                                "Id": "a40d8df3-3e2b-481b-8952-a7ae658d8f7d",
+                                "IsEnabled": true,
+                                "Layers": 1,
+                                "Name": "TextLineRenderer",
+                                "Local Position": "0, 0",
+                                "Inheritance": 3,
+                                "Color": {
+                                  "R": 255,
+                                  "G": 255,
+                                  "B": 255,
+                                  "A": 255
+                                },
+                                "ShouldScroll": false,
+                                "RenderOptions": {
+                                  "Flip Horizontal": false,
+                                  "Flip Vertical": false,
+                                  "Offset Type": 5,
+                                  "Offset": "0, -8"
+                                }
+                              }
+                            ]
+                          },
+                          "PromptType": 0,
+                          "IsCollapsed": true,
+                          "Margin": "0, 0",
+                          "Location": 1,
+                          "Id": "790628af-b2bf-4865-ba0b-c8a96bd0ed1d",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "MenuPrompt (Confirm)",
+                          "Local Position": "0, 0",
+                          "Inheritance": 3
+                        },
+                        {
+                          "$id": "31",
+                          "$type": "Macabresoft.Macabre2D.Project.Gameplay.MenuPrompt, Macabre2D.Project.Gameplay",
+                          "_children": {
+                            "$id": "32",
+                            "$values": [
+                              {
+                                "$id": "33",
+                                "$type": "Macabresoft.Macabre2D.Framework.InputActionRenderer, Macabre2D.Framework",
+                                "_children": {
+                                  "$id": "34",
+                                  "$values": []
+                                },
+                                "GamePadNReference": {
+                                  "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                                  "ContentId": "00000000-0000-0000-0000-000000000000"
+                                },
+                                "GamePadSReference": {
+                                  "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                                  "ContentId": "00000000-0000-0000-0000-000000000000"
+                                },
+                                "GamePadXReference": {
+                                  "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                                  "ContentId": "00000000-0000-0000-0000-000000000000"
+                                },
+                                "KeyboardReference": {
+                                  "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                                  "ContentId": "00000000-0000-0000-0000-000000000000"
+                                },
+                                "MouseReference": {
+                                  "PackagedAssetId": "00000000-0000-0000-0000-000000000000",
+                                  "ContentId": "00000000-0000-0000-0000-000000000000"
+                                },
+                                "Action": 2,
+                                "DisplayMode": 0,
+                                "InputDeviceToRender": 0,
+                                "Kerning": 0,
+                                "PixelSnap": 0,
+                                "RenderOrder": 0,
+                                "RenderOutOfBounds": false,
+                                "ShouldRender": true,
+                                "Id": "42018464-ee07-4f0b-82f5-d73839618f20",
+                                "IsEnabled": true,
+                                "Layers": 1,
+                                "Name": "InputActionRenderer",
+                                "Local Position": "0, 0",
+                                "Inheritance": 3,
+                                "Color": {
+                                  "R": 255,
+                                  "G": 255,
+                                  "B": 255,
+                                  "A": 255
+                                },
+                                "Render Options": {
+                                  "$id": "35",
+                                  "Flip Horizontal": false,
+                                  "Flip Vertical": false,
+                                  "Offset Type": 6,
+                                  "Offset": "-16, -8"
+                                }
+                              },
+                              {
+                                "$id": "36",
+                                "$type": "Macabresoft.Macabre2D.Framework.TextLineRenderer, Macabre2D.Framework",
+                                "_children": {
+                                  "$id": "37",
+                                  "$values": []
+                                },
+                                "FontCategory": 0,
+                                "FontReference": {
+                                  "PackagedAssetId": "0d1786bc-8fa7-4655-b181-f7a5832e7dec",
+                                  "ContentId": "dad78dc2-736d-4c8d-83b6-2a559b4b0a35"
+                                },
+                                "Format": "",
+                                "Kerning": 0,
+                                "ResourceName": "Menu_Return",
+                                "ScrollTime": {
+                                  "TimeLimit": 1.0
+                                },
+                                "ScrollWaitTime": {
+                                  "TimeLimit": 1.0
+                                },
+                                "Text": "",
+                                "WidthOverride": {
+                                  "IsEnabled": false,
+                                  "Value": 0.0
+                                },
+                                "PixelSnap": 0,
+                                "RenderOrder": 0,
+                                "RenderOutOfBounds": false,
+                                "ShouldRender": true,
+                                "Id": "5294c688-71ba-4f92-b697-d17e17bb7815",
+                                "IsEnabled": true,
+                                "Layers": 1,
+                                "Name": "TextLineRenderer",
+                                "Local Position": "0, 0",
+                                "Inheritance": 3,
+                                "Color": {
+                                  "R": 255,
+                                  "G": 255,
+                                  "B": 255,
+                                  "A": 255
+                                },
+                                "ShouldScroll": false,
+                                "RenderOptions": {
+                                  "Flip Horizontal": false,
+                                  "Flip Vertical": false,
+                                  "Offset Type": 5,
+                                  "Offset": "0, -8"
+                                }
+                              }
+                            ]
+                          },
+                          "PromptType": 1,
+                          "IsCollapsed": false,
+                          "Margin": "0, 0",
+                          "Location": 1,
+                          "Id": "993f45b0-842c-4bc9-9924-f5e6e20780b2",
+                          "IsEnabled": true,
+                          "Layers": 1,
+                          "Name": "MenuPrompt (Cancel)",
+                          "Local Position": "0, 0",
+                          "Inheritance": 3
+                        }
+                      ]
+                    },
+                    "Orientation": 1,
+                    "Spacing": 0.0,
+                    "IsCollapsed": false,
+                    "Margin": "0.1, 0.05",
+                    "Location": 9,
+                    "Id": "ef95a2b4-dc4b-4d16-8486-7bf21ec9f3a8",
+                    "IsEnabled": true,
+                    "Layers": 1,
+                    "Name": "Menu Prompt Stack Panel",
+                    "Local Position": "-8.791049, -4.7",
+                    "Inheritance": 3
                   }
                 ]
               },
               "InheritParentBoundingArea": true,
               "Height": 0.0,
               "OffsetOptions": {
-                "$id": "462",
+                "$id": "38",
                 "Offset Type": 4,
                 "Offset": "0, 0"
               },
@@ -187,7 +455,7 @@
         },
         "Shader": {
           "Configuration": {
-            "$id": "463",
+            "$id": "39",
             "$type": "Macabresoft.Macabre2D.Framework.ShaderConfiguration, Macabre2D.Framework"
           },
           "ContentId": "00000000-0000-0000-0000-000000000000"
@@ -215,7 +483,7 @@
     "A": 255
   },
   "BoundingArea": {
-    "$id": "464",
+    "$id": "40",
     "Maximum": "0, 0",
     "Minimum": "0, 0"
   },

@@ -17,11 +17,6 @@ public interface IBaseMenu : IEntity, IBoundable {
     IMenuItem FocusedMenuItem { get; set; }
 
     /// <summary>
-    /// Gets a value indicating whether the return prompt should be shown.
-    /// </summary>
-    bool ShowReturnPrompt { get; }
-
-    /// <summary>
     /// Handles input for this menu.
     /// </summary>
     /// <param name="frameTime">The frame time.</param>
@@ -142,9 +137,6 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     /// <inheritdoc />
     [DataMember]
     public bool ShouldRender { get; set; } = true;
-
-    /// <inheritdoc />
-    public virtual bool ShowReturnPrompt => true;
 
     /// <inheritdoc />
     public override void Deinitialize() {
@@ -579,9 +571,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
             get => MenuItem.EmptyInstance;
             set { }
         }
-
-        public bool ShowReturnPrompt => false;
-
+        
         public void HandleInput(FrameTime frameTime, InputState inputState) {
         }
 

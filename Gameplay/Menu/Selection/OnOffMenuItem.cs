@@ -13,10 +13,10 @@ public abstract class OnOffMenuItem : SelectionMenuItem {
     protected OnOffMenuItem() : base() {
         this._offOption = new SelectionOption(nameof(Resources.Menu_Off), () => this.SetValue(false));
         this._onOption = new SelectionOption(nameof(Resources.Menu_On), () => this.SetValue(true));
-        this.AvailableOptions = new List<SelectionOption> {
+        this.AvailableOptions = [
             this._offOption,
             this._onOption
-        };
+        ];
     }
 
     public override string ConfirmPromptResourceName => this.GetValue() ? nameof(Resources.Menu_Prompts_TurnOff) : nameof(Resources.Menu_Prompts_TurnOn);
