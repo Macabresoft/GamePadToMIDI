@@ -186,6 +186,15 @@ namespace Macabresoft.Macabre2D.Project.Common {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enabled.
+        /// </summary>
+        public static string Menu_Settings_NoteEnabled {
+            get {
+                return ResourceManager.GetString("Menu_Settings_NoteEnabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Velocity.
         /// </summary>
         public static string Menu_Settings_Velocity {

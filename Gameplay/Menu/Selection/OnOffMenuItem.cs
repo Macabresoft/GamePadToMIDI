@@ -9,10 +9,9 @@ public abstract class OnOffMenuItem : SelectionMenuItem {
     private readonly SelectionOption _onOption;
     private IMenuSystem _menuSystem = MenuSystem.Empty;
 
-
     protected OnOffMenuItem() : base() {
-        this._offOption = new SelectionOption(nameof(Resources.Menu_Off), () => this.SetValue(false));
-        this._onOption = new SelectionOption(nameof(Resources.Menu_On), () => this.SetValue(true));
+        this._offOption = new SelectionOption(Resources.Menu_Off, () => this.SetValue(false));
+        this._onOption = new SelectionOption(Resources.Menu_On, () => this.SetValue(true));
         this.AvailableOptions = [
             this._offOption,
             this._onOption

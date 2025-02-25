@@ -11,12 +11,11 @@ using Microsoft.Xna.Framework.Input;
 /// </summary>
 public class MidiPad : BaseSpriteEntity, IUpdateableEntity {
     private Buttons _button = Buttons.None;
+    private MidiMouseCursor? _cursor;
     private GamePadButtonRenderer? _gamePadButtonRenderer;
     private bool _isOn;
-    private MidiNote _midiNote = MidiNote.Empty;
     private MidiSystem? _midiSystem;
     private ITextRenderer _noteIndexRenderer = EmptyObject.Instance;
-    private MidiMouseCursor? _cursor;
 
     /// <summary>
     /// Gets or sets the button for this MIDI pad.
@@ -33,13 +32,8 @@ public class MidiPad : BaseSpriteEntity, IUpdateableEntity {
         }
     }
 
-    /// <summary>
-    /// Gets the MIDI note.
-    /// </summary>
-    public MidiNote MidiNote => this._midiNote;
-
     /// <inheritdoc />
-    public bool ShouldUpdate => this._midiNote.IsEnabled;
+    public bool ShouldUpdate => true;
 
     /// <inheritdoc />
     public override byte? SpriteIndex => this._isOn ? this._midiSystem?.PadOnSprite.SpriteIndex : this._midiSystem?.PadOffSprite.SpriteIndex;
@@ -73,38 +67,48 @@ public class MidiPad : BaseSpriteEntity, IUpdateableEntity {
         this.ResetMidiNote();
     }
 
-    /// <summary>
-    /// Plays the MIDI note.
-    /// </summary>
-    public void PlayMidiNote() {
-        this._midiSystem?.PlayMidiNote(this._midiNote);
-        this._isOn = true;
-    }
-
     /// <inheritdoc />
     public void Update(FrameTime frameTime, InputState inputState) {
-        if (inputState.IsGamePadButtonNewlyPressed(this.Button)) {
-            this.PlayMidiNote();
-        }
-        else if (this.CheckIsBeingClicked()) {
-            if (!this._isOn) {
-                this.PlayMidiNote();
-            }
-        }
-        else if (!inputState.IsGamePadButtonHeld(this.Button)) {
-            this._isOn = false;
-        }
+        if (this.Game.State.CurrentSave.TryGetMidiNote(this._button, out var midiNote) && midiNote.Value.IsEnabled) {
+            this.ResetRender(true);
 
-        this._noteIndexRenderer.Text = this._midiNote.Note.ToString();
+            if (inputState.IsGamePadButtonNewlyPressed(this.Button)) {
+                this.PlayMidiNote(midiNote.Value);
+            }
+            else if (this.CheckIsBeingClicked()) {
+                if (!this._isOn) {
+                    this.PlayMidiNote(midiNote.Value);
+                }
+            }
+            else if (!inputState.IsGamePadButtonHeld(this.Button)) {
+                this._isOn = false;
+            }
+
+            this._noteIndexRenderer.Text = midiNote.Value.Note.ToString();
+        }
+        else {
+            this.ResetRender(false);
+        }
     }
 
     private bool CheckIsBeingClicked() => this._cursor is { IsClicking: true } && this.BoundingArea.Contains(this._cursor.WorldPosition);
+
+    private void PlayMidiNote(MidiNote note) {
+        this._midiSystem?.PlayMidiNote(note);
+        this._isOn = true;
+    }
 
     private void ResetMidiNote() {
         if (this._gamePadButtonRenderer != null) {
             this._gamePadButtonRenderer.Button = this.Button;
         }
+    }
 
-        this._midiNote = this._midiSystem?.GetMidiNote(this.Button) ?? MidiNote.Empty;
+    private void ResetRender(bool shouldRender) {
+        if (this._gamePadButtonRenderer != null) {
+            this._gamePadButtonRenderer.ShouldRender = shouldRender;
+        }
+
+        this._noteIndexRenderer.ShouldRender = shouldRender;
     }
 }

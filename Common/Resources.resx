@@ -63,4 +63,7 @@
     <data name="Menu_Settings_Channel" xml:space="preserve">
         <value>Channel (1-16)</value>
     </data>
+    <data name="Menu_Settings_NoteEnabled" xml:space="preserve">
+        <value>Enabled</value>
+    </data>
 </root>
