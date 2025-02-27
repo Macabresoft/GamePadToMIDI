@@ -1,4 +1,4 @@
-# Gamepad to MIDI
+# Game Pad to MIDI
 
 Allows you to bind game pad buttons to send specific MIDI events to a MIDI device.
 
