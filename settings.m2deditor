@@ -1,5 +1,5 @@
 {
-  "$id": "281",
+  "$id": "1",
   "AnimationPreviewFrameRate": 8,
   "BackgroundColor": {
     "R": 30,
@@ -8,7 +8,7 @@
     "A": 255
   },
   "CameraPosition": "0.72688293, -0.061529636",
-  "CameraViewHeight": 21.894272,
+  "CameraViewHeight": 24.959673,
   "InputDeviceDisplay": 1,
   "LastGizmoSelected": 1,
   "LastSceneOpened": "afca8156-3436-4a17-9062-4932495d3808",
