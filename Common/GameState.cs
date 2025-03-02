@@ -94,14 +94,14 @@ public class GameState {
 
         SaveData? currentSave = null;
         if (this._existingSaves.Any()) {
+            this._existingSaves.Sort((x, y) => -DateTime.Compare(x.CreatedDate, y.CreatedDate));
             currentSave = this._existingSaves.FirstOrDefault(x => x.Id == customSettings.CurrentSave);
 
             if (currentSave != null) {
                 this.CurrentSave = currentSave;
             }
             else {
-                this._existingSaves.Sort((x, y) => DateTime.Compare(x.LastSaved, y.LastSaved));
-                currentSave = this._existingSaves.FirstOrDefault();
+                currentSave = this._existingSaves.OrderByDescending(x => x.LastSaved).FirstOrDefault();
             }
         }
 

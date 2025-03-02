@@ -25,7 +25,12 @@ public class NoteEnabledMenuItem : OnOffMenuItem {
 
     /// <inheritdoc />
     protected override void SetValue(bool value) {
-        this.Game.State.CurrentSave.SetEnabled(this._button, value);
+        if (value) {
+            this.Game.State.CurrentSave.Enable(this._button);
+        }
+        else {
+            this.Game.State.CurrentSave.Disable(this._button);
+        }
 
         base.SetValue(value);
     }
