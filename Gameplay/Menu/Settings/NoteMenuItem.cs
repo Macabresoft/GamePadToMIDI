@@ -1,5 +1,6 @@
 ﻿namespace Macabresoft.Macabre2D.Project.Gameplay;
 
+using System.ComponentModel;
 using Macabresoft.Macabre2D.Framework;
 using Macabresoft.Macabre2D.Project.Common;
 using Microsoft.Xna.Framework.Input;
@@ -34,9 +35,22 @@ public class NoteMenuItem : SelectionMenuItem {
     protected override List<SelectionOption> AvailableOptions => this._selectionOptions;
 
     /// <inheritdoc />
+    public override void Deinitialize() {
+        this.Game.State.PropertyChanged -= this.GameState_PropertyChanged;
+        base.Deinitialize();
+    }
+
+    /// <inheritdoc />
     public override void Initialize(IScene scene, IEntity parent) {
         base.Initialize(scene, parent);
+        this.Game.State.PropertyChanged += this.GameState_PropertyChanged;
         this.SetInitialValue();
+    }
+
+    private void GameState_PropertyChanged(object? sender, PropertyChangedEventArgs e) {
+        if (e.PropertyName == nameof(GameState.CurrentSave)) {
+            this.SetInitialValue();
+        }
     }
 
     private void SetInitialValue() {

@@ -3,9 +3,15 @@
 using Macabresoft.Macabre2D.Framework;
 using Macabresoft.Macabre2D.Project.Common;
 
+/// <summary>
+/// A menu item for changing the style of game pad to display.
+/// </summary>
 public class GamePadDisplayMenuItem : SelectionMenuItem {
     private readonly Dictionary<GamePadDisplay, SelectionOption> _inputDisplayToOptions;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="GamePadDisplayMenuItem" /> class.
+    /// </summary>
     public GamePadDisplayMenuItem() : base() {
         this._inputDisplayToOptions = new Dictionary<GamePadDisplay, SelectionOption> {
             { GamePadDisplay.X, new SelectionOption(Resources.Menu_Settings_GamePadSelection_X, () => this.SetDisplay(GamePadDisplay.X)) },
@@ -14,19 +20,22 @@ public class GamePadDisplayMenuItem : SelectionMenuItem {
         };
     }
 
-    public override bool CanFocus {
-        get => this.Game.InputBindings.DesiredInputDevice != InputDevice.KeyboardMouse;
-    }
+    /// <inheritdoc />
+    public override bool CanFocus => this.Game.InputBindings.DesiredInputDevice != InputDevice.KeyboardMouse;
 
+    /// <inheritdoc />
     public override string ResourceName => nameof(Resources.Menu_Settings_GamePadSelection);
 
+    /// <inheritdoc />
     protected override List<SelectionOption> AvailableOptions { get; } = new();
 
+    /// <inheritdoc />
     public override void Activate() {
         base.Activate();
         this.SetInitialValue();
     }
 
+    /// <inheritdoc />
     public override void Initialize(IScene scene, IEntity parent) {
         this.AvailableOptions.Clear();
         this.AvailableOptions.AddRange(this._inputDisplayToOptions.Values);

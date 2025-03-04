@@ -61,9 +61,18 @@
         <value>Velocity</value>
     </data>
     <data name="Menu_Settings_Channel" xml:space="preserve">
-        <value>Channel (1-16)</value>
+        <value>MIDI Channel (1-16)</value>
     </data>
     <data name="Menu_Settings_NoteEnabled" xml:space="preserve">
         <value>Enabled</value>
+    </data>
+    <data name="Menu_Settings_Delete" xml:space="preserve">
+        <value>Delete Current Configuration</value>
+    </data>
+    <data name="Menu_Settings_Configuration" xml:space="preserve">
+        <value>Configuration</value>
+    </data>
+    <data name="Menu_Settings_NewConfiguration" xml:space="preserve">
+        <value>Create New Configuration</value>
     </data>
 </root>

@@ -3,9 +3,15 @@
 using Macabresoft.Macabre2D.Framework;
 using Macabresoft.Macabre2D.Project.Common;
 
+/// <summary>
+/// A menu item for selecting the current MIDI device.
+/// </summary>
 public class MidiDeviceMenuItem : SelectionMenuItem {
     private readonly SelectionOption _noSelection;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="MidiDeviceMenuItem"/> class.
+    /// </summary>
     public MidiDeviceMenuItem() : base() {
         this._noSelection = new SelectionOption(MidiDeviceDefinition.Empty.Name, () => this.SetMidiDevice(MidiDeviceDefinition.Empty));
     }

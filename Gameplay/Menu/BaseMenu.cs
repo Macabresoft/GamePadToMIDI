@@ -38,10 +38,10 @@ public interface IBaseMenu : IEntity, IBoundable {
 /// Base implementation of menu functionality.
 /// </summary>
 public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
+    internal const float MenuItemDistanceFromCenter = 3.75f;
     internal const float SeparatorHeight = 0.2f;
     internal const float SpinnerWidth = 1.75f;
     private const char LeftAdornment = '[';
-    private const float MenuItemDistanceFromCenter = 3.75f;
     private const char RightAdornment = ']';
     private const float ScrollVelocity = 20f;
 
@@ -241,7 +241,6 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         if (this.TryGetAncestor<IDockingContainer>(out var dockingContainer)) {
             dockingContainer.BoundingAreaChanged += this.DockingContainer_BoundingAreaChanged;
         }
-        
     }
 
     /// <inheritdoc />
@@ -314,13 +313,15 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     /// Adds a header.
     /// </summary>
     /// <param name="resourceName">The resource name.</param>
+    /// <param name="yPosition">The Y position.</param>
     /// <returns>The header.</returns>
-    protected TextLineRenderer AddHeader(string resourceName) {
+    protected TextLineRenderer AddHeader(string resourceName, float yPosition) {
         var header = this.AddChild<TextLineRenderer>();
         header.RenderOptions.OffsetType = PixelOffsetType.Center;
         header.ResourceName = resourceName;
         header.FontCategory = FontCategory.Normal;
         header.Color = HeaderColor;
+        header.LocalPosition = new Vector2(0f, yPosition);
         return header;
     }
 
@@ -340,11 +341,13 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     /// Adds a menu item with text.
     /// </summary>
     /// <param name="yPosition">The Y position.</param>
+    /// <param name="distanceFromCenter">The distance from the center.</param>
+    /// <param name="offsetType">The offset type.</param>
     /// <typeparam name="T">The type.</typeparam>
     /// <returns>The menu item.</returns>
-    protected T AddMenuItemWithText<T>(float yPosition) where T : MenuItem, new() {
+    protected T AddMenuItemWithText<T>(float yPosition, float distanceFromCenter, PixelOffsetType offsetType) where T : MenuItem, new() {
         var menuItem = this.AddMenuItem<T>(yPosition);
-        this.ApplyTextToMenuItem(menuItem, menuItem.ResourceName);
+        this.ApplyTextToMenuItem(menuItem, menuItem.ResourceName, distanceFromCenter, offsetType);
         return menuItem;
     }
 
@@ -381,22 +384,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     /// <typeparam name="T">The type.</typeparam>
     /// <returns>The menu item.</returns>
     protected T AddSpinnerMenuItemWithText<T>(float yPosition) where T : MenuItem, new() {
-        var menuItem = this.AddMenuItemWithText<T>(yPosition);
-        this.ApplySpinnerToMenuItem(menuItem);
-        return menuItem;
-    }
-
-    /// <summary>
-    /// Adds a spinner menu item with text.
-    /// </summary>
-    /// <param name="menuItem">The menu item.</param>
-    /// <param name="resourceName">The resource name.</param>
-    /// <param name="yPosition">The Y position.</param>
-    /// <returns>The menu item.</returns>
-    protected MenuItem AddSpinnerMenuItemWithText(MenuItem menuItem, string resourceName, float yPosition) {
-        this.AddChild(menuItem);
-        menuItem.LocalPosition = new Vector2(0f, yPosition);
-        this.ApplyTextToMenuItem(menuItem, resourceName);
+        var menuItem = this.AddMenuItemWithText<T>(yPosition, -MenuItemDistanceFromCenter, PixelOffsetType.Left);
         this.ApplySpinnerToMenuItem(menuItem);
         return menuItem;
     }
@@ -418,11 +406,13 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     /// </summary>
     /// <param name="menuItem">The menu item.</param>
     /// <param name="resourceName">The resource name.</param>
-    protected void ApplyTextToMenuItem(MenuItem menuItem, string resourceName) {
+    /// <param name="distanceFromCenter">The distance from the center.</param>
+    /// <param name="offsetType">The offset type.</param>
+    protected void ApplyTextToMenuItem(MenuItem menuItem, string resourceName, float distanceFromCenter, PixelOffsetType offsetType) {
         var textLine = menuItem.AddChild<MenuTextLineRenderer>();
         textLine.ResourceName = resourceName;
-        textLine.LocalPosition = new Vector2(-MenuItemDistanceFromCenter, 0f);
-        textLine.RenderOptions.OffsetType = PixelOffsetType.Left;
+        textLine.LocalPosition = new Vector2(distanceFromCenter, 0f);
+        textLine.RenderOptions.OffsetType = offsetType;
         textLine.FontCategory = this.FontCategory;
     }
 
@@ -571,7 +561,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
             get => MenuItem.EmptyInstance;
             set { }
         }
-        
+
         public void HandleInput(FrameTime frameTime, InputState inputState) {
         }
 

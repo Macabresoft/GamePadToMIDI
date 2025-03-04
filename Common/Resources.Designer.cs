@@ -123,11 +123,29 @@ namespace Macabresoft.Macabre2D.Project.Common {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Channel (1-16).
+        ///   Looks up a localized string similar to MIDI Channel (1-16).
         /// </summary>
         public static string Menu_Settings_Channel {
             get {
                 return ResourceManager.GetString("Menu_Settings_Channel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configuration.
+        /// </summary>
+        public static string Menu_Settings_Configuration {
+            get {
+                return ResourceManager.GetString("Menu_Settings_Configuration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Current Configuration.
+        /// </summary>
+        public static string Menu_Settings_Delete {
+            get {
+                return ResourceManager.GetString("Menu_Settings_Delete", resourceCulture);
             }
         }
         
@@ -173,6 +191,15 @@ namespace Macabresoft.Macabre2D.Project.Common {
         public static string Menu_Settings_MidiDevice {
             get {
                 return ResourceManager.GetString("Menu_Settings_MidiDevice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create New Configuration.
+        /// </summary>
+        public static string Menu_Settings_NewConfiguration {
+            get {
+                return ResourceManager.GetString("Menu_Settings_NewConfiguration", resourceCulture);
             }
         }
         

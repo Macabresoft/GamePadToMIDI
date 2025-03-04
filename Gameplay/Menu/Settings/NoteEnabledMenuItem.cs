@@ -1,5 +1,7 @@
 ﻿namespace Macabresoft.Macabre2D.Project.Gameplay;
 
+using System.ComponentModel;
+using Macabresoft.Macabre2D.Framework;
 using Macabresoft.Macabre2D.Project.Common;
 using Microsoft.Xna.Framework.Input;
 
@@ -21,6 +23,18 @@ public class NoteEnabledMenuItem : OnOffMenuItem {
     public override string ResourceName => nameof(Resources.Menu_Settings_NoteEnabled);
 
     /// <inheritdoc />
+    public override void Deinitialize() {
+        this.Game.State.PropertyChanged -= this.GameState_PropertyChanged;
+        base.Deinitialize();
+    }
+
+    /// <inheritdoc />
+    public override void Initialize(IScene scene, IEntity parent) {
+        base.Initialize(scene, parent);
+        this.Game.State.PropertyChanged += this.GameState_PropertyChanged;
+    }
+
+    /// <inheritdoc />
     protected override bool GetValue() => this.Game.State.CurrentSave.TryGetMidiNote(this._button, out var midiNote) && midiNote.Value.IsEnabled;
 
     /// <inheritdoc />
@@ -33,5 +47,11 @@ public class NoteEnabledMenuItem : OnOffMenuItem {
         }
 
         base.SetValue(value);
+    }
+
+    private void GameState_PropertyChanged(object? sender, PropertyChangedEventArgs e) {
+        if (e.PropertyName == nameof(GameState.CurrentSave)) {
+            this.SetInitialValue();
+        }
     }
 }

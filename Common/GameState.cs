@@ -16,10 +16,11 @@ public enum GameAction {
 /// <summary>
 /// A class accessible via the containing game that can include any information about the currently running game that might be relevant in the current scene or across scenes.
 /// </summary>
-public class GameState {
+public class GameState : PropertyChangedNotifier {
     private readonly List<SaveData> _existingSaves = new();
 
     private readonly List<MidiDeviceDefinition> _midiDevices = new();
+    private SaveData _currentSave = new();
     private IDataManager _dataManager = EmptyDataManager.Instance;
     private bool _isBusy;
     private MidiDeviceDefinition _selectedMidiDevice = MidiDeviceDefinition.Empty;
@@ -30,14 +31,17 @@ public class GameState {
     public event EventHandler<GameAction>? ActionRequested;
 
     /// <summary>
-    /// Raised when <see cref="SelectedMidiDevice" /> changes.
+    /// Gets a value indicating whether the current save can be deleted.
     /// </summary>
-    public event EventHandler? MidiDeviceChanged;
+    public bool CanDeleteCurrentSave => this.ExistingSaves.Count > 1;
 
     /// <summary>
     /// Gets the current save data.
     /// </summary>
-    public SaveData CurrentSave { get; private set; } = new();
+    public SaveData CurrentSave {
+        get => this._currentSave;
+        set => this.Set(ref this._currentSave, value);
+    }
 
     /// <summary>
     /// Gets existing <see cref="SaveData" />.
@@ -54,10 +58,7 @@ public class GameState {
     /// </summary>
     public MidiDeviceDefinition SelectedMidiDevice {
         get => this._selectedMidiDevice;
-        set {
-            this._selectedMidiDevice = value;
-            this.MidiDeviceChanged.SafeInvoke(this);
-        }
+        set => this.Set(ref this._selectedMidiDevice, value);
     }
 
     /// <summary>
@@ -66,6 +67,24 @@ public class GameState {
     public void CreateNew() {
         this.Load(new SaveData());
         this.Save();
+    }
+
+    /// <summary>
+    /// Deletes the current save if it is not the only save.
+    /// </summary>
+    /// <returns>A value indicating whether the save was deleted.</returns>
+    public bool DeleteCurrent() {
+        if (this.CanDeleteCurrentSave) {
+            var index = this._existingSaves.IndexOf(this.CurrentSave);
+            this._existingSaves.Remove(this.CurrentSave);
+            var fileLocation = this.GetCurrentSaveFilePath(this.CurrentSave);
+            File.Delete(fileLocation);
+            this.CurrentSave = this._existingSaves.Count > index ? this._existingSaves.ElementAt(index) : this._existingSaves.ElementAt(index - 1);
+            this.RaisePropertyChanged(nameof(this.ExistingSaves));
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>

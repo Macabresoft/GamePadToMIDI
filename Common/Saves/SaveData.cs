@@ -16,34 +16,8 @@ public class SaveData {
     /// </summary>
     public const string FileExtension = ".gptomidi";
 
-    /// <summary>
-    /// The maximum MIDI channel.
-    /// </summary>
-    public const int MaximumChannel = 16;
-
-    /// <summary>
-    /// The minimum MIDI channel.
-    /// </summary>
-    public const int MinimumChannel = 1;
-
     [JsonProperty(ObjectCreationHandling = ObjectCreationHandling.Replace)]
     private readonly Dictionary<Buttons, MidiNote> _buttonsToMidiNote = [];
-
-    private int _channel = 1;
-
-    /// <summary>
-    /// Gets or sets the channel.
-    /// </summary>
-    [DataMember]
-    public int Channel {
-        get => this._channel;
-        set {
-            if (this._channel != value) {
-                this._channel = Math.Clamp(value, MinimumChannel, MaximumChannel);
-                this.HasChanges = true;
-            }
-        }
-    }
 
     /// <summary>
     /// Gets the date this save file was created.

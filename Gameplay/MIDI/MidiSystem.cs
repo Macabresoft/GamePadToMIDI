@@ -1,5 +1,6 @@
 ﻿namespace Macabresoft.Macabre2D.Project.Gameplay;
 
+using System.ComponentModel;
 using System.Runtime.Serialization;
 using Macabresoft.Macabre2D.Framework;
 using Macabresoft.Macabre2D.Project.Common;
@@ -30,7 +31,7 @@ public class MidiSystem : InputSystem {
 
     /// <inheritdoc />
     public override void Deinitialize() {
-        this.Game.State.MidiDeviceChanged -= this.State_MidiDeviceChanged;
+        this.Game.State.PropertyChanged -= this.GameState_PropertyChanged;
 
         base.Deinitialize();
         this._midiOut = null;
@@ -55,7 +56,7 @@ public class MidiSystem : InputSystem {
         this.PadOnSprite.Initialize(this.Scene.Assets, this.Game);
 
         this.ResetMidiOut();
-        this.Game.State.MidiDeviceChanged += this.State_MidiDeviceChanged;
+        this.Game.State.PropertyChanged += this.GameState_PropertyChanged;
 
         if (this.Scene.Assets.TryLoadContent<Scene>(this.Scene.Project.AdditionalConfiguration.PauseSceneId, out var pauseScene)) {
             this._pauseScene = pauseScene;
@@ -77,7 +78,7 @@ public class MidiSystem : InputSystem {
     /// <param name="midiNote">The MIDI note definition.</param>
     public void PlayMidiNote(MidiNote midiNote) {
         if (this._midiOut != null) {
-            var noteOnEvent = new NoteOnEvent(0, this.Game.State.CurrentSave.Channel, midiNote.Note, midiNote.Velocity, 50);
+            var noteOnEvent = new NoteOnEvent(0, this.Game.UserSettings.Custom.Channel, midiNote.Note, midiNote.Velocity, 50);
             this._midiOut.Send(noteOnEvent.GetAsShortMessage());
         }
     }
@@ -91,12 +92,14 @@ public class MidiSystem : InputSystem {
         }
     }
 
+    private void GameState_PropertyChanged(object? sender, PropertyChangedEventArgs e) {
+        if (e.PropertyName == nameof(GameState.SelectedMidiDevice)) {
+            this.ResetMidiOut();
+        }
+    }
+
     private void ResetMidiOut() {
         this._midiOut?.Dispose();
         this._midiOut = this.Game.State.SelectedMidiDevice.Index >= 0 ? new MidiOut(this.Game.State.SelectedMidiDevice.Index) : null;
-    }
-
-    private void State_MidiDeviceChanged(object? sender, EventArgs e) {
-        this.ResetMidiOut();
     }
 }

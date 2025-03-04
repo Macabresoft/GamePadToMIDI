@@ -1,5 +1,6 @@
 ﻿namespace Macabresoft.Macabre2D.Project.Gameplay;
 
+using System.ComponentModel;
 using Macabresoft.Macabre2D.Framework;
 using Macabresoft.Macabre2D.Project.Common;
 
@@ -10,7 +11,7 @@ public class MidiDeviceRenderer : TextLineRenderer {
 
     /// <inheritdoc />
     public override void Deinitialize() {
-        this.Game.State.MidiDeviceChanged -= this.GameState_MidiDeviceChanged;
+        this.Game.State.PropertyChanged -= this.GameState_PropertyChanged;
         base.Deinitialize();
     }
 
@@ -29,10 +30,12 @@ public class MidiDeviceRenderer : TextLineRenderer {
         base.Initialize(scene, parent);
 
         this.FontCategory = FontCategory.Normal;
-        this.Game.State.MidiDeviceChanged += this.GameState_MidiDeviceChanged;
+        this.Game.State.PropertyChanged += this.GameState_PropertyChanged;
     }
 
-    private void GameState_MidiDeviceChanged(object? sender, EventArgs e) {
-        this.OnTransformChanged();
+    private void GameState_PropertyChanged(object? sender, PropertyChangedEventArgs e) {
+        if (e.PropertyName == nameof(GameState.SelectedMidiDevice)) {
+            this.OnTransformChanged();
+        }
     }
 }
