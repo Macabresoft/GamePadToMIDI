@@ -26,7 +26,8 @@ public class SettingsSubMenu : BaseMenu {
             var configurationHeader = this.AddHeader(nameof(Resources.Menu_Settings_Configuration), channel.LocalPosition.Y - menuItemHeight - SeparatorHeight);
             // TODO: select configuration menu item
 
-            var createNew = this.AddMenuItemWithText<CreateSaveMenuItem>(configurationHeader.LocalPosition.Y - menuItemHeight - SeparatorHeight, 0f, PixelOffsetType.Center);
+            var current = this.AddSpinnerMenuItemWithText<SaveSelectionMenuItem>(configurationHeader.LocalPosition.Y - menuItemHeight - SeparatorHeight);
+            var createNew = this.AddMenuItemWithText<CreateSaveMenuItem>(current.LocalPosition.Y - menuItemHeight, 0f, PixelOffsetType.Center);
             var delete = this.AddMenuItemWithText<DeleteSaveMenuItem>(createNew.LocalPosition.Y - menuItemHeight, 0f, PixelOffsetType.Center);
 
             var currentPosition = delete.LocalPosition.Y - menuItemHeight - SeparatorHeight;

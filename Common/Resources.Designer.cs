@@ -141,6 +141,15 @@ namespace Macabresoft.Macabre2D.Project.Common {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Current.
+        /// </summary>
+        public static string Menu_Settings_Current {
+            get {
+                return ResourceManager.GetString("Menu_Settings_Current", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete Current Configuration.
         /// </summary>
         public static string Menu_Settings_Delete {

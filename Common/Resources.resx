@@ -75,4 +75,7 @@
     <data name="Menu_Settings_NewConfiguration" xml:space="preserve">
         <value>Create New Configuration</value>
     </data>
+    <data name="Menu_Settings_Current" xml:space="preserve">
+        <value>Current</value>
+    </data>
 </root>

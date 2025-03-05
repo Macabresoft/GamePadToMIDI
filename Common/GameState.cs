@@ -67,6 +67,7 @@ public class GameState : PropertyChangedNotifier {
     public void CreateNew() {
         this.Load(new SaveData());
         this.Save();
+        this.RaisePropertyChanged(nameof(this.ExistingSaves));
     }
 
     /// <summary>
@@ -113,7 +114,7 @@ public class GameState : PropertyChangedNotifier {
 
         SaveData? currentSave = null;
         if (this._existingSaves.Any()) {
-            this._existingSaves.Sort((x, y) => -DateTime.Compare(x.CreatedDate, y.CreatedDate));
+            this._existingSaves.Sort((x, y) => DateTime.Compare(x.CreatedDate, y.CreatedDate));
             currentSave = this._existingSaves.FirstOrDefault(x => x.Id == customSettings.CurrentSave);
 
             if (currentSave != null) {

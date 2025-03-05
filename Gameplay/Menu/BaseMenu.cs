@@ -40,7 +40,7 @@ public interface IBaseMenu : IEntity, IBoundable {
 public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     internal const float MenuItemDistanceFromCenter = 3.75f;
     internal const float SeparatorHeight = 0.2f;
-    internal const float SpinnerWidth = 1.75f;
+    internal const float SpinnerWidth = 3f;
     private const char LeftAdornment = '[';
     private const char RightAdornment = ']';
     private const float ScrollVelocity = 20f;
@@ -251,7 +251,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
 
     /// <inheritdoc />
     public void OnPop() {
-        if (this.HasChanges) {
+        if (this.HasChanges || this.Game.State.ExistingSaves.Any(x => x.HasChanges)) {
             this.OnSave();
             this.HasChanges = false;
         }
