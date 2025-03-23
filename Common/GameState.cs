@@ -5,15 +5,6 @@ using Macabresoft.Macabre2D.Common;
 using NAudio.Midi;
 
 /// <summary>
-/// Events that can be raised to the game.
-/// </summary>
-public enum GameAction {
-    Shutdown,
-    SaveSettings,
-    SaveAndApplySettings
-}
-
-/// <summary>
 /// A class accessible via the containing game that can include any information about the currently running game that might be relevant in the current scene or across scenes.
 /// </summary>
 public class GameState : PropertyChangedNotifier {
@@ -24,11 +15,6 @@ public class GameState : PropertyChangedNotifier {
     private IDataManager _dataManager = EmptyDataManager.Instance;
     private bool _isBusy;
     private MidiDeviceDefinition _selectedMidiDevice = MidiDeviceDefinition.Empty;
-
-    /// <summary>
-    /// An event that is called when it is requested that the game should perform a specific action.
-    /// </summary>
-    public event EventHandler<GameAction>? ActionRequested;
 
     /// <summary>
     /// Gets a value indicating whether the current save can be deleted.
@@ -160,14 +146,6 @@ public class GameState : PropertyChangedNotifier {
                 this._existingSaves.Add(saveData);
             }
         }
-    }
-
-    /// <summary>
-    /// Raises an event which requests an action be taken by the game.
-    /// </summary>
-    /// <param name="action">The action.</param>
-    public void RaiseActionRequested(GameAction action) {
-        this.ActionRequested.SafeInvoke(this, action);
     }
 
     /// <summary>
