@@ -58,6 +58,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     private SpriteSheetFontCharacter? _leftAdornmentCharacter;
     private IMenuSystem _menuSystem = MenuSystem.Empty;
     private float _moveTo;
+    private int _renderOrder;
     private SpriteSheetFontCharacter? _rightAdornmentCharacter;
     private SpriteSheet? _spriteSheet;
 
@@ -123,6 +124,13 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     /// <inheritdoc />
     [DataMember]
     public PixelSnap PixelSnap { get; set; } = PixelSnap.Inherit;
+
+    /// <inheritdoc />
+    [DataMember]
+    public int RenderOrder {
+        get => this._renderOrder;
+        set => this.Set(ref this._renderOrder, value);
+    }
 
     /// <inheritdoc />
     [DataMember]
