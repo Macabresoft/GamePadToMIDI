@@ -1,6 +1,7 @@
 ﻿namespace Macabresoft.Macabre2D.Project.Gameplay;
 
 using System.Runtime.Serialization;
+using Macabresoft.Core;
 using Macabresoft.Macabre2D.Framework;
 using Macabresoft.Macabre2D.Project.Common;
 using Microsoft.Xna.Framework;
@@ -60,7 +61,12 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
     private float _moveTo;
     private int _renderOrder;
     private SpriteSheetFontCharacter? _rightAdornmentCharacter;
+
+    private bool _shouldRender = true;
     private SpriteSheet? _spriteSheet;
+
+    /// <inheritdoc />
+    public event EventHandler? ShouldRenderChanged;
 
     /// <summary>
     /// Gets an empty menu instance.
@@ -144,7 +150,14 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
 
     /// <inheritdoc />
     [DataMember]
-    public bool ShouldRender { get; set; } = true;
+    public bool ShouldRender {
+        get => this._shouldRender;
+        set {
+            if (this.Set(ref this._shouldRender, value)) {
+                this.ShouldRenderChanged.SafeInvoke(this);
+            }
+        }
+    }
 
     /// <inheritdoc />
     public override void Deinitialize() {
@@ -328,7 +341,7 @@ public abstract class BaseMenu : DockableWrapper, IBaseMenu, IRenderableEntity {
         header.RenderOptions.OffsetType = PixelOffsetType.Center;
         header.ResourceName = resourceName;
         header.FontCategory = FontCategory.Normal;
-        header.Color = HeaderColor;
+        header.RenderOptions.Color = HeaderColor;
         header.LocalPosition = new Vector2(0f, yPosition);
         return header;
     }

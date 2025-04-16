@@ -17,6 +17,18 @@ public class MidiPad : BaseSpriteEntity, IUpdateableEntity {
     private MidiSystem? _midiSystem;
     private ITextRenderer _noteIndexRenderer = EmptyObject.Instance;
 
+    /// <inheritdoc />
+    public event EventHandler? ShouldUpdateChanged {
+        add { }
+        remove { }
+    }
+
+    /// <inheritdoc />
+    public event EventHandler? UpdateOrderChanged {
+        add { }
+        remove { }
+    }
+
     /// <summary>
     /// Gets or sets the button for this MIDI pad.
     /// </summary>

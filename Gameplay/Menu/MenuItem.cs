@@ -113,7 +113,7 @@ public abstract class MenuItem : DockableWrapper, IMenuItem {
         base.Initialize(scene, parent);
 
         foreach (var textLine in this.GetDescendants<MenuTextLineRenderer>()) {
-            textLine.Color = Color.White;
+            textLine.RenderOptions.Color = Color.White;
         }
     }
 
